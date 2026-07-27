@@ -15,7 +15,6 @@ a = Analysis(
     pathex=['.'],
     binaries=[
         ('solvers/glpsol.exe',    'solvers'),
-        ('solvers/glpk_4_65.dll', 'solvers'),
     ],
     datas=[
         ('templates',                       'templates'),
