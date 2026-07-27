@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m py_compile cache_manager.py)",
+      "Bash(python -m py_compile job_runner.py)",
+      "Bash(python -m py_compile app.py)",
+      "Bash(python -m py_compile mix_ort_30dias.py)",
+      "Bash(python -m py_compile sequenciamento_30dias_ort.py)",
+      "Bash(pip install *)",
+      "Bash(python -c \"import flask; print\\('Flask', flask.__version__\\)\")",
+      "Bash(glpsol --version)",
+      "Bash(pip show *)",
+      "Bash(python3 -c \"import glpk; print\\(glpk.__version__\\)\")",
+      "Bash(python3 -c \"import swiglpk; print\\(swiglpk.__version__\\)\")",
+      "Bash(dpkg -l glpk-utils)",
+      "Bash(apt list *)",
+      "Bash(git *)",
+      "Bash(gh auth *)"
+    ]
+  }
+}
