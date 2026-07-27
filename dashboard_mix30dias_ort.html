@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klabin — Mix ORT 30 Dias</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:#07111f; --surf:#0e1f33; --surf2:#132843; --border:#1e3a55;
+      --text:#e8f0fa; --muted:#7a9bbf; --teal:#00c9b1; --blue:#2d82e8;
+      --orange:#f5973a; --red:#e85c5c; --green:#3dc98e; --purple:#9b72cf;
+      --ma:#2d82e8; --ort:#00c9b1; --ota:#f5973a; --r:14px; --sh:0 4px 24px rgba(0,0,0,.45);
+    }
+    body { background:var(--bg); color:var(--text); font-family:'Segoe UI',system-ui,sans-serif; font-size:14px; min-height:100vh; }
+    header { background:linear-gradient(135deg,#0a1e38,#0d2e50); border-bottom:1px solid var(--border); padding:18px 36px; display:flex; align-items:center; justify-content:space-between; }
+    .brand { display:flex; align-items:center; gap:14px; }
+    .logo { width:44px; height:44px; border-radius:10px; background:linear-gradient(135deg,var(--teal),var(--blue)); display:grid; place-items:center; font-size:18px; font-weight:900; color:#fff; }
+    header h1 { font-size:17px; font-weight:700; }
+    header p  { font-size:12px; color:var(--muted); margin-top:2px; }
+    .badge { display:inline-flex; align-items:center; gap:6px; background:rgba(0,201,177,.12); color:var(--teal); border:1px solid rgba(0,201,177,.3); border-radius:20px; padding:4px 12px; font-size:11px; font-weight:700; }
+    .badge::before { content:''; width:7px; height:7px; border-radius:50%; background:var(--teal); }
+    .ts { font-size:11px; color:var(--muted); margin-top:6px; text-align:right; }
+    .filter-bar { background:var(--surf); border-bottom:1px solid var(--border); padding:10px 36px; display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+    .filter-group { display:flex; align-items:center; gap:8px; }
+    .filter-label { font-size:11px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; color:var(--muted); white-space:nowrap; }
+    .chip { padding:5px 14px; border-radius:20px; font-size:12px; font-weight:600; cursor:pointer; border:1.5px solid var(--border); color:var(--muted); background:transparent; transition:all .15s; }
+    .chip:hover { border-color:var(--teal); color:var(--teal); }
+    .chip.active { color:#fff; border-color:transparent; background:var(--blue); }
+    .chip[data-unit="Todas"].active { background:var(--surf2); color:var(--teal); border-color:var(--teal); }
+    .chip[data-unit="MA"].active    { background:var(--ma); }
+    .chip[data-unit="ORT"].active   { background:var(--ort); color:#07111f; }
+    .chip[data-unit="OTA"].active   { background:var(--ota); color:#07111f; }
+    .chip[data-tipo="Todos"].active    { background:var(--surf2); color:var(--teal); border-color:var(--teal); }
+    .chip[data-tipo="kraft"].active    { background:#2d82e8; }
+    .chip[data-tipo="cartao"].active   { background:#3dc98e; color:#07111f; }
+    .chip[data-tipo="celulose"].active { background:#9b72cf; }
+    .chip[data-estado="Todos"].active  { background:var(--surf2); color:var(--teal); border-color:var(--teal); }
+    .chip[data-estado="PR"].active     { background:#2d82e8; }
+    .chip[data-estado="SC"].active     { background:#f5973a; color:#07111f; }
+    .filter-sep { width:1px; height:28px; background:var(--border); }
+    #main-nav { display:flex; gap:4px; padding:10px 36px 0; background:var(--surf); border-bottom:1px solid var(--border); }
+    .tab { background:none; border:none; color:var(--muted); padding:10px 20px; font-size:13px; font-weight:600; cursor:pointer; border-bottom:2px solid transparent; transition:color .15s,border-color .15s; }
+    .tab:hover { color:var(--text); }
+    .tab.active { color:var(--teal); border-bottom-color:var(--teal); }
+    .panel { display:none; padding:24px 36px 60px; max-width:1600px; margin:0 auto; }
+    .panel.active { display:block; }
+    .section-label { font-size:11px; font-weight:700; letter-spacing:1.4px; text-transform:uppercase; color:var(--muted); margin:28px 0 14px; }
+    .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .kpi-row { display:grid; grid-template-columns:repeat(5,1fr); gap:16px; }
+    .kpi-card { background:var(--surf); border:1px solid var(--border); border-radius:var(--r); padding:20px 22px; box-shadow:var(--sh); position:relative; overflow:hidden; }
+    .kpi-card::after { content:''; position:absolute; top:0; left:0; width:4px; height:100%; background:var(--accent,var(--teal)); }
+    .kpi-icon { font-size:20px; margin-bottom:12px; }
+    .kpi-label { font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.8px; margin-bottom:5px; }
+    .kpi-value { font-size:26px; font-weight:800; line-height:1.1; letter-spacing:-.5px; }
+    .kpi-sub   { font-size:11px; color:var(--muted); margin-top:7px; }
+    .unidade-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+    .unidade-card { background:var(--surf); border:1px solid var(--border); border-radius:var(--r); padding:20px; box-shadow:var(--sh); position:relative; }
+    .unidade-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--u-color); }
+    .unidade-header { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+    .unidade-badge { width:36px; height:36px; border-radius:10px; background:rgba(255,255,255,.06); border:1px solid var(--u-color); display:grid; place-items:center; font-size:11px; font-weight:800; color:var(--u-color); }
+    .unidade-name { font-size:15px; font-weight:700; }
+    .unidade-sub  { font-size:11px; color:var(--muted); margin-top:1px; }
+    .unidade-machines { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:14px; }
+    .maq-tag { padding:2px 9px; border-radius:5px; font-size:11px; font-weight:600; background:rgba(255,255,255,.07); color:var(--muted); border:1px solid var(--border); }
+    .maq-tag.cel { border-color:var(--purple); color:var(--purple); background:rgba(155,114,207,.08); }
+    .unidade-metrics { display:flex; flex-direction:column; gap:8px; }
+    .u-metric { display:flex; justify-content:space-between; align-items:baseline; }
+    .u-metric-label { font-size:11px; color:var(--muted); }
+    .u-metric-value { font-size:13px; font-weight:700; }
+    .u-bar-bg  { background:var(--surf2); border-radius:3px; height:5px; margin-top:3px; overflow:hidden; }
+    .u-bar-fill { height:100%; border-radius:3px; background:var(--u-color); transition:width .6s; }
+    .tipo-pills { display:flex; flex-wrap:wrap; gap:4px; margin-top:10px; padding-top:10px; border-top:1px solid var(--border); }
+    .tipo-pill  { padding:2px 8px; border-radius:10px; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.4px; }
+    .t-kraft    { background:rgba(45,130,232,.15);  color:var(--blue); }
+    .t-cartao   { background:rgba(61,201,142,.15);  color:var(--green); }
+    .t-celulose { background:rgba(155,114,207,.15); color:var(--purple); }
+    .chart-card { background:var(--surf); border:1px solid var(--border); border-radius:var(--r); padding:22px; box-shadow:var(--sh); }
+    .chart-card h2   { font-size:14px; font-weight:700; margin-bottom:3px; }
+    .chart-card .sub { font-size:11px; color:var(--muted); margin-bottom:16px; }
+    .scroll-outer { overflow-x:auto; }
+    .gauge-table { width:100%; border-collapse:collapse; }
+    .gauge-table tr { border-bottom:1px solid var(--border); }
+    .gauge-table tr:last-child { border-bottom:none; }
+    .gauge-table td { padding:9px 0; vertical-align:middle; }
+    .gauge-name { font-size:12px; width:40%; }
+    .gauge-vals { font-size:11px; color:var(--muted); width:32%; text-align:right; padding-right:12px; white-space:nowrap; }
+    .gauge-bar-wrap { width:28%; }
+    .gauge-bar-bg   { background:var(--surf2); border-radius:4px; height:7px; overflow:hidden; }
+    .gauge-bar-fill { height:100%; border-radius:4px; }
+    .gauge-pct { font-size:10px; text-align:right; margin-top:2px; }
+    .data-table { width:100%; border-collapse:collapse; }
+    .data-table th { font-size:10px; text-transform:uppercase; letter-spacing:.6px; color:var(--muted); text-align:left; padding:8px 10px; border-bottom:1px solid var(--border); }
+    .data-table td { padding:9px 10px; font-size:12px; border-bottom:1px solid rgba(30,58,85,.45); }
+    .data-table tr:last-child td { border-bottom:none; }
+    .data-table .num { text-align:right; font-variant-numeric:tabular-nums; }
+    .data-table tfoot td { font-weight:700; border-top:2px solid var(--border); }
+    .pill { display:inline-block; padding:2px 9px; border-radius:20px; font-size:10px; font-weight:700; }
+    .pill-green  { background:rgba(61,201,142,.15);  color:var(--green); }
+    .pill-orange { background:rgba(245,151,58,.15);   color:var(--orange); }
+    .pill-red    { background:rgba(232,92,92,.15);    color:var(--red); border:1px solid rgba(232,92,92,.3); }
+    .diff-pos { color:var(--orange); }
+    .wf-controls { display:flex; align-items:center; gap:16px; flex-wrap:wrap; padding:14px; background:var(--surf2); border-radius:10px; border:1px solid var(--border); margin-bottom:20px; }
+    .wf-select { background:var(--bg); color:var(--text); border:1px solid var(--border); border-radius:7px; padding:6px 28px 6px 10px; font-size:12px; cursor:pointer; outline:none; appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a9bbf' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 8px center; }
+    .wf-mode-btn { padding:5px 12px; border-radius:6px; font-size:11px; font-weight:700; cursor:pointer; border:1.5px solid var(--border); background:transparent; color:var(--muted); transition:all .15s; }
+    .wf-kpis { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:20px; }
+    .wf-kpi { background:var(--surf2); border:1px solid var(--border); border-radius:10px; padding:14px; border-left:3px solid var(--accent,var(--teal)); }
+    .wf-kpi-label { font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.7px; margin-bottom:5px; }
+    .wf-kpi-value { font-size:20px; font-weight:800; }
+    .wf-kpi-sub   { font-size:11px; color:var(--muted); margin-top:4px; }
+    /* extra info panel no waterfall */
+    .wf-info-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:20px; }
+    .wf-info-card { background:var(--surf2); border:1px solid var(--border); border-radius:10px; padding:14px; }
+    .wf-info-title { font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.7px; margin-bottom:8px; }
+    .wf-info-value { font-size:18px; font-weight:800; }
+    .wf-info-sub   { font-size:11px; color:var(--muted); margin-top:4px; }
+    .filter-select { background:var(--surf2); color:var(--text); border:1px solid var(--border); border-radius:8px; padding:6px 28px 6px 12px; font-size:12px; cursor:pointer; outline:none; appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a9bbf' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 10px center; }
+    footer { text-align:center; padding:20px; font-size:11px; color:var(--muted); border-top:1px solid var(--border); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo">K</div>
+    <div>
+      <h1>Klabin — Mix ORT · 30 Dias</h1>
+      <p>Fábrica ORT · MP27 / MP28 / MC25 / MC26 · Paraná</p>
+    </div>
+  </div>
+  <div>
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end;">
+      <div class="badge">Solução Ótima</div>
+      <div class="badge" style="background:rgba(155,114,207,.12);color:var(--purple);border-color:rgba(155,114,207,.3);" id="badge-periodo">30 dias</div>
+    </div>
+    <div class="ts" id="ts"></div>
+  </div>
+</header>
+
+
+<nav id="main-nav">
+  <button class="tab active" onclick="switchTab('dashboard')">📊 Dashboard</button>
+  <button class="tab" onclick="switchTab('waterfall')">📉 Total Waste</button>
+  <button class="tab" onclick="switchTab('bridge')">🌉 Bridge Macro</button>
+</nav>
+
+<!-- ═══ DASHBOARD ═══ -->
+<div id="panel-dashboard" class="panel active">
+  <div class="section-label">Indicadores-chave</div>
+  <div class="kpi-row">
+    <div class="kpi-card" style="--accent:var(--blue);">
+      <div class="kpi-icon">📦</div><div class="kpi-label">Produção Bruta Total</div>
+      <div class="kpi-value" id="kpi-bruta">—</div><div class="kpi-sub" id="kpi-bruta-sub">toneladas / ano</div>
+    </div>
+    <div class="kpi-card" style="--accent:var(--teal);">
+      <div class="kpi-icon">✅</div><div class="kpi-label">Produção Vendável</div>
+      <div class="kpi-value" id="kpi-vendavel">—</div><div class="kpi-sub" id="kpi-vendavel-sub">toneladas / ano</div>
+    </div>
+    <div class="kpi-card" style="--accent:var(--orange);">
+      <div class="kpi-icon">💰</div><div class="kpi-label">Função Objetivo</div>
+      <div class="kpi-value" id="kpi-fo">—</div><div class="kpi-sub" id="kpi-fo-sub">receita − custos variáveis</div>
+    </div>
+    <div class="kpi-card" style="--accent:var(--red);">
+      <div class="kpi-icon">⚠️</div><div class="kpi-label">Demanda Não Atendida</div>
+      <div class="kpi-value" id="kpi-nao-atendida" style="color:var(--red)">—</div><div class="kpi-sub" id="kpi-na-sub">toneladas não supridas</div>
+    </div>
+    <div class="kpi-card" style="--accent:var(--purple);">
+      <div class="kpi-icon">🏭</div><div class="kpi-label">Máquinas no Escopo</div>
+      <div class="kpi-value" id="kpi-maquinas">—</div><div class="kpi-sub" id="kpi-maquinas-sub">—</div>
+    </div>
+  </div>
+
+  <div class="section-label">Visão por unidade</div>
+  <div class="unidade-grid" id="unidadeGrid"></div>
+
+  <div class="section-label">Desempenho por máquina</div>
+  <div class="chart-card">
+    <h2>Produção Bruta × Capacidade Máxima</h2>
+    <div class="sub">Toneladas produzidas (barras) vs capacidade instalada (linha laranja)</div>
+    <div style="position:relative;height:300px;"><canvas id="chartBruta"></canvas></div>
+  </div>
+
+  <div class="chart-card" style="margin-top:16px;">
+    <h2>Demanda × Produção por Produto</h2>
+    <div class="sub">Comparativo em toneladas — use o filtro para ver por máquina</div>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap;">
+      <span class="filter-label">Máquina:</span>
+      <select id="demProdMaqFilter" class="filter-select"><option value="Todas">Todas as Máquinas</option></select>
+    </div>
+    <div class="scroll-outer">
+      <div style="position:relative;height:360px;" id="demProdScrollInner"><canvas id="chartDemProd"></canvas></div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-top:16px;">
+    <div class="chart-card">
+      <h2>Capacidade Ociosa por Máquina</h2>
+      <div class="sub">Horas não utilizadas — ordenado do maior ao menor</div>
+      <div style="position:relative;height:280px;"><canvas id="chartOciosidade"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <h2>Atendimento por Mercado</h2>
+      <div class="sub">Demanda vs produção vendável por mercado</div>
+      <div style="position:relative;height:280px;"><canvas id="chartMercado"></canvas></div>
+    </div>
+  </div>
+
+  <div class="section-label">Restrições de balanço de fábrica — ORT</div>
+  <div class="chart-card">
+    <h2>Fábrica ORT</h2>
+    <div class="sub">Utilização vs limite operacional · Caustificação, Captação, Emissário, Digestores, CDR, Evaporação</div>
+    <table class="gauge-table" id="gaugeORT"></table>
+  </div>
+
+  <div class="section-label">Painel de máquinas</div>
+  <div class="chart-card">
+    <h2>Detalhamento por máquina</h2><div class="sub">Capacidade, produção, utilização e margem</div>
+    <table class="data-table">
+      <thead><tr><th>Máquina</th><th>Unidade</th><th>Tipo</th><th class="num">Cap. Instalada (t)</th><th class="num">Produção (t)</th><th class="num">Utilização</th><th class="num">Ociosidade (h)</th><th class="num">Margem (R$)</th></tr></thead>
+      <tbody id="tblMaquinasBody"></tbody>
+    </table>
+  </div>
+
+  <div class="section-label">Cobertura de demanda</div>
+  <div class="chart-card">
+    <h2>Tabela de Cobertura Detalhada <span style="font-size:12px;font-weight:400;color:var(--orange);margin-left:8px;">· apenas itens com cobertura &lt; 100%</span></h2>
+    <div class="sub">Ordenado pelo maior volume de demanda não atendida</div>
+    <table class="data-table">
+      <thead><tr><th>Produto</th><th>Mercado</th><th class="num">Demanda (t)</th><th class="num">Atendida (t)</th><th class="num">Diferença (t)</th><th>Cobertura</th><th>Máquinas</th></tr></thead>
+      <tbody id="tblCoberturaBody"></tbody>
+      <tfoot id="tblCoberturaFoot"></tfoot>
+    </table>
+  </div>
+</div>
+
+<!-- ═══ WATERFALL ═══ -->
+<div id="panel-waterfall" class="panel">
+  <div class="section-label">Análise de perdas — Bruto para Vendável (Total Waste)</div>
+  <div class="chart-card">
+    <h2>Bridge de Perdas: Produção Bruta → Vendável</h2>
+    <div class="sub">Cascata de perdas por etapa — dados reais da aba Total Waste · inclui custo variável, preço e produtividade</div>
+
+    <div class="wf-controls">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span class="filter-label">Produto</span>
+        <select id="wf-produto" class="wf-select" style="min-width:130px;"></select>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span class="filter-label">Máquina</span>
+        <select id="wf-maquina" class="wf-select" style="min-width:90px;"></select>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <span class="filter-label">Modo</span>
+        <button class="wf-mode-btn" id="wf-mode-pct" onclick="setWfMode('pct')">% Perda</button>
+        <button class="wf-mode-btn" id="wf-mode-ton" onclick="setWfMode('ton')">Toneladas</button>
+        <button class="wf-mode-btn" id="wf-mode-rs"  onclick="setWfMode('rs')">R$ Perda</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;margin-left:auto;">
+        <span style="font-size:11px;color:var(--muted);">Volume ref. (t):</span>
+        <input id="wf-volume" type="number" value="1000" min="1" step="100"
+          style="width:90px;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:7px;padding:5px 8px;font-size:12px;outline:none;text-align:right;"
+          oninput="buildWaterfall()">
+      </div>
+    </div>
+
+    <!-- KPIs de perdas -->
+    <div class="wf-kpis" id="wf-kpis"></div>
+
+    <!-- Cards informativos: custo variável, preço, produtividade, margem -->
+    <div class="wf-info-grid" id="wf-info-grid"></div>
+
+    <div style="position:relative;height:380px;"><canvas id="chartWaterfall"></canvas></div>
+
+    <div style="margin-top:20px;overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;">
+        <thead><tr style="border-bottom:1px solid var(--border);">
+          <th style="text-align:left;padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);">Etapa</th>
+          <th style="text-align:right;padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);">Entrada (t)</th>
+          <th style="text-align:right;padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);">Perda (t)</th>
+          <th style="text-align:right;padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);">Perda (%)</th>
+          <th style="text-align:right;padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);">Perda (R$)</th>
+          <th style="text-align:right;padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);">Saída (t)</th>
+          <th style="text-align:right;padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);">Rend. Acum.</th>
+        </tr></thead>
+        <tbody id="wf-table-body"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ BRIDGE MACRO ═══ -->
+<div id="panel-bridge" class="panel">
+  <div class="section-label">Bridge Macro — Da Capacidade Instalada à Produção Vendável</div>
+  <div class="chart-card">
+    <h2>Waterfall: Capacidade Instalada → Vendável</h2>
+    <div class="sub">Mostra onde estão as perdas: ociosas (subutilização), gap de demanda (mercado/mix) e total waste (melhoria contínua)</div>
+
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px;flex-wrap:wrap;">
+      <span class="filter-label">Modo</span>
+      <button class="wf-mode-btn" id="br-mode-pct" onclick="setBrMode('pct')">% da Capacidade</button>
+      <button class="wf-mode-btn" id="br-mode-ton" onclick="setBrMode('ton')">Toneladas</button>
+      <button class="wf-mode-btn" id="br-mode-rs"  onclick="setBrMode('rs')">R$ (preço médio pond.)</button>
+      <div style="margin-left:auto;font-size:11px;color:var(--muted);" id="br-preco-info"></div>
+    </div>
+
+    <!-- KPIs da bridge -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px;" id="br-kpis"></div>
+
+    <div style="position:relative;height:420px;"><canvas id="chartBridge"></canvas></div>
+
+    <!-- Legenda explicativa -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px;">
+      <div style="background:rgba(120,140,160,.08);border:1px solid rgba(120,140,160,.25);border-radius:10px;padding:14px;">
+        <div style="font-size:11px;font-weight:700;color:var(--muted);margin-bottom:6px;">⬜ CUSTO DE PORTFÓLIO</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;">Diferença entre a capacidade máxima teórica (produzindo só o item mais rápido em cada máquina) e a produção real com mix diversificado. É uma perda estrutural e esperada — não é ineficiência, é o custo de atender múltiplos mercados e clientes com produtos de produtividades distintas.</div>
+      </div>
+      <div style="background:rgba(245,151,58,.08);border:1px solid rgba(245,151,58,.25);border-radius:10px;padding:14px;">
+        <div style="font-size:11px;font-weight:700;color:var(--orange);margin-bottom:6px;">🔶 RESTRIÇÃO DE FÁBRICA</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;">Demanda existia mas o modelo não conseguiu atender — limitações de balanço de fábrica (digestores, CDR, evaporação, outorgas) ou capacidade de máquina. Complexo de alterar no curto prazo; requer investimento ou revisão de mix estratégico.</div>
+      </div>
+      <div style="background:rgba(232,92,92,.08);border:1px solid rgba(232,92,92,.25);border-radius:10px;padding:14px;">
+        <div style="font-size:11px;font-weight:700;color:var(--red);margin-bottom:6px;">🔴 PERDA TOTAL WASTE</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.6;">Perdas de processo: IAC, refugo, sala, cortadeira, estoque. Principal alvo da melhoria contínua — cada ponto percentual recuperado converte diretamente em receita adicional sem necessidade de aumentar capacidade instalada.</div>
+      </div>
+    </div>
+
+    <!-- Tabela resumo -->
+    <div style="margin-top:20px;overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:12px;">
+        <thead><tr style="border-bottom:1px solid var(--border);">
+          <th style="text-align:left;padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);">Etapa</th>
+          <th style="text-align:left;padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);">Tipo de Perda</th>
+          <th style="text-align:right;padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);">Volume (t)</th>
+          <th style="text-align:right;padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);">% da Capac.</th>
+          <th style="text-align:right;padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);">Valor (R$)</th>
+          <th style="text-align:left;padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);">Alavanca</th>
+        </tr></thead>
+        <tbody id="br-table-body"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<footer>Dashboard ORT · Pyomo + GLPK · Horizonte 30 Dias · MP27 / MP28 / MC25 / MC26 · Paraná</footer>
+
+<!-- ══════════════════════ SCRIPT PRINCIPAL ══════════════════════ -->
+<script>
+const fmt   = n => n==null?'—':new Intl.NumberFormat('pt-BR').format(Math.round(n));
+const fmtR  = n => 'R$ '+new Intl.NumberFormat('pt-BR',{maximumFractionDigits:0}).format(n);
+const fmtBi = n => { if(Math.abs(n)>=1e9) return 'R$ '+(n/1e9).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+' bi'; return 'R$ '+Math.round(n/1e6).toLocaleString('pt-BR')+' M'; };
+const pct = (a,b) => b>0?(100*a/b).toFixed(1):'0.0';
+
+Chart.defaults.color='#7a9bbf'; Chart.defaults.font.family="'Segoe UI',system-ui,sans-serif"; Chart.defaults.font.size=12;
+document.getElementById('ts').textContent=new Date().toLocaleString('pt-BR',{dateStyle:'long',timeStyle:'short'});
+
+const MACHINES=[
+  {id:'MP27',num:'27',unidade:'ORT',tipos:['kraft'],         capac:477568},
+  {id:'MP28',num:'28',unidade:'ORT',tipos:['kraft','cartao'],capac:481962},
+  {id:'MC25',num:'25',unidade:'ORT',tipos:['celulose'],      capac:430000},
+  {id:'MC26',num:'26',unidade:'ORT',tipos:['celulose'],      capac:430000},
+];
+const UNIDADES=[
+  {id:'ORT',label:'Fábrica ORT',maquinas:['MP27','MP28','MC25','MC26'], color:'#00c9b1'},
+];
+const TIPO_LABEL={kraft:'Kraft',cartao:'Cartão',celulose:'Celulose'};
+const UNIT_COLOR={ORT:'#00c9b1'};
+const UNIT_ESTADO={ORT:'PR'};
+const GAUGE_UNITS={'Caustificação':'m³/d','Outorga Captação':'m³/h','Outorga Emissário':'m³/h','CDR':'tss/d','Evaporação ORT':'t_H2O/h','CKB-FC':'t/d','CKB-FL':'t/d'};
+const ORT_NUMS = ['27','28','25','26'];
+
+let JSON_DATA=null;
+const charts={};
+
+/* ── getters ── */
+function getBruta(n)  { return JSON_DATA?.bruta_por_maquina?.[n]||0; }
+function getMargem(n) { return JSON_DATA?.margem_por_maquina?.[n]||0; }
+function getOcioso(n) { return JSON_DATA?.capacidade_por_maquina?.[n]?.ocioso||0; }
+function getCapac(m) {
+  const v=JSON_DATA?.prod_bruta_max_por_maquina?.[m.num];
+  if(v!=null&&v>0) return v;
+  // Fallback: usa capacidade por máquina do JSON (tempo disponível calculado pelo solver)
+  const capMaq = JSON_DATA?.capacidade_por_maquina?.[m.num];
+  if(capMaq) return capMaq.usado + (capMaq.ocioso > 0 ? capMaq.ocioso * (
+    getBruta(m.num) > 0 ? getBruta(m.num) / Math.max(capMaq.usado, 1) : 1
+  ) : 0);
+  const diasPeriodo = JSON_DATA?.dias_periodo || 30;
+  return Math.max(getBruta(m.num), m.capac * (diasPeriodo / 365));
+}
+
+function filteredMachines() {
+  return MACHINES;
+}
+
+/* ── KPIs ORT ── */
+function computeFilteredKPIs(ms) {
+  if(!JSON_DATA) return {bruta:0,vendavel:0,fo:0,naoAt:0};
+  const numSet = new Set(ms.map(m=>m.num));
+  const bruta = ms.reduce((s,m)=>s+getBruta(m.num),0);
+  let vendavel=0;
+  if(JSON_DATA.atendida_por_maquina_produto) {
+    Object.values(JSON_DATA.atendida_por_maquina_produto).forEach(maqVols=>{
+      Object.entries(maqVols).forEach(([mNum,vol])=>{
+        if(numSet.has(mNum)) vendavel+=vol;
+      });
+    });
+  } else {
+    const ratio = JSON_DATA.producao_bruta_total>0 ? JSON_DATA.producao_vendavel_total/JSON_DATA.producao_bruta_total : 1;
+    vendavel = bruta * ratio;
+  }
+  const fo = ms.reduce((s,m)=>s+getMargem(m.num),0);
+  const naoAt = (JSON_DATA.cobertura_por_produto||[]).reduce((s,r)=>{
+    const dif = r.nao_atendida??(r.demanda-r.atendida);
+    return s + (dif>0?dif:0);
+  }, 0);
+  return {bruta,vendavel,fo,naoAt};
+}
+
+
+/* ── Tabs ── */
+function switchTab(name) {
+  const names=['dashboard','waterfall','bridge'];
+  document.querySelectorAll('.tab').forEach((t,i)=>t.classList.toggle('active',names[i]===name));
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('panel-'+name).classList.add('active');
+}
+
+/* ── KPI display ── */
+function refreshKPIs(ms) {
+  const {bruta,vendavel,fo,naoAt}=computeFilteredKPIs(ms);
+  const diasPeriodo = JSON_DATA?.dias_periodo || 30;
+  document.getElementById('kpi-bruta').textContent=fmt(bruta)+' t';
+  document.getElementById('kpi-bruta-sub').textContent=`toneladas / ${diasPeriodo} dias · ORT`;
+  document.getElementById('kpi-vendavel').textContent=fmt(vendavel)+' t';
+  document.getElementById('kpi-vendavel-sub').textContent=`toneladas / ${diasPeriodo} dias · todos os mercados`;
+  document.getElementById('kpi-fo').textContent=fmtBi(fo);
+  document.getElementById('kpi-fo-sub').textContent=fmtR(fo)+' · ORT';
+  document.getElementById('kpi-nao-atendida').textContent=fmt(naoAt)+' t';
+  document.getElementById('kpi-na-sub').textContent='toneladas não supridas';
+  document.getElementById('kpi-maquinas').textContent=ms.length;
+  document.getElementById('kpi-maquinas-sub').textContent='MP27 · MP28 · MC25 · MC26';
+}
+
+/* ── Unidade cards ── */
+function buildUnidadeGrid() {
+  const grid=document.getElementById('unidadeGrid'); grid.innerHTML='';
+  UNIDADES.forEach(u=>{
+    const mf=MACHINES.filter(m=>m.unidade===u.id);
+    if(!mf.length) return;
+    const tC=mf.reduce((s,m)=>s+getCapac(m),0),tP=mf.reduce((s,m)=>s+getBruta(m.num),0),tM=mf.reduce((s,m)=>s+getMargem(m.num),0);
+    const ur=tC>0?tP/tC:0;
+    const card=document.createElement('div'); card.className='unidade-card'; card.style.setProperty('--u-color',UNIT_COLOR[u.id]);
+    const maqT=u.maquinas.map(mid=>{const mo=MACHINES.find(x=>x.id===mid);const cls=mo?.tipos.includes('celulose')?'maq-tag cel':'maq-tag';return`<span class="${cls}">${mid}</span>`;}).join('');
+    const tipP=[...new Set(mf.flatMap(m=>m.tipos))].map(t=>`<span class="tipo-pill t-${t}">${TIPO_LABEL[t]}</span>`).join('');
+    const uLocais={MA:'Paraná',ORT:'Paraná',OTA:'Santa Catarina'};
+    card.innerHTML=`<div class="unidade-header"><div class="unidade-badge">${u.id}</div><div><div class="unidade-name">${u.label}</div><div class="unidade-sub">📍 ${uLocais[u.id]||'—'} · ✓ Dados reais</div></div></div><div class="unidade-machines">${maqT}</div><div class="unidade-metrics"><div><div class="u-metric"><span class="u-metric-label">Capacidade instalada</span><span class="u-metric-value">${fmt(tC)} t</span></div><div class="u-bar-bg"><div class="u-bar-fill" style="width:100%"></div></div></div><div><div class="u-metric"><span class="u-metric-label">Produção (cenário)</span><span class="u-metric-value">${fmt(tP)} t</span></div><div class="u-bar-bg"><div class="u-bar-fill" style="width:${Math.min(ur*100,100).toFixed(1)}%"></div></div></div><div class="u-metric"><span class="u-metric-label">Utilização</span><span class="u-metric-value" style="color:${UNIT_COLOR[u.id]}">${(ur*100).toFixed(1)}%</span></div><div class="u-metric"><span class="u-metric-label">Margem de contribuição</span><span class="u-metric-value">${fmtBi(tM)}</span></div></div><div class="tipo-pills">${tipP}</div>`;
+    grid.appendChild(card);
+  });
+}
+
+/* ── Charts helpers ── */
+function dc(id){if(charts[id]){charts[id].destroy();delete charts[id];}}
+
+function buildChartBruta(ms) {
+  dc('bruta');
+  charts['bruta']=new Chart(document.getElementById('chartBruta').getContext('2d'),{type:'bar',data:{labels:ms.map(m=>m.id),datasets:[{label:'Produção (t)',data:ms.map(m=>getBruta(m.num)),backgroundColor:ms.map(m=>m.unidade==='MA'?'rgba(45,130,232,.75)':m.unidade==='ORT'?'rgba(0,201,177,.75)':'rgba(245,151,58,.75)'),borderColor:ms.map(m=>m.unidade==='MA'?'#2d82e8':m.unidade==='ORT'?'#00c9b1':'#f5973a'),borderWidth:2,borderRadius:6,order:1},{label:'Capacidade máx. (t)',data:ms.map(m=>getCapac(m)),type:'line',borderColor:'#f5973a',borderWidth:2,pointBackgroundColor:'#f5973a',pointRadius:5,fill:false,order:0,tension:0.1}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top'}},scales:{x:{grid:{color:'#1e3a55'}},y:{grid:{color:'#1e3a55'},ticks:{callback:v=>fmt(v)}}}}});
+}
+
+function buildChartDemProd(ms) {
+  const sel=document.getElementById('demProdMaqFilter');
+  const prev=sel.value;
+  sel.innerHTML='<option value="Todas">Todas as Máquinas</option>';
+  ms.forEach(m=>{const o=document.createElement('option');o.value=m.id;o.textContent=m.id;sel.appendChild(o);});
+  if(ms.find(m=>m.id===prev)||prev==='Todas') sel.value=prev; else sel.value='Todas';
+  sel.onchange=()=>renderDemProd(ms);
+  renderDemProd(ms);
+}
+
+function renderDemProd(ms) {
+  const chosen=document.getElementById('demProdMaqFilter').value;
+  if(!JSON_DATA) return;
+  const numSet=new Set(ms.map(m=>m.num));
+  let rows=[];
+  if(chosen==='Todas'){
+    const pm={};
+    (JSON_DATA.cobertura_por_produto||[]).forEach(r=>{
+      if(!pm[r.produto])pm[r.produto]={demanda:0,atendida:0};
+      pm[r.produto].demanda+=r.demanda; pm[r.produto].atendida+=r.atendida;
+    });
+    rows=Object.entries(pm).map(([p,v])=>({produto:p,...v}));
+  } else {
+    const mNum=MACHINES.find(m=>m.id===chosen)?.num;
+    const demMap={};
+    (JSON_DATA.cobertura_por_produto||[]).forEach(r=>{if(!demMap[r.produto])demMap[r.produto]=0;demMap[r.produto]+=r.demanda;});
+    Object.entries(JSON_DATA.atendida_por_maquina_produto||{}).forEach(([prod,maqVols])=>{const v=maqVols[mNum]||0;if(v>0.01)rows.push({produto:prod,demanda:demMap[prod]||0,atendida:v});});
+  }
+  rows.sort((a,b)=>b.demanda-a.demanda);
+  const si=document.getElementById('demProdScrollInner');
+  si.style.width=Math.max(900,rows.length*65)+'px';
+  si.innerHTML='<canvas id="chartDemProd"></canvas>';
+  dc('demProd'); if(!rows.length) return;
+  charts['demProd']=new Chart(document.getElementById('chartDemProd').getContext('2d'),{type:'bar',data:{labels:rows.map(r=>r.produto),datasets:[{label:'Demanda total',data:rows.map(r=>r.demanda),backgroundColor:'rgba(45,130,232,.25)',borderColor:'#2d82e8',borderWidth:2,borderRadius:4},{label:chosen==='Todas'?'Prod. vendável':'Prod. '+chosen,data:rows.map(r=>r.atendida),backgroundColor:'rgba(0,201,177,.7)',borderColor:'#00c9b1',borderWidth:2,borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top'},tooltip:{callbacks:{afterLabel:ctx=>{const r=rows[ctx.dataIndex];return`Cobertura: ${pct(r.atendida,r.demanda)}%`;}}}},scales:{x:{grid:{color:'#1e3a55'},ticks:{maxRotation:45}},y:{grid:{color:'#1e3a55'},ticks:{callback:v=>fmt(v)+' t'}}}}});
+}
+
+function buildChartOciosidade(ms) {
+  dc('ociosidade');
+  const vals = ms.map(m => getOcioso(m.num));
+  const maxOc = Math.max(...vals, 0);
+  const s = [...ms].map(m => ({ id: m.id, oc: getOcioso(m.num) }))
+                   .sort((a, b) => b.oc - a.oc);
+
+  const yTickFmt = v => {
+    if (maxOc === 0)  return v.toFixed(0) + ' h';
+    if (maxOc < 0.1)  return v.toFixed(3) + ' h';
+    if (maxOc < 10)   return v.toFixed(1) + ' h';
+    if (maxOc < 100)  return v.toFixed(0) + ' h';
+    return fmt(v) + ' h';
+  };
+
+  charts['ociosidade'] = new Chart(
+    document.getElementById('chartOciosidade').getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: s.map(m => m.id),
+      datasets: [{
+        label: 'Horas ociosas',
+        data: s.map(m => m.oc),
+        backgroundColor: s.map(m =>
+          m.oc === 0 ? '#3dc98e44'
+          : m.oc > maxOc * 0.5 ? '#e85c5c88'
+          : '#f5973a88'),
+        borderColor: s.map(m =>
+          m.oc === 0 ? '#3dc98e'
+          : m.oc > maxOc * 0.5 ? '#e85c5c'
+          : '#f5973a'),
+        borderWidth: 2,
+        borderRadius: 6,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const v = ctx.raw;
+              const str = v < 0.001 ? v.toFixed(4)
+                        : v < 0.1   ? v.toFixed(3)
+                        : v < 10    ? v.toFixed(2)
+                        : v.toFixed(1);
+              return ` ${str} h ociosas`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: { grid: { color: '#1e3a55' } },
+        y: {
+          grid: { color: '#1e3a55' },
+          min: 0,
+          suggestedMax: maxOc > 0 ? maxOc * 1.2 : 1,
+          ticks: { callback: yTickFmt }
+        }
+      }
+    }
+  });
+}
+
+function buildChartMercado() {
+  dc('mercado'); if(!JSON_DATA) return;
+  const numSet=new Set(filteredMachines().map(m=>m.num));
+  const mm={ME:{dem:0,at:0},MI:{dem:0,at:0},'Transferência':{dem:0,at:0}};
+  (JSON_DATA.cobertura_por_produto||[]).forEach(r=>{
+    if(!mm[r.mercado]) return;
+    mm[r.mercado].dem+=r.demanda; mm[r.mercado].at+=r.atendida;
+  });
+  const keys=Object.keys(mm).filter(k=>mm[k].dem>0);
+  charts['mercado']=new Chart(document.getElementById('chartMercado').getContext('2d'),{type:'bar',data:{labels:keys,datasets:[{label:'Demanda (t)',data:keys.map(k=>mm[k].dem),backgroundColor:'rgba(45,130,232,.25)',borderColor:'#2d82e8',borderWidth:2,borderRadius:4},{label:'Atendida (t)',data:keys.map(k=>mm[k].at),backgroundColor:'rgba(0,201,177,.7)',borderColor:'#00c9b1',borderWidth:2,borderRadius:4}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'top'},tooltip:{callbacks:{afterLabel:ctx=>{const k=keys[ctx.dataIndex];return`Cobertura: ${pct(mm[k].at,mm[k].dem)}%`;}}}},scales:{x:{grid:{color:'#1e3a55'},ticks:{callback:v=>fmt(v)+' t'}},y:{grid:{color:'#1e3a55'}}}}});
+}
+
+function buildGauge(tableId,rows) {
+  const t=document.getElementById(tableId); t.innerHTML='';
+  (rows||[]).forEach(r=>{
+    const ratio=r.limite>0?Math.min((r.usado||0)/r.limite,1.5):0;
+    const color=ratio>1?'#e85c5c':ratio>=.95?'#e85c5c':ratio>=.80?'#f5973a':'#3dc98e';
+    const unit=GAUGE_UNITS[r.nome]||'';
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td class="gauge-name">${r.nome}</td><td class="gauge-vals">${(r.usado||0).toFixed(1)} / ${r.limite} ${unit}</td><td class="gauge-bar-wrap"><div class="gauge-bar-bg"><div class="gauge-bar-fill" style="width:${Math.min(ratio*100,100).toFixed(1)}%;background:${color}"></div></div><div class="gauge-pct" style="color:${color}">${(ratio*100).toFixed(1)}%</div></td>`;
+    t.appendChild(tr);
+  });
+}
+
+function buildMachineTable(ms) {
+  const body=document.getElementById('tblMaquinasBody'); body.innerHTML='';
+  ms.forEach(m=>{
+    const prod=getBruta(m.num),capac=getCapac(m),util=capac>0?pct(prod,capac):'—';
+    const pu=+util>=85?'pill-green':+util>=60?'pill-orange':'pill-red';
+    const tipos=m.tipos.map(t=>`<span class="tipo-pill t-${t}">${TIPO_LABEL[t]}</span>`).join(' ');
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td><strong>${m.id}</strong></td><td><span style="color:${UNIT_COLOR[m.unidade]};font-weight:700">${m.unidade}</span></td><td>${tipos}</td><td class="num">${fmt(capac)}</td><td class="num">${fmt(prod)}</td><td class="num"><span class="pill ${pu}">${util}%</span></td><td class="num">${fmt(getOcioso(m.num))} h</td><td class="num">${getMargem(m.num)>0?fmtBi(getMargem(m.num)):'—'}</td>`;
+    body.appendChild(tr);
+  });
+}
+
+function buildCoverageTable(ms) {
+  if(!JSON_DATA) return;
+  const numSet=new Set(ms.map(m=>m.num));
+  const maqMap={};
+  (JSON_DATA.maquinas_por_produto_mercado||[]).forEach(r=>{const s=Object.entries(r.maquinas||{}).map(([m,v])=>`MP${m}=${Math.round(v)}t`).join(', ')||'—';maqMap[`${r.produto}|${r.mercado}`]={str:s,nums:Object.keys(r.maquinas||{})};});
+  let rows=(JSON_DATA.cobertura_por_produto||[]).filter(r=>{
+    const dif=r.nao_atendida??(r.demanda-r.atendida);
+    return dif>0.1;
+  }).sort((a,b)=>(b.nao_atendida??(b.demanda-b.atendida))-(a.nao_atendida??(a.demanda-a.atendida)));
+  const body=document.getElementById('tblCoberturaBody'); body.innerHTML='';
+  const foot=document.getElementById('tblCoberturaFoot'); foot.innerHTML='';
+  let tD=0,tA=0,tDf=0;
+  rows.forEach(r=>{
+    const dif=r.nao_atendida??(r.demanda-r.atendida),c=pct(r.atendida,r.demanda);
+    tD+=r.demanda;tA+=r.atendida;tDf+=dif;
+    const pc=+c>=99?'pill-green':+c>=85?'pill-orange':'pill-red';
+    const machStr=maqMap[`${r.produto}|${r.mercado}`]?.str||'—';
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td><strong>${r.produto}</strong></td><td>${r.mercado}</td><td class="num">${fmt(r.demanda)}</td><td class="num">${fmt(r.atendida)}</td><td class="num diff-pos">+${fmt(dif)}</td><td><span class="pill ${pc}">${c}%</span></td><td style="font-size:11px;color:var(--muted)">${machStr}</td>`;
+    body.appendChild(tr);
+  });
+  const tC=pct(tA,tD); const pT=+tC>=80?'pill-green':+tC>=50?'pill-orange':'pill-red';
+  foot.innerHTML=`<tr><td colspan="2">TOTAL</td><td class="num">${fmt(tD)}</td><td class="num">${fmt(tA)}</td><td class="num diff-pos">+${fmt(tDf)}</td><td><span class="pill ${pT}">${tC}%</span></td><td></td></tr>`;
+}
+
+function refreshAll() {
+  const ms=filteredMachines();
+  refreshKPIs(ms); buildUnidadeGrid();
+  buildChartBruta(ms); buildChartDemProd(ms);
+  buildChartOciosidade(ms); buildChartMercado();
+  buildGauge('gaugeORT',JSON_DATA?.balanco_ORT);
+  buildMachineTable(ms); buildCoverageTable(ms);
+  buildBridge(brMode);
+}
+
+async function init() {
+  try { const r=await fetch('/data/dashboard_data_ort.json'); if(r.ok) JSON_DATA=await r.json(); } catch(e){}
+  if(JSON_DATA?.dias_periodo) {
+    const bp=document.getElementById('badge-periodo');
+    if(bp) bp.textContent=JSON_DATA.dias_periodo+' dias';
+  }
+  refreshAll();
+  initWaterfallSelects(); buildBridge('pct');
+}
+init();
+</script>
+
+<!-- ══════ WATERFALL ══════ -->
+<script>
+const WF_STEPS=[
+  {key:'delta_IAC',      surv:'surv_IAC',      label:'IAC',              color:'#e85c5c'},
+  {key:'delta_Refugo',   surv:'surv_Refugo',   label:'Refugo MP',        color:'#f5973a'},
+  {key:'delta_RepExt',   surv:'surv_RepExt',   label:'Rep. Externo',     color:'#f5973a'},
+  {key:'delta_MR2',      surv:'surv_MR2',      label:'MR2',              color:'#f5973a'},
+  {key:'delta_Sala',     surv:'surv_Sala',     label:'Sala',             color:'#e85c5c'},
+  {key:'delta_CortGram', surv:'surv_CortGram', label:'Cort. Gramatura',  color:'#f5973a'},
+  {key:'delta_CortCort', surv:'surv_CortCort', label:'Cort. Cortadeira', color:'#f5973a'},
+  {key:'delta_EstExp',   surv:'surv_EstExp',   label:'Estoque Expediç.', color:'#f5973a'},
+  {key:'delta_EstRef',   surv:'surv_Vendavel', label:'Estoque Refugo',   color:'#e85c5c'},
+];
+let wfMode='pct', wfChart=null;
+
+function getWfData() { return JSON_DATA?.waste_data||[]; }
+
+function setWfMode(m) {
+  wfMode=m;
+  ['pct','ton','rs'].forEach(id=>{const b=document.getElementById('wf-mode-'+id);if(!b)return;const a=id===m;b.style.borderColor=a?'var(--teal)':'var(--border)';b.style.background=a?'rgba(0,201,177,.15)':'transparent';b.style.color=a?'var(--teal)':'var(--muted)';});
+  buildWaterfall();
+}
+
+function initWaterfallSelects() {
+  const ps=document.getElementById('wf-produto'); if(!ps) return;
+  const data=getWfData();
+  if(!data.length) { ps.innerHTML='<option>— sem dados —</option>'; return; }
+  const prods=[...new Set(data.map(r=>r.produto))].sort();
+  ps.innerHTML=prods.map(p=>`<option value="${p}">${p}</option>`).join('');
+  ps.onchange=()=>{updateWfMaq();buildWaterfall();};
+  document.getElementById('wf-maquina').onchange=()=>buildWaterfall();
+  updateWfMaq(); setWfMode('pct'); buildWaterfall();
+}
+
+function updateWfMaq() {
+  const prod=document.getElementById('wf-produto')?.value;
+  const ms=document.getElementById('wf-maquina'); if(!ms) return;
+  const data=getWfData();
+  ms.innerHTML=data.filter(r=>r.produto===prod).map(r=>r.maquina).sort((a,b)=>a-b).map(m=>`<option value="${m}">MP${m}</option>`).join('');
+}
+
+function getWfRec() {
+  const p=document.getElementById('wf-produto')?.value;
+  const m=parseInt(document.getElementById('wf-maquina')?.value||'0');
+  return getWfData().find(r=>r.produto===p&&r.maquina===m)||null;
+}
+
+function buildWaterfall() {
+  const rec=getWfRec(); if(!rec) return;
+  const vol=parseFloat(document.getElementById('wf-volume')?.value||'1000');
+  const preco=rec.preco||0, hasP=preco>0;
+  const custo=rec.custo_variavel||0;
+  const prod_h=rec.produtividade_bruta||0;
+  const vendavel=rec.surv_Vendavel*vol;
+  const perdaTot=vol-vendavel;
+  const maiorS=WF_STEPS.reduce((b,s)=>rec[s.key]>rec[b.key]?s:b,WF_STEPS[0]);
+
+  // KPIs de perda
+  document.getElementById('wf-kpis').innerHTML=`
+    <div class="wf-kpi" style="--accent:var(--teal)"><div class="wf-kpi-label">Produção Bruta</div><div class="wf-kpi-value" style="color:var(--teal)">${fmt(vol)} t</div><div class="wf-kpi-sub">volume de referência</div></div>
+    <div class="wf-kpi" style="--accent:var(--green)"><div class="wf-kpi-label">Produção Vendável</div><div class="wf-kpi-value" style="color:var(--green)">${fmt(vendavel)} t</div><div class="wf-kpi-sub">rendimento: ${(rec.surv_Vendavel*100).toFixed(1)}%</div></div>
+    <div class="wf-kpi" style="--accent:var(--red)"><div class="wf-kpi-label">Perda Total</div><div class="wf-kpi-value" style="color:var(--red)">${fmt(perdaTot)} t</div><div class="wf-kpi-sub">${((1-rec.surv_Vendavel)*100).toFixed(1)}% do bruto</div></div>
+    <div class="wf-kpi" style="--accent:var(--orange)"><div class="wf-kpi-label">Maior Perda</div><div class="wf-kpi-value" style="color:var(--orange);font-size:15px">${maiorS.label}</div><div class="wf-kpi-sub">${(rec[maiorS.key]*100).toFixed(2)}% do bruto</div></div>
+    <div class="wf-kpi" style="--accent:var(--purple)"><div class="wf-kpi-label">Perda em R$</div><div class="wf-kpi-value" style="color:var(--purple);font-size:15px">${hasP?fmtR(perdaTot*preco):'—'}</div><div class="wf-kpi-sub">${hasP?'preço R$ '+fmt(preco)+'/t':'preço n/d'}</div></div>`;
+
+  // Cards informativos: preço, custo, margem/t bruta, produtividade, margem/hora
+  // Margem/t bruta = Preço × surv_Vendavel − Custo variável  (unidades consistentes: ambos em t bruta)
+  // Margem/hora    = Margem/t bruta × Produtividade (t/h)
+  const margemBruta = hasP&&custo>0 ? (preco*rec.surv_Vendavel)-custo : null;
+  const margemHora  = margemBruta!=null&&prod_h>0 ? margemBruta*prod_h : null;
+  document.getElementById('wf-info-grid').innerHTML=`
+    <div class="wf-info-card">
+      <div class="wf-info-title">💲 Preço de Venda</div>
+      <div class="wf-info-value" style="color:var(--green)">${hasP?fmtR(preco)+'/t':'—'}</div>
+      <div class="wf-info-sub">preço por tonelada vendável</div>
+    </div>
+    <div class="wf-info-card">
+      <div class="wf-info-title">🏭 Custo Variável</div>
+      <div class="wf-info-value" style="color:var(--orange)">${custo>0?fmtR(custo)+'/t bruta':'—'}</div>
+      <div class="wf-info-sub">custo por tonelada bruta produzida</div>
+    </div>
+    <div class="wf-info-card">
+      <div class="wf-info-title">📊 Margem/t Bruta</div>
+      <div class="wf-info-value" style="color:${margemBruta!=null?(margemBruta>=0?'var(--teal)':'var(--red)'):'var(--muted)'}">${margemBruta!=null?fmtR(margemBruta)+'/t':'—'}</div>
+      <div class="wf-info-sub">${margemBruta!=null?'Preço×surv ('+fmtR(preco*rec.surv_Vendavel)+') − Custo':'preço ou custo n/d'}</div>
+    </div>
+    <div class="wf-info-card">
+      <div class="wf-info-title">⚡ Produtividade</div>
+      <div class="wf-info-value" style="color:var(--blue)">${prod_h>0?prod_h.toFixed(1)+' t/h':'—'}</div>
+      <div class="wf-info-sub">${prod_h>0?'≈ '+fmt(prod_h*24)+' t bruta/dia':'n/d na máquina'}</div>
+    </div>
+    <div class="wf-info-card">
+      <div class="wf-info-title">📈 Margem/Hora</div>
+      <div class="wf-info-value" style="color:var(--purple)">${margemHora!=null?fmtR(margemHora)+'/h':'—'}</div>
+      <div class="wf-info-sub">Margem/t bruta × Produtividade</div>
+    </div>`;
+
+  // Chart waterfall
+  const labels=['Produção Bruta',...WF_STEPS.map(s=>s.label),'Vendável'];
+  const barData=[],floatData=[],colors=[],borders=[];
+  barData.push(wfMode==='pct'?100:wfMode==='ton'?vol:hasP?vol*preco:vol); floatData.push(0);
+  colors.push('rgba(0,201,177,.8)'); borders.push('#00c9b1');
+  WF_STEPS.forEach(s=>{
+    const d=rec[s.key],sA=rec[s.surv];
+    let bv,fv;
+    if(wfMode==='pct'){bv=d*100;fv=sA*100;}else if(wfMode==='ton'){bv=d*vol;fv=sA*vol;}else{bv=hasP?d*vol*preco:d*vol;fv=hasP?sA*vol*preco:sA*vol;}
+    barData.push(bv);floatData.push(fv);
+    colors.push(d>0.001?(s.color==='#e85c5c'?'rgba(232,92,92,.85)':'rgba(245,151,58,.85)'):'rgba(255,255,255,.04)');
+    borders.push(d>0.001?s.color:'transparent');
+  });
+  const fv2=wfMode==='pct'?rec.surv_Vendavel*100:wfMode==='ton'?rec.surv_Vendavel*vol:hasP?rec.surv_Vendavel*vol*preco:rec.surv_Vendavel*vol;
+  barData.push(fv2);floatData.push(0);colors.push('rgba(61,201,142,.8)');borders.push('#3dc98e');
+  const yL=wfMode==='pct'?'% do bruto':wfMode==='ton'?'toneladas':'R$';
+  const tF=v=>wfMode==='rs'?'R$ '+new Intl.NumberFormat('pt-BR',{notation:'compact',maximumFractionDigits:1}).format(v):wfMode==='ton'?fmt(v)+' t':v.toFixed(1)+'%';
+  if(wfChart){wfChart.destroy();wfChart=null;}
+  wfChart=new Chart(document.getElementById('chartWaterfall').getContext('2d'),{type:'bar',data:{labels,datasets:[{label:'Float',data:floatData,backgroundColor:'transparent',borderColor:'transparent',borderWidth:0,stack:'wf'},{label:yL,data:barData,backgroundColor:colors,borderColor:borders,borderWidth:2,borderRadius:4,stack:'wf'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>{if(ctx.datasetIndex===0)return null;const i=ctx.dataIndex;if(i===0)return` Bruto: ${tF(ctx.raw)}`;if(i===labels.length-1)return` Vendável: ${tF(ctx.raw)} (${(rec.surv_Vendavel*100).toFixed(1)}%)`;const s=WF_STEPS[i-1];const pS=i===1?1.0:rec[WF_STEPS[i-2].surv];const eV=pS*vol,pV=rec[s.key]*vol;const pE=eV>0?(pV/eV*100).toFixed(2):'0.00';const rs=hasP?' · '+fmtR(pV*preco):'';return` ${pV.toFixed(1)}t · ${pE}% da entrada · ${(rec[s.key]*100).toFixed(2)}% do bruto${rs}`;},title:ctx=>ctx[0]?.label||''}}},scales:{x:{stacked:true,grid:{color:'#1e3a55'}},y:{stacked:true,grid:{color:'#1e3a55'},title:{display:true,text:yL,color:'#7a9bbf'},ticks:{callback:tF}}}}});
+
+  // Tabela detalhada
+  const tbody=document.getElementById('wf-table-body'); tbody.innerHTML='';
+  const sSeq=['surv_IAC','surv_Refugo','surv_RepExt','surv_MR2','surv_Sala','surv_CortGram','surv_CortCort','surv_EstExp','surv_Vendavel'];
+  const etapas=[{label:'Produção Bruta',entrada:vol,perda:0,pct:0,rs:null,saida:vol,acum:100,isS:true},...WF_STEPS.map((s,i)=>{const eS=i===0?1.0:rec[sSeq[i-1]];const eV=eS*vol,sV=rec[s.surv]*vol,pV=eV-sV;return{label:s.label,entrada:eV,perda:pV,pct:eV>0?pV/eV*100:0,rs:hasP?pV*preco:null,saida:sV,acum:rec[s.surv]*100,hasL:pV>0.05};}),{label:'Produção Vendável',entrada:rec.surv_Vendavel*vol,perda:0,pct:0,rs:null,saida:rec.surv_Vendavel*vol,acum:rec.surv_Vendavel*100,isE:true}];
+  etapas.forEach(e=>{const sp=e.isS||e.isE;const pc=!sp&&e.hasL?(e.pct>5?'color:#e85c5c':'color:#f5973a'):'color:var(--muted)';const tr=document.createElement('tr');tr.style.borderBottom='1px solid rgba(30,58,85,.4)';if(sp)tr.style.fontWeight='700';if(!sp&&!e.hasL)tr.style.opacity='.55';tr.innerHTML=`<td style="padding:9px 10px;font-size:12px;">${e.isS?'🟢 ':e.isE?'✅ ':'↳ '}<strong>${e.label}</strong></td><td style="padding:9px 10px;text-align:right;">${fmt(e.entrada)} t</td><td style="padding:9px 10px;text-align:right;${pc}">${sp?'—':fmt(e.perda)+' t'}</td><td style="padding:9px 10px;text-align:right;${pc}">${sp?'—':e.pct.toFixed(2)+'% da entrada'}</td><td style="padding:9px 10px;text-align:right;${pc}">${sp||!hasP||e.rs===null?'—':fmtR(e.rs)}</td><td style="padding:9px 10px;text-align:right;">${fmt(e.saida)} t</td><td style="padding:9px 10px;text-align:right;color:${e.acum>=90?'#3dc98e':e.acum>=80?'#f5973a':'#e85c5c'};font-weight:700;">${e.acum.toFixed(1)}%</td>`;tbody.appendChild(tr);});
+}
+</script>
+
+<!-- ══════ BRIDGE MACRO ══════ -->
+<script>
+let brMode='pct', brChart=null;
+
+function setBrMode(m){
+  brMode=m;
+  ['pct','ton','rs'].forEach(id=>{const b=document.getElementById('br-mode-'+id);if(!b)return;const a=id===m;b.style.borderColor=a?'var(--teal)':'var(--border)';b.style.background=a?'rgba(0,201,177,.15)':'transparent';b.style.color=a?'var(--teal)':'var(--muted)';});
+  buildBridge(m);
+}
+
+function buildBridge(mode) {
+  if(!JSON_DATA) return;
+  const bd = JSON_DATA.bridge_data;
+  if(!bd) {
+    document.getElementById('br-kpis').innerHTML='<div style="color:var(--muted);font-size:12px;grid-column:span 4;">⚠️ Campo bridge_data não encontrado no JSON. Adicione o trecho Python ao mix_attempt1_celulose.py e regere o dashboard_data.json.</div>';
+    return;
+  }
+
+  const preco = bd.preco_medio_ponderado||0;
+  document.getElementById('br-preco-info').textContent = preco>0?`Preço médio ponderado: R$ ${fmt(preco)}/t`:'';
+
+  const capac   = bd.capac_instalada_t;
+  const ociosa  = bd.capac_ociosa_t;
+  const bruta   = bd.producao_bruta_real_t;
+  const gap     = bd.gap_demanda_t;
+  const waste   = bd.perda_waste_t;
+  const vendavel = bd.producao_vendavel_t;
+
+  const pctOciosa = capac>0?(ociosa/capac*100):0;
+  const pctGap    = capac>0?(gap/capac*100):0;
+  const pctWaste  = capac>0?(waste/capac*100):0;
+  const pctVend   = capac>0?(vendavel/capac*100):0;
+
+  document.getElementById('br-kpis').innerHTML=`
+    <div class="wf-kpi" style="--accent:var(--blue)"><div class="wf-kpi-label">Capacidade Instalada</div><div class="wf-kpi-value" style="color:var(--blue)">${fmt(capac)} t</div><div class="wf-kpi-sub">teto físico total</div></div>
+    <div class="wf-kpi" style="--accent:#7a9bbf"><div class="wf-kpi-label">Custo de Portfólio</div><div class="wf-kpi-value" style="color:var(--muted)">${fmt(ociosa)} t</div><div class="wf-kpi-sub">${pctOciosa.toFixed(1)}% · mix diversificado</div></div>
+    <div class="wf-kpi" style="--accent:var(--orange)"><div class="wf-kpi-label">Restrição de Fábrica</div><div class="wf-kpi-value" style="color:var(--orange)">${fmt(gap)} t</div><div class="wf-kpi-sub">${pctGap.toFixed(1)}% · balanço/capacidade</div></div>
+    <div class="wf-kpi" style="--accent:var(--red)"><div class="wf-kpi-label">Perda Total Waste</div><div class="wf-kpi-value" style="color:var(--red)">${fmt(waste)} t</div><div class="wf-kpi-sub">${pctWaste.toFixed(1)}% · melhoria contínua</div></div>`;
+
+  const toVal = t => {
+    if(mode==='pct') return capac>0?t/capac*100:0;
+    if(mode==='ton') return t;
+    return preco>0?t*preco:t;
+  };
+  const tF = v => {
+    if(mode==='pct') return v.toFixed(1)+'%';
+    if(mode==='ton') return fmt(v)+' t';
+    return 'R$ '+new Intl.NumberFormat('pt-BR',{notation:'compact',maximumFractionDigits:1}).format(v);
+  };
+
+  const vCapac  = toVal(capac);
+  const vOciosa = toVal(ociosa);
+  const vBruta  = toVal(bruta);
+  const vGap    = toVal(gap);
+  const vWaste  = toVal(waste);
+  const vVend   = toVal(vendavel);
+
+  // Waterfall ORT — mesma lógica do dashboard_mix_celulose2.html
+  // Cap. Instalada → − Custo de Portfólio → = Prod. Bruta Real
+  //   → − Restrição de Fábrica → − Total Waste → = Vendável
+  //
+  // Níveis:
+  //   n1 = vCapac
+  //   n2 = vBruta        (= n1 − vOciosa)
+  //   n3 = vBruta − vGap (após Restrição de Fábrica)
+  //   n4 = vVend         (após Total Waste)
+
+  const n1 = vCapac;
+  const n2 = vBruta;
+  const n3 = vBruta - vGap;
+  const n4 = vVend;
+
+  const labels = ['Cap. Instalada','− Custo de\nPortfólio','= Prod. Bruta\nReal','− Restrição\nde Fábrica','− Total\nWaste','= Vendável'];
+
+  const floatBars = [
+    [0,  n1],
+    [n2, n1],
+    [0,  n2],
+    [n3, n2],
+    [n4, n3],
+    [0,  n4],
+  ];
+
+  const bgCol = [
+    'rgba(45,130,232,.8)',
+    'rgba(120,140,160,.6)',
+    'rgba(0,201,177,.8)',
+    'rgba(245,151,58,.85)',
+    'rgba(232,92,92,.85)',
+    'rgba(61,201,142,.8)',
+  ];
+  const bdCol = ['#2d82e8','#7a9bbf','#00c9b1','#f5973a','#e85c5c','#3dc98e'];
+
+  const tooltipAbsolutos = [vCapac, vOciosa, vBruta, vGap, vWaste, vVend];
+  const tooltipPrefixes  = ['','− ','= ','− ','− ','= '];
+
+  if(brChart){brChart.destroy();brChart=null;}
+  brChart = new Chart(document.getElementById('chartBridge').getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        data: floatBars,
+        backgroundColor: bgCol,
+        borderColor: bdCol,
+        borderWidth: 2,
+        borderRadius: 4,
+        borderSkipped: false,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const i = ctx.dataIndex;
+              return ` ${tooltipPrefixes[i]}${tF(tooltipAbsolutos[i])}`;
+            },
+            title: ctx => ctx[0]?.label?.replace(/\n/g,' ') || ''
+          }
+        }
+      },
+      scales: {
+        x: { grid: { color: '#1e3a55' }, ticks: { font: { size: 12 } } },
+        y: {
+          grid: { color: '#1e3a55' },
+          min: 0,
+          ticks: { callback: tF },
+          title: { display: true, text: mode==='pct'?'% da capacidade instalada':mode==='ton'?'toneladas':'R$', color: '#7a9bbf' }
+        }
+      }
+    }
+  });
+
+  // Tabela resumo
+  const tbody=document.getElementById('br-table-body'); tbody.innerHTML='';
+  const rows=[
+    {label:'Capacidade Instalada',   tipo:'—',                   ton:capac,   pctC:100,             rs:preco>0?capac*preco:null,  alavanca:'Horas disponíveis × maior produtividade habilitada por máquina ORT',               cor:'var(--blue)',  icon:'🏭'},
+    {label:'− Custo de Portfólio',   tipo:'Mix diversificado',   ton:ociosa,  pctC:pctOciosa,       rs:preco>0?ociosa*preco:null, alavanca:'Diferença entre produzir só o item mais rápido vs o mix real de produtos',         cor:'var(--muted)', icon:'⬜'},
+    {label:'= Produção Bruta Real',  tipo:'—',                   ton:bruta,   pctC:bruta/capac*100, rs:preco>0?bruta*preco:null,  alavanca:'Output do otimizador MILP — produção efetivamente alocada',                       cor:'var(--teal)',  icon:'✅'},
+    {label:'− Restrição de Fábrica', tipo:'Balanço / Capacidade',ton:gap,     pctC:pctGap,          rs:preco>0?gap*preco:null,    alavanca:'Demanda existia mas restrições de balanço ou capacidade impediram o atendimento',  cor:'var(--orange)',icon:'🔶'},
+    {label:'− Perda Total Waste',    tipo:'Processo produtivo',  ton:waste,   pctC:pctWaste,        rs:preco>0?waste*preco:null,  alavanca:'IAC, refugo, sala, cortadeira, estoque — alvo da melhoria contínua',              cor:'var(--red)',   icon:'🔴'},
+    {label:'= Produção Vendável',    tipo:'—',                   ton:vendavel,pctC:pctVend,          rs:preco>0?vendavel*preco:null,alavanca:'Resultado final disponível para faturamento',                                    cor:'var(--green)', icon:'💚'},
+  ];
+  rows.forEach(r=>{
+    const isSep=r.tipo==='—';
+    const tr=document.createElement('tr');
+    tr.style.borderBottom='1px solid rgba(30,58,85,.4)';
+    if(isSep) tr.style.fontWeight='700';
+    tr.innerHTML=`
+      <td style="padding:9px 10px;font-size:12px;"><span style="color:${r.cor}">${r.icon}</span> <strong>${r.label}</strong></td>
+      <td style="padding:9px 10px;font-size:11px;color:var(--muted)">${r.tipo}</td>
+      <td style="padding:9px 10px;text-align:right;font-variant-numeric:tabular-nums;">${fmt(r.ton)} t</td>
+      <td style="padding:9px 10px;text-align:right;color:${r.cor}">${r.pctC.toFixed(1)}%</td>
+      <td style="padding:9px 10px;text-align:right;font-variant-numeric:tabular-nums;">${r.rs!=null?fmtR(r.rs):'—'}</td>
+      <td style="padding:9px 10px;font-size:11px;color:var(--muted)">${r.alavanca}</td>`;
+    tbody.appendChild(tr);
+  });
+}
+</script>
+
+</body>
+</html>

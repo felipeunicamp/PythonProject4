@@ -1,0 +1,18 @@
+# PyInstaller
+dist/
+build/
+*.spec.bak
+__pycache__/
+*.pyc
+
+# GLPK baixado localmente (não commitar)
+solvers/
+
+# Pasta temporária do PyInstaller
+_MEIPASS*/
+
+# Virtualenv
+.venv/
+
+# IDE
+.idea/

@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sequenciamento ORT – 30 dias · MILP · GLPK</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:       #07111f;
+  --surface:  #0e1f33;
+  --surface2: #132843;
+  --border:   #1e3a55;
+  --text:     #e8f0fa;
+  --muted:    #7a9bbf;
+  --teal:     #00c9b1;
+  --blue:     #2d82e8;
+  --orange:   #f5973a;
+  --red:      #e85c5c;
+  --green:    #3dc98e;
+  --purple:   #a78bfa;
+  --card-r:   14px;
+  --shadow:   0 4px 24px rgba(0,0,0,.45);
+}
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 14px; min-height: 100vh;
+}
+
+/* ── Notice banner ─────────────────────────────────────── */
+.notice {
+  display: none; align-items: center; gap: 12px;
+  background: rgba(245,151,58,.12);
+  border-bottom: 1px solid rgba(245,151,58,.3);
+  padding: 10px 36px; font-size: 12px; color: var(--orange);
+}
+.notice.show { display: flex; }
+.notice code {
+  background: rgba(255,255,255,.1); padding: 2px 6px;
+  border-radius: 4px; font-size: 11px;
+}
+
+/* ── Header ────────────────────────────────────────────── */
+header {
+  background: linear-gradient(135deg, #0d2240, #0e3060);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 36px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+.brand { display: flex; align-items: center; gap: 14px; }
+.logo {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: linear-gradient(135deg, var(--teal), var(--blue));
+  display: grid; place-items: center;
+  font-size: 20px; font-weight: 800; color: #fff; flex-shrink: 0;
+}
+header h1 { font-size: 18px; font-weight: 700; letter-spacing: .3px; }
+header p  { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.hdr-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(0,201,177,.15); color: var(--teal);
+  border: 1px solid rgba(0,201,177,.3);
+  border-radius: 20px; padding: 4px 12px; font-size: 12px; font-weight: 600;
+}
+.badge::before {
+  content: ''; width: 7px; height: 7px;
+  border-radius: 50%; background: var(--teal);
+}
+.badge-ok {
+  background: rgba(61,201,142,.15); color: var(--green);
+  border-color: rgba(61,201,142,.3);
+}
+.badge-ok::before  { background: var(--green); }
+.badge-fail {
+  background: rgba(232,92,92,.15); color: var(--red);
+  border-color: rgba(232,92,92,.3);
+}
+.badge-fail::before { background: var(--red); }
+
+/* ── Tabs ──────────────────────────────────────────────── */
+.tabs {
+  display: flex; gap: 2px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 0 36px;
+  overflow-x: auto;
+}
+.tab {
+  padding: 12px 22px; cursor: pointer;
+  font-size: 13px; font-weight: 600;
+  color: var(--muted); background: none; border: none;
+  border-bottom: 2px solid transparent;
+  transition: color .15s, border-color .15s;
+  white-space: nowrap;
+}
+.tab:hover  { color: var(--text); }
+.tab.active { color: var(--teal); border-bottom-color: var(--teal); }
+
+/* ── Panels ────────────────────────────────────────────── */
+.panel { display: none; padding: 28px 36px 48px; max-width: 1680px; margin: 0 auto; }
+.panel.active { display: block; }
+
+/* ── KPI cards ─────────────────────────────────────────── */
+.kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 24px; }
+.kpi-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--card-r); padding: 22px 24px;
+  box-shadow: var(--shadow); position: relative; overflow: hidden;
+}
+.kpi-card::after {
+  content: ''; position: absolute; top: 0; left: 0;
+  width: 4px; height: 100%; background: var(--accent, var(--teal));
+}
+.kpi-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 6px; }
+.kpi-value { font-size: 28px; font-weight: 800; line-height: 1.1; letter-spacing: -.5px; }
+.kpi-sub   { font-size: 12px; color: var(--muted); margin-top: 8px; }
+
+/* ── Section card ──────────────────────────────────────── */
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--card-r); padding: 22px 24px;
+  box-shadow: var(--shadow); margin-bottom: 20px;
+}
+.card h2 {
+  font-size: 14px; font-weight: 700; margin-bottom: 4px;
+}
+.card .sub { font-size: 12px; color: var(--muted); margin-bottom: 18px; }
+.section-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.4px;
+  text-transform: uppercase; color: var(--muted); margin: 28px 0 14px;
+}
+
+/* ── Gantt toolbar (filtros) ──────────────────────────────*/
+.gantt-toolbar {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 14px; margin-bottom: 16px;
+}
+.seg-control {
+  display: inline-flex; background: var(--surface2);
+  border: 1px solid var(--border); border-radius: 9px; padding: 3px;
+  gap: 2px;
+}
+.seg-btn {
+  border: none; background: none; color: var(--muted);
+  font-size: 12px; font-weight: 600; padding: 6px 14px;
+  border-radius: 7px; cursor: pointer; transition: all .15s;
+}
+.seg-btn.active { background: var(--teal); color: #07111f; }
+.seg-btn:hover:not(.active) { color: var(--text); }
+
+.nav-control {
+  display: flex; align-items: center; gap: 10px;
+}
+.nav-btn {
+  width: 30px; height: 30px; border-radius: 7px;
+  background: var(--surface2); border: 1px solid var(--border);
+  color: var(--text); font-size: 14px; cursor: pointer;
+  display: grid; place-items: center; transition: background .15s;
+}
+.nav-btn:hover:not(:disabled) { background: var(--border); }
+.nav-btn:disabled { opacity: .35; cursor: not-allowed; }
+.nav-label {
+  font-size: 12.5px; font-weight: 600; color: var(--text);
+  min-width: 150px; text-align: center;
+}
+.nav-label .nav-sub { display:block; font-size: 10.5px; color: var(--muted); font-weight: 500; margin-top: 1px; }
+
+/* ── Gantt ─────────────────────────────────────────────── */
+.gantt-wrap { overflow-x: auto; }
+.gantt-table { border-collapse: collapse; font-size: 0.72rem; min-width: 100%; }
+.gantt-table th, .gantt-table td {
+  border: 1px solid var(--border); padding: 3px 5px; white-space: nowrap;
+}
+.gantt-table th {
+  background: var(--surface2); color: var(--muted);
+  font-weight: 600; text-align: center;
+}
+.gantt-table th.day-weekend { background: #0c2038; }
+.gantt-table td.maq-label {
+  font-weight: 700; background: var(--surface2);
+  color: var(--teal); padding: 6px 10px; min-width: 60px;
+  position: sticky; left: 0; z-index: 2;
+}
+.gantt-table td.cell-idle {
+  background: var(--surface2); color: var(--muted);
+  text-align: center; font-size: 0.65rem;
+}
+.gantt-table td.cell-prod {
+  text-align: center; font-weight: 600; font-size: 0.7rem; cursor: default;
+}
+.gantt-table td.cell-prod.has-setup {
+  border-left: 3px solid var(--orange);
+}
+.gantt-table td.util-row {
+  text-align: center; font-size: 0.65rem; font-weight: 600;
+  padding: 2px 4px; background: var(--surface2);
+}
+.gantt-table td.util-label {
+  font-size: 0.65rem; color: var(--muted); background: var(--surface2);
+  padding: 2px 6px; font-style: italic;
+  position: sticky; left: 0; z-index: 2;
+}
+
+/* ── Legend ────────────────────────────────────────────── */
+.legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.legend-item { display: flex; align-items: center; gap: 5px; font-size: 0.73rem; color: var(--muted); }
+.legend-swatch { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+
+/* ── Tables ────────────────────────────────────────────── */
+table.data-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+table.data-table th {
+  background: var(--surface2); color: var(--muted);
+  padding: 9px 12px; text-align: left; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .6px; font-size: 11px;
+  border-bottom: 1px solid var(--border);
+}
+table.data-table td {
+  padding: 8px 12px; border-bottom: 1px solid var(--border); color: var(--text);
+}
+table.data-table tr:hover td { background: rgba(255,255,255,.03); }
+.pct-bar-wrap { background: rgba(255,255,255,.08); border-radius: 4px; height: 8px; min-width: 80px; }
+.pct-bar      { height: 8px; border-radius: 4px; background: var(--teal); transition: width .3s; }
+.pct-bar.warn { background: var(--orange); }
+.pct-bar.crit { background: var(--red); }
+.pill {
+  display: inline-block; border-radius: 6px;
+  padding: 2px 8px; font-size: 0.7rem; font-weight: 600;
+}
+.pill-ok   { background: rgba(61,201,142,.15);  color: var(--green); }
+.pill-warn { background: rgba(245,151,58,.15);  color: var(--orange); }
+.pill-miss { background: rgba(232,92,92,.15);   color: var(--red); }
+
+/* ── Heatmap restrições ────────────────────────────────── */
+.heat-ok   { background: var(--surface2);             color: var(--muted);   }
+.heat-med  { background: rgba(45,130,232,.10);         color: var(--blue);    }
+.heat-warn { background: rgba(245,151,58,.15);         color: var(--orange);  font-weight: 600; }
+.heat-crit { background: rgba(232,92,92,.20);          color: var(--red);     font-weight: 700; }
+.heat-over { background: rgba(232,92,92,.40);          color: #fff;           font-weight: 700; }
+
+/* Feasibility Matrix removida — dashboard ORT 30 dias */
+
+/* Chat IA removido — dashboard ORT 30 dias */
+
+/* ── Footer ────────────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 14px 36px; text-align: center;
+  font-size: 11px; color: var(--muted);
+}
+</style>
+</head>
+<body>
+
+<div class="notice" id="notice">
+  ⚠ Não foi possível carregar <code>sequenciamento_ort30dias_data.json</code>.
+  Execute: <code>python sequenciamento_30dias_ort.py</code>
+</div>
+
+<header>
+  <div class="brand">
+    <div class="logo">Σ</div>
+    <div>
+      <h1>Sequenciamento ORT – Horizonte 30 dias</h1>
+      <p id="hdr-sub">Carregando sequenciamento_ort30dias_data.json…</p>
+    </div>
+  </div>
+  <div class="hdr-right">
+    <span id="badge-modo" class="badge" style="display:none"></span>
+    <span id="badge-valid" style="display:none"></span>
+    <span class="badge">MILP · GLPK</span>
+  </div>
+</header>
+
+<nav class="tabs">
+  <button class="tab active" data-panel="ort">Unidade ORT</button>
+  <button class="tab" data-panel="rest">Restrições</button>
+</nav>
+
+<div id="panel-ort"  class="panel active"></div>
+<div id="panel-rest" class="panel"></div>
+
+<footer>Sequenciamento ORT · Pyomo + GLPK · Horizonte de 30 dias · Apenas Unidade ORT</footer>
+
+<script>
+let seqData = null;
+
+// ── Palette ───────────────────────────────────────────────────────────────────
+const PALETTE = [
+  '#00c9b1','#2d82e8','#f5973a','#e85c5c','#3dc98e','#a78bfa','#fb7185',
+  '#34d399','#60a5fa','#fbbf24','#c084fc','#4ade80','#38bdf8','#f472b6',
+  '#818cf8','#facc15','#a3e635','#22d3ee','#f87171','#e879f9','#86efac',
+  '#7dd3fc','#fca5a5','#d8b4fe','#6ee7b7','#93c5fd','#fde68a','#bef264',
+  '#67e8f9','#fbb6ce','#c7d2fe','#bbf7d0','#bae6fd','#fef08a','#d9f99d',
+  '#a5f3fc','#fecaca','#e9d5ff','#a7f3d0','#bfdbfe',
+];
+const colorMap = {};
+function getColor(prod) {
+  if (!colorMap[prod]) colorMap[prod] = PALETTE[Object.keys(colorMap).length % PALETTE.length];
+  return colorMap[prod];
+}
+function hexToRGBA(hex, a) {
+  const r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+  return `rgba(${r},${g},${b},${a})`;
+}
+
+// ── Tab navigation ────────────────────────────────────────────────────────────
+document.querySelectorAll('.tab').forEach(btn => {
+  btn.addEventListener('click', e => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-' + btn.dataset.panel).classList.add('active');
+  });
+});
+
+// ── Global state per unit (qual fatia de tempo o Gantt está mostrando) ────────
+const ganttState = {
+  ORT: { modo: 'semana', idx: 0 },
+};
+
+// ── Estado de navegação da aba Restrições (bloco de 60 dias) ─────────────────
+const restState = { ORT: { idx: 0 } };
+const REST_JANELA = 60;
+
+// ── Load data ─────────────────────────────────────────────────────────────────
+fetch('/data/sequenciamento_ort30dias_data.json')
+  .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
+  .then(data => render(data))
+  .catch(() => { document.getElementById('notice').classList.add('show'); });
+
+// ── Main render ───────────────────────────────────────────────────────────────
+function render(data) {
+  seqData = data;
+  const md = data.meta_dados || {};
+
+  const diasPeriodo = md.dias_periodo || md.total_dias_ano || 30;
+  const setupVal = typeof md.perda_setup_t === 'object'
+    ? md.perda_setup_default || Object.values(md.perda_setup_t)[0] || 20
+    : (md.perda_setup_t || 20);
+
+  document.getElementById('hdr-sub').textContent =
+    `Lote: ${md.lote_t || 700} t  ·  Perda setup: ${setupVal} t  ·  ` +
+    `Horizonte: ${diasPeriodo} dias  ·  Máquinas: MP27 · MP28 · MC25 · MC26`;
+
+  const badgeValid = document.getElementById('badge-valid');
+  const rg = data.resumo_geral || {};
+  if (rg.factibilidade_anual !== undefined) {
+    badgeValid.innerHTML = rg.factibilidade_anual
+      ? '<span class="badge badge-ok">✓ Plano Factível</span>'
+      : '<span class="badge badge-fail">⚠ Com Restrições</span>';
+    badgeValid.style.display = 'inline-block';
+  }
+
+  renderUnitPanel('ort', data, 'ORT', md.maquinas_ORT || [27, 28, 25, 26]);
+  renderRestricoes(data);
+}
+
+// ── Helpers de schedule / ciclos ────────────────────────────────────────────────
+function getSchedule(data, unit) {
+  // Prioriza schedule_v2 (enriquecido com toneladas/semana/ciclo); cai para
+  // o schedule consolidado simples caso a Seção 15 não tenha sido rodada.
+  return (data.schedule_v2 || {})[unit] || (data.schedule || {})[unit] || {};
+}
+function getCiclos(data, unit) {
+  return ((data.ciclos || {})[unit]) || [];
+}
+
+/** Constrói a lista de "blocos de semana" (1-indexada) cobrindo todo o ano
+ *  sequenciado, cada bloco = {label, dias:[d_ini,d_fim]} */
+function buildWeekBlocks(totalDias) {
+  const blocks = [];
+  let d = 1, semana = 1;
+  while (d <= totalDias) {
+    const fim = Math.min(d + 6, totalDias);
+    blocks.push({ idx: semana - 1, label: `Semana ${semana}`, dias: [d, fim] });
+    d = fim + 1;
+    semana++;
+  }
+  return blocks;
+}
+
+/** Constrói os blocos de ciclo (60 dias) a partir dos dados de 'ciclos' já
+ *  calculados pelo MILP (preserva os limites reais, não reinventa). */
+function buildCycleBlocks(ciclosData) {
+  return ciclosData.map((c, i) => ({
+    idx: i, label: `Ciclo ${c.ciclo}`, dias: c.dias, status: c.status, ritmo_ok: c.ritmo_ok,
+  }));
+}
+
+// ── Unit panel ────────────────────────────────────────────────────────────────
+function renderUnitPanel(panelId, data, unit, maquinas) {
+  const el     = document.getElementById('panel-' + panelId);
+  const resumo = (data.resumo_producao_v2 || data.resumo_producao || {})[unit] || {};
+  const md     = data.meta_dados || {};
+
+  let totalProd = 0, totalMeta = 0, totalFolga = 0, totalSetups = 0, totalHoras = 0;
+  for (const [, mdict] of Object.entries(resumo)) {
+    for (const [, v] of Object.entries(mdict)) {
+      totalProd   += v.produzido_t ?? v.total_t ?? 0;
+      totalMeta   += v.meta_t      ?? 0;
+      totalFolga  += v.folga_t     ?? 0;
+      totalSetups += v.n_setups    ?? 0;
+      totalHoras  += v.horas_tot   ?? 0;
+    }
+  }
+  const cobertura = totalMeta > 0 ? 100 * totalProd / totalMeta : 100;
+  // perda_setup_t é dict por máquina; usar default por unidade
+  const perdaDefault = unit === 'ORT'
+    ? (md.perda_setup_default_ort || 20)
+    : (md.perda_setup_default_ma  || 20);
+  const perdaSetup = totalSetups * perdaDefault;
+
+  el.innerHTML = `
+    <p class="section-label">Indicadores – ${unit}</p>
+    <div class="kpi-row">
+      <div class="kpi-card" style="--accent:var(--teal)">
+        <div class="kpi-label">Produção Total (ano)</div>
+        <div class="kpi-value">${fmt1(totalProd)} t</div>
+      </div>
+      <div class="kpi-card" style="--accent:var(--blue)">
+        <div class="kpi-label">Meta Anual Total</div>
+        <div class="kpi-value">${fmt1(totalMeta)} t</div>
+      </div>
+      <div class="kpi-card" style="--accent:${cobertura >= 98 ? 'var(--green)' : cobertura >= 80 ? 'var(--orange)' : 'var(--red)'}">
+        <div class="kpi-label">Cobertura de Meta</div>
+        <div class="kpi-value">${cobertura.toFixed(1)}%</div>
+        <div class="kpi-sub">Folga: ${fmt1(totalFolga)} t</div>
+      </div>
+      <div class="kpi-card" style="--accent:var(--orange)">
+        <div class="kpi-label">Horas Totais Utilizadas</div>
+        <div class="kpi-value">${fmt1(totalHoras)} h</div>
+        <div class="kpi-sub">Setups: ${totalSetups} (−${fmt1(perdaSetup)} t)</div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Gantt de Produção – ORT (MP27 · MP28 · MC25 · MC26)</h2>
+      <p class="sub">Borda laranja = setup · linha % = utilização de horas da máquina no dia</p>
+      <div class="gantt-toolbar">
+        <div class="seg-control" data-unit="${unit}" data-role="modo">
+          <button class="seg-btn" data-mode="semana">Por semana</button>
+          <button class="seg-btn" data-mode="ciclo">Por ciclo</button>
+        </div>
+        <div class="nav-control" data-unit="${unit}" data-role="nav">
+          <button class="nav-btn" data-dir="-1">‹</button>
+          <span class="nav-label" data-role="navlabel"></span>
+          <button class="nav-btn" data-dir="1">›</button>
+        </div>
+      </div>
+      <div class="gantt-wrap" id="gantt-${unit}"></div>
+      <div class="legend" id="legend-${unit}"></div>
+    </div>
+    <div class="card">
+      <h2>Resumo por Produto e Máquina</h2>
+      <div id="resumo-${unit}"></div>
+    </div>`;
+
+  // Wire up toolbar controls
+  const segWrap = el.querySelector(`.seg-control[data-unit="${unit}"]`);
+  segWrap.querySelectorAll('.seg-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      ganttState[unit].modo = btn.dataset.mode;
+      ganttState[unit].idx  = 0;
+      refreshGantt(data, unit, maquinas);
+    });
+  });
+  const navWrap = el.querySelector(`.nav-control[data-unit="${unit}"]`);
+  navWrap.querySelectorAll('.nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      ganttState[unit].idx += parseInt(btn.dataset.dir, 10);
+      refreshGantt(data, unit, maquinas);
+    });
+  });
+
+  refreshGantt(data, unit, maquinas);
+  buildResumoTable(`resumo-${unit}`, resumo);
+}
+
+function refreshGantt(data, unit, maquinas) {
+  const state   = ganttState[unit];
+  const sched   = getSchedule(data, unit);
+  const ciclos  = getCiclos(data, unit);
+  const md      = data.meta_dados || {};
+  const totalDias = md.total_dias_ano || 365;
+
+  // Decide blocks based on mode
+  let blocks;
+  if (state.modo === 'ciclo') {
+    blocks = ciclos.length ? buildCycleBlocks(ciclos) : buildWeekBlocks(totalDias);
+  } else {
+    blocks = buildWeekBlocks(totalDias);
+  }
+  if (state.idx < 0) state.idx = 0;
+  if (state.idx > blocks.length - 1) state.idx = blocks.length - 1;
+  const block = blocks[state.idx];
+
+  // Update toolbar UI (active seg button + nav label/disabled state)
+  const panel = document.getElementById('panel-' + unit.toLowerCase());
+  panel.querySelectorAll(`.seg-control[data-unit="${unit}"] .seg-btn`).forEach(b => {
+    b.classList.toggle('active', b.dataset.mode === state.modo);
+  });
+  const navLabel = panel.querySelector(`.nav-control[data-unit="${unit}"] [data-role="navlabel"]`);
+  navLabel.innerHTML = `${block.label}<span class="nav-sub">dias ${block.dias[0]}–${block.dias[1]}</span>`;
+  const [prevBtn, nextBtn] = panel.querySelectorAll(`.nav-control[data-unit="${unit}"] .nav-btn`);
+  prevBtn.disabled = state.idx <= 0;
+  nextBtn.disabled = state.idx >= blocks.length - 1;
+
+  const utilHoras = (data.utilizacao_horas_maquina || {})[unit] || null;
+  buildGantt(`gantt-${unit}`, `legend-${unit}`, sched, maquinas, block.dias, data.utilizacao_restricoes ? data.utilizacao_restricoes[unit] : null, utilHoras);
+}
+
+function buildGantt(ganttId, legendId, sched, maquinas, diaRange, utilSerie, utilHorasMaquina) {
+  const wrap  = document.getElementById(ganttId);
+  const legEl = document.getElementById(legendId);
+  const [diaIni, diaFim] = diaRange;
+
+  // Pre-assign colors (sobre o conjunto completo de produtos visíveis nesta fatia)
+  const allProds = new Set();
+  for (const m of maquinas) {
+    for (const lote of (sched[String(m)] || [])) {
+      if (lote.dia_inicio <= diaFim && lote.dia_fim >= diaIni) allProds.add(lote.produto);
+    }
+  }
+  allProds.forEach(p => getColor(p));
+
+  let html = '<table class="gantt-table"><thead><tr><th>MP</th>';
+  for (let d = diaIni; d <= diaFim; d++) {
+    const isWeekend = ((d - 1) % 7) >= 5; // aproximação de fim de semana dentro do bloco
+    html += `<th class="${isWeekend ? 'day-weekend' : ''}">${d}</th>`;
+  }
+  html += '</tr></thead><tbody>';
+
+  for (const m of maquinas) {
+    const lotes = (sched[String(m)] || []).filter(l => l.dia_inicio <= diaFim && l.dia_fim >= diaIni);
+    // Para cada dia, lista de lotes que tocam aquele dia
+    const byDay = {};
+    for (const l of lotes) {
+      for (let d = Math.max(l.dia_inicio, diaIni); d <= Math.min(l.dia_fim, diaFim); d++) {
+        if (!byDay[d]) byDay[d] = [];
+        byDay[d].push(l);
+      }
+    }
+
+    const vol = l => (l.toneladas_brutas ?? l.toneladas ?? 0);
+
+    // Pré-calcula o best por volume e o lote de setup por dia
+    const bestPorDia = {};
+    const setupPorDia = {};
+    for (let d = diaIni; d <= diaFim; d++) {
+      const daySlots = byDay[d] || [];
+      if (daySlots.length > 0) {
+        bestPorDia[d] = daySlots.reduce((a, b) => (vol(b) > vol(a) ? b : a));
+        // Lote que INICIA neste dia com setup_t > 0 (troca real garantida pelo Python)
+        const loteSetup = daySlots.find(l => l.dia_inicio === d && (l.setup_t ?? 0) > 0);
+        if (loteSetup) setupPorDia[d] = loteSetup;
+      }
+    }
+
+    // Mapa de qual produto NOVO estreia em cada dia (considerando todos os lotes,
+    // não só o best). Um lote "estreia" no seu dia_inicio dentro da janela visível.
+    // Isso garante que transições onde o lote antigo domina o volume não se percam.
+    const novosPorDia = {};
+    for (const l of (sched[String(m)] || [])) {
+      const d = l.dia_inicio;
+      if (d >= diaIni && d <= diaFim) {
+        if (!novosPorDia[d]) novosPorDia[d] = [];
+        novosPorDia[d].push(l);
+      }
+    }
+
+    html += `<tr><td class="maq-label">${maqLabel(m)}</td>`;
+    for (let d = diaIni; d <= diaFim; d++) {
+      const daySlots = byDay[d] || [];
+      if (daySlots.length > 0) {
+        const best = bestPorDia[d];
+        const col  = getColor(best.produto);
+        const bg   = hexToRGBA(col, 0.18);
+
+        // Borda laranja: existe lote com setup_t > 0 iniciando hoje
+        // (produto_anterior != produto já garantido pelo Python ao gerar setup_t > 0)
+        const loteSetup = setupPorDia[d];
+        const temSetup  = !!loteSetup;
+        const setupCls  = temSetup ? ' has-setup' : '';
+        const setupInfo = temSetup
+          ? ` | Setup: ${loteSetup.setup_t}t (de ${loteSetup.produto_anterior ?? '—'} → ${loteSetup.produto})`
+          : '';
+        const tip = daySlots.map(l =>
+          `${l.produto} (lote ${l.lote_num}): ${vol(l).toLocaleString('pt-BR')} t`
+        ).join(' | ') + setupInfo;
+        html += `<td class="cell-prod${setupCls}" style="background:${bg};color:${col}" title="${tip}">${best.produto.slice(0,6)}</td>`;
+      } else {
+        html += '<td class="cell-idle">—</td>';
+      }
+    }
+    html += '</tr>';
+
+    // Hour utilization row — lê o valor REAL exportado por
+    // utilizacao_horas_maquina (calculado por empacotar_lotes em
+    // sequenciamento_v2.py), não uma aproximação local.
+    html += `<tr><td class="util-label">%h</td>`;
+    const utilMaqDias = (utilHorasMaquina || {})[String(m)] || {};
+    for (let d = diaIni; d <= diaFim; d++) {
+      const info = utilMaqDias[String(d)];
+      const usado = info ? info.usado_h : 0;
+      const pct   = info ? info.pct : 0;
+      const txt = usado > 0 ? usado.toFixed(1) + 'h' : '—';
+      let cls = 'color:var(--muted)';
+      if (pct >= 95) cls = 'color:var(--red)';
+      else if (pct >= 80) cls = 'color:var(--orange)';
+      else if (usado > 0) cls = 'color:var(--green)';
+      html += `<td class="util-row" style="${cls}" title="${pct.toFixed(1)}% da capacidade">${txt}</td>`;
+    }
+    html += '</tr>';
+  }
+  html += '</tbody></table>';
+  wrap.innerHTML = html;
+
+  legEl.innerHTML = [...allProds].sort().map(p =>
+    `<div class="legend-item"><div class="legend-swatch" style="background:${getColor(p)}"></div>${p}</div>`
+  ).join('') || '<div class="legend-item" style="color:var(--muted)">Sem produção nesta fatia de tempo.</div>';
+}
+
+function buildResumoTable(elId, resumo) {
+  const el = document.getElementById(elId);
+  let rows = [];
+  for (const [p, mdict] of Object.entries(resumo))
+    for (const [m, v] of Object.entries(mdict))
+      rows.push({p, m: parseInt(m), ...v});
+  rows.sort((a, b) => a.p.localeCompare(b.p) || a.m - b.m);
+
+  const head = `<thead><tr>
+    <th>Produto</th><th>MP</th><th>Realizado (t)</th><th>Meta (t)</th>
+    <th>Cobertura</th><th>Folga (t)</th><th>Horas</th><th>Dias</th><th>Setups</th>
+  </tr></thead>`;
+
+  const body = rows.map(r => {
+    const total = r.produzido_t ?? r.total_t ?? 0;
+    const meta  = r.meta_t ?? 0;
+    const folga = r.folga_t ?? (meta - total);
+    const cob   = meta > 0 ? 100 * total / meta : 100;
+    const cls   = folga > 0.5 ? 'pill-miss' : cob >= 98 ? 'pill-ok' : 'pill-warn';
+    const bcls  = cob >= 95 ? '' : cob >= 80 ? 'warn' : 'crit';
+    return `<tr>
+      <td>${r.p}</td><td>${maqLabel(r.m)}</td>
+      <td>${fmt1(total)}</td><td>${fmt1(meta)}</td>
+      <td>
+        <div style="display:flex;align-items:center;gap:6px">
+          <div class="pct-bar-wrap"><div class="pct-bar ${bcls}" style="width:${Math.min(cob,100).toFixed(0)}%"></div></div>
+          <span class="pill ${cls}">${cob.toFixed(1)}%</span>
+        </div>
+      </td>
+      <td>${fmt1(folga)}</td>
+      <td>${fmt1(r.horas_tot || 0)}</td>
+      <td>${r.dias_prod ?? '—'}</td><td>${r.n_setups ?? '—'}</td>
+    </tr>`;
+  }).join('');
+
+  el.innerHTML = `<table class="data-table">${head}<tbody>${body}</tbody></table>`;
+}
+
+// ── Restrições ────────────────────────────────────────────────────────────────
+function renderRestricoes(data) {
+  const el   = document.getElementById('panel-rest');
+  const util = data.utilizacao_restricoes || {};
+  const lims = data.limites || {};
+  const diag = data.diagnostico || {};
+
+  // Monta estrutura fixa (toolbar + tabelas + diagnóstico)
+  let html = '';
+
+  for (const unit of ['ORT']) {
+    const dias  = util[unit] || [];
+    const lim   = lims[unit] || {};
+    const rests = Object.keys(lim);
+    if (!rests.length) continue;
+    if (!dias.length) {
+      html += `<div class="card">
+    <h2>Utilização Diária de Restrições – ${unit}</h2>
+    <p style="color:var(--orange);margin-top:8px">
+      ⚠ Dados de utilização diária não disponíveis no JSON atual.<br>
+      Execute: <code>python sequenciamento_30dias_ort.py</code>
+    </p>
+  </div>`;
+      continue;
+    }
+
+    const totalDias  = dias.length;
+    const nBlocos    = Math.ceil(totalDias / REST_JANELA);
+
+    html += `
+    <div class="card">
+      <h2>Utilização Diária de Restrições – ${unit}</h2>
+      <div class="gantt-toolbar" style="margin-bottom:12px">
+        <p class="sub" style="margin:0" id="rest-sub-${unit}"></p>
+        <div class="nav-control">
+          <button class="nav-btn" id="rest-prev-${unit}" data-unit="${unit}" data-dir="-1">‹</button>
+          <span class="nav-label" id="rest-label-${unit}" style="min-width:120px;text-align:center"></span>
+          <button class="nav-btn" id="rest-next-${unit}" data-unit="${unit}" data-dir="1">›</button>
+        </div>
+      </div>
+      <div class="gantt-wrap" id="rest-table-${unit}"></div>
+    </div>`;
+  }
+
+  // Diagnóstico de violações
+  const allDiag = [...(diag.ORT || [])];
+  if (allDiag.length > 0) {
+    html += `<div class="card"><h2 style="color:var(--orange)">⚠ Violações de Balanço Detectadas</h2>
+      <table class="data-table"><thead><tr>
+        <th>Restrição</th><th>Dia</th><th>Excesso</th><th>Usado</th><th>Limite</th>
+      </tr></thead><tbody>`;
+    for (const d of (diag.ORT || [])) {
+      html += `<tr>
+        <td>${d.restricao}</td><td>D${d.dia}</td>
+        <td><span class="pill pill-miss">${(d.excesso_pct||0).toFixed(1)}%</span></td>
+        <td>${(d.usado||0).toFixed(4)}</td><td>${(d.limite||0).toFixed(4)}</td>
+      </tr>`;
+    }
+    html += '</tbody></table></div>';
+  } else {
+    html += `<div class="card"><p style="color:var(--green);font-weight:600">✓ Nenhuma violação diária de balanço detectada.</p></div>`;
+  }
+
+  el.innerHTML = html || '<div style="padding:20px;color:var(--muted)">Sem dados de restrições.</div>';
+
+  // Wire up navegação e renderiza bloco inicial para ORT
+  for (const unit of ['ORT']) {
+    const dias  = util[unit] || [];
+    const lim   = lims[unit] || {};
+    const rests = Object.keys(lim);
+    if (!rests.length) continue;
+
+    const renderBlocoRest = () => {
+      const idx    = restState[unit].idx;
+      const inicio = idx * REST_JANELA;
+      const fim    = Math.min(inicio + REST_JANELA, dias.length);
+      const amostra = dias.slice(inicio, fim);
+      const nBlocos = Math.ceil(dias.length / REST_JANELA);
+
+      // Atualiza label e botões
+      const dIni = amostra.length ? amostra[0].dia : inicio + 1;
+      const dFim = amostra.length ? amostra[amostra.length - 1].dia : fim;
+      document.getElementById(`rest-label-${unit}`).textContent =
+        `Dias ${dIni}–${dFim}`;
+      document.getElementById(`rest-sub-${unit}`).textContent =
+        `Bloco ${idx + 1} de ${nBlocos} · ${amostra.length} dias`;
+      document.getElementById(`rest-prev-${unit}`).disabled = idx <= 0;
+      document.getElementById(`rest-next-${unit}`).disabled = idx >= nBlocos - 1;
+
+      // Monta tabela
+      let tbl = `<table class="data-table" style="font-size:0.75rem">
+        <thead><tr><th>Restrição</th>`;
+      for (const dInfo of amostra) tbl += `<th>D${dInfo.dia}</th>`;
+      tbl += `<th>Limite</th></tr></thead><tbody>`;
+
+      for (const r of rests) {
+        tbl += `<tr><td style="font-weight:600;min-width:140px">${r}</td>`;
+        for (const diaInfo of amostra) {
+          const v   = diaInfo[r] || {};
+          const pct = v.pct || 0;
+          let cls = 'heat-ok';
+          if      (pct >= 100) cls = 'heat-over';
+          else if (pct >=  95) cls = 'heat-crit';
+          else if (pct >=  80) cls = 'heat-warn';
+          else if (pct >=  60) cls = 'heat-med';
+          const txt = v.usado != null ? pct.toFixed(0) + '%' : '—';
+
+          // Tooltip detalhado
+          let tipLines = [`Dia ${diaInfo.dia} — ${r}`];
+          if (v.usado != null) {
+            tipLines.push(`Usado:  ${v.usado.toFixed(4)}`);
+            tipLines.push(`Limite: ${(v.limite ?? lim[r] ?? 0).toFixed(4)}`);
+            tipLines.push(`Utiliz: ${pct.toFixed(1)}%`);
+            if (pct >= 100) {
+              const excesso = v.usado - (v.limite ?? lim[r] ?? 0);
+              tipLines.push(`Excesso: +${excesso.toFixed(4)} (${(pct - 100).toFixed(1)}%)`);
+            }
+          }
+          const prods = getProdutosNoDia(data, unit, diaInfo.dia);
+          if (prods.length) {
+            tipLines.push('');
+            tipLines.push('Produção no dia:');
+            prods.forEach(p => tipLines.push('  ' + p));
+          }
+          const tip = tipLines.join('\n');
+
+          tbl += `<td class="${cls}" style="text-align:center;cursor:default" title="${tip}">${txt}</td>`;
+        }
+        tbl += `<td style="text-align:right;font-weight:600;color:var(--muted)">${(lim[r]||0).toFixed(2)}</td>`;
+        tbl += '</tr>';
+      }
+      tbl += '</tbody></table>';
+      document.getElementById(`rest-table-${unit}`).innerHTML = tbl;
+    };
+
+    // Eventos dos botões de navegação
+    document.getElementById(`rest-prev-${unit}`).addEventListener('click', () => {
+      if (restState[unit].idx > 0) { restState[unit].idx--; renderBlocoRest(); }
+    });
+    document.getElementById(`rest-next-${unit}`).addEventListener('click', () => {
+      const nBlocos = Math.ceil(dias.length / REST_JANELA);
+      if (restState[unit].idx < nBlocos - 1) { restState[unit].idx++; renderBlocoRest(); }
+    });
+
+    // Renderiza bloco inicial
+    renderBlocoRest();
+  }
+}
+
+
+
+
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
+function maqLabel(m) {
+  return (m === 25 || m === 26) ? `MC${m}` : `MP${m}`;
+}
+
+function fmt1(v) {
+  return (v || 0).toLocaleString('pt-BR', {minimumFractionDigits: 1, maximumFractionDigits: 1});
+}
+
+/**
+ * Retorna lista de strings descrevendo os produtos rodando no dia `dia`
+ * para a unidade `unit`, cruzando com schedule_v2.
+ * Ex: ["CKF332 (MP28) — 21.4h", "LWE175 (MP28) — 3.2h"]
+ */
+function getProdutosNoDia(data, unit, dia) {
+  const sched = (data.schedule_v2 || {})[unit] || {};
+  const encontrados = [];
+  for (const [maq, lotes] of Object.entries(sched)) {
+    for (const lote of lotes) {
+      if (lote.dia_inicio <= dia && lote.dia_fim >= dia) {
+        const hpd = lote.horas_por_dia || {};
+        const h   = hpd[String(dia)] ?? null;
+        const hStr = h != null ? `${h.toFixed(1)}h` : '—';
+        encontrados.push(`${lote.produto} (MP${maq}) — ${hStr}`);
+      }
+    }
+  }
+  // Remove duplicatas (mesmo produto/máquina pode aparecer em ciclos consecutivos)
+  return [...new Set(encontrados)];
+}
+</script>
+</body>
+</html>

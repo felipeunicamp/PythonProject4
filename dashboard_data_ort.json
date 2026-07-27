@@ -1,0 +1,6642 @@
+{
+  "dias_periodo": 7,
+  "fo_reais": 378736071.61792815,
+  "producao_bruta_total": 44142.36250730224,
+  "producao_vendavel_total": 43248.41823256708,
+  "bruta_por_maquina": {
+    "25": 20526.3638658632,
+    "26": 8692.215838885086,
+    "27": 6062.443186206041,
+    "28": 8861.339616347912
+  },
+  "vendavel_por_mercado": {
+    "Transferência": 8911.695932793706,
+    "MI": 33192.1548075922,
+    "ME": 1144.567492181174
+  },
+  "cobertura_por_produto": [
+    {
+      "produto": "CBA205",
+      "mercado": "MI",
+      "demanda": 112.64762885093718,
+      "atendida": 8.27637367097271,
+      "nao_atendida": 104.371255179964
+    },
+    {
+      "produto": "CBA210",
+      "mercado": "MI",
+      "demanda": 64.52707944759752,
+      "atendida": 0.0,
+      "nao_atendida": 64.5270794475975
+    },
+    {
+      "produto": "CBA227",
+      "mercado": "MI",
+      "demanda": 15.288895820497217,
+      "atendida": 2.00084072819048,
+      "nao_atendida": 13.2880550923067
+    },
+    {
+      "produto": "CBA233",
+      "mercado": "MI",
+      "demanda": 93.5711459296855,
+      "atendida": 12.9125406013339,
+      "nao_atendida": 80.6586053283516
+    },
+    {
+      "produto": "CBA255",
+      "mercado": "ME",
+      "demanda": 6.547190892502879,
+      "atendida": 0.0,
+      "nao_atendida": 6.54719089250288
+    },
+    {
+      "produto": "CBA255",
+      "mercado": "MI",
+      "demanda": 50.40490208119219,
+      "atendida": 17.4457665581582,
+      "nao_atendida": 32.959135523034
+    },
+    {
+      "produto": "CBA276",
+      "mercado": "ME",
+      "demanda": 128.37629072609755,
+      "atendida": 0.0,
+      "nao_atendida": 128.376290726098
+    },
+    {
+      "produto": "CBA276",
+      "mercado": "MI",
+      "demanda": 153.31540966942535,
+      "atendida": 58.7010540641767,
+      "nao_atendida": 94.6143556052487
+    },
+    {
+      "produto": "CBA285",
+      "mercado": "MI",
+      "demanda": 65.70005852798644,
+      "atendida": 6.86137843928429,
+      "nao_atendida": 58.8386800887022
+    },
+    {
+      "produto": "CBA300",
+      "mercado": "MI",
+      "demanda": 14.10339362232034,
+      "atendida": 4.40259197923236,
+      "nao_atendida": 9.70080164308798
+    },
+    {
+      "produto": "CBA312",
+      "mercado": "MI",
+      "demanda": 103.96949079589896,
+      "atendida": 13.9910714282478,
+      "nao_atendida": 89.9784193676512
+    },
+    {
+      "produto": "CBA318",
+      "mercado": "ME",
+      "demanda": 256.75258530348384,
+      "atendida": 0.0,
+      "nao_atendida": 256.752585303484
+    },
+    {
+      "produto": "CBA318",
+      "mercado": "MI",
+      "demanda": 44.475211507840115,
+      "atendida": 7.07835225794759,
+      "nao_atendida": 37.3968592498925
+    },
+    {
+      "produto": "CBA332",
+      "mercado": "MI",
+      "demanda": 32.260775817591615,
+      "atendida": 0.0,
+      "nao_atendida": 32.2607758175916
+    },
+    {
+      "produto": "CBA358",
+      "mercado": "MI",
+      "demanda": 5.306510911382704,
+      "atendida": 0.0,
+      "nao_atendida": 5.3065109113827
+    },
+    {
+      "produto": "CBA360",
+      "mercado": "MI",
+      "demanda": 33.08308003650214,
+      "atendida": 9.51537046897514,
+      "nao_atendida": 23.567709567527
+    },
+    {
+      "produto": "CHD278",
+      "mercado": "MI",
+      "demanda": 26.585425732682467,
+      "atendida": 0.0,
+      "nao_atendida": 26.5854257326825
+    },
+    {
+      "produto": "CHD318",
+      "mercado": "ME",
+      "demanda": 428.5360138835195,
+      "atendida": 428.53601388352,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CHD318",
+      "mercado": "MI",
+      "demanda": 1201.5375899743024,
+      "atendida": 1201.5375899743,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CHD358",
+      "mercado": "ME",
+      "demanda": 99.85305177868406,
+      "atendida": 0.0,
+      "nao_atendida": 99.8530517786841
+    },
+    {
+      "produto": "CHD358",
+      "mercado": "MI",
+      "demanda": 76.17033605270869,
+      "atendida": 0.0,
+      "nao_atendida": 76.1703360527087
+    },
+    {
+      "produto": "CKF205",
+      "mercado": "ME",
+      "demanda": 67.59276194657345,
+      "atendida": 0.0,
+      "nao_atendida": 67.5927619465734
+    },
+    {
+      "produto": "CKF205",
+      "mercado": "MI",
+      "demanda": 282.7771599550206,
+      "atendida": 239.207252050449,
+      "nao_atendida": 43.5699079045716
+    },
+    {
+      "produto": "CKF227",
+      "mercado": "ME",
+      "demanda": 32.08064948518932,
+      "atendida": 32.0806494851893,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKF227",
+      "mercado": "MI",
+      "demanda": 26.690595723063424,
+      "atendida": 26.6905957230634,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKF233",
+      "mercado": "ME",
+      "demanda": 6.259638923939378,
+      "atendida": 6.25963892393938,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKF233",
+      "mercado": "MI",
+      "demanda": 373.26081226308577,
+      "atendida": 373.260812263086,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKF250",
+      "mercado": "ME",
+      "demanda": 184.65934825621187,
+      "atendida": 184.659348256212,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKF250",
+      "mercado": "MI",
+      "demanda": 323.94560727174877,
+      "atendida": 323.945607271749,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKF276",
+      "mercado": "ME",
+      "demanda": 276.20656751882467,
+      "atendida": 276.206567518825,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKF276",
+      "mercado": "MI",
+      "demanda": 500.30786747892904,
+      "atendida": 500.307867478929,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKF285",
+      "mercado": "ME",
+      "demanda": 96.24194845556814,
+      "atendida": 96.2419484555681,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKF285",
+      "mercado": "MI",
+      "demanda": 106.57340684845323,
+      "atendida": 106.573406848453,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKF312",
+      "mercado": "ME",
+      "demanda": 37.557833543636384,
+      "atendida": 37.5578335436364,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKF312",
+      "mercado": "MI",
+      "demanda": 373.06212666733455,
+      "atendida": 373.062126667334,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKF332",
+      "mercado": "ME",
+      "demanda": 9.389458385909078,
+      "atendida": 0.0,
+      "nao_atendida": 9.38945838590908
+    },
+    {
+      "produto": "CKF332",
+      "mercado": "MI",
+      "demanda": 144.4261772173721,
+      "atendida": 0.0,
+      "nao_atendida": 144.426177217372
+    },
+    {
+      "produto": "CKF360",
+      "mercado": "ME",
+      "demanda": 18.778916771818157,
+      "atendida": 18.7789167718182,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKF360",
+      "mercado": "MI",
+      "demanda": 257.8267352705984,
+      "atendida": 257.826735270598,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKQ232",
+      "mercado": "MI",
+      "demanda": 6.615320984084266,
+      "atendida": 6.61532098408427,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKQ276",
+      "mercado": "ME",
+      "demanda": 45.06849315068494,
+      "atendida": 45.0684931506849,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKQ276",
+      "mercado": "MI",
+      "demanda": 150.5674619815012,
+      "atendida": 150.567461981501,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CKQ300",
+      "mercado": "MI",
+      "demanda": 160.8120215610206,
+      "atendida": 160.812021561021,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "CNT210",
+      "mercado": "ME",
+      "demanda": 8.63013698630137,
+      "atendida": 0.0,
+      "nao_atendida": 8.63013698630137
+    },
+    {
+      "produto": "CNT210",
+      "mercado": "MI",
+      "demanda": 10.445084820216987,
+      "atendida": 0.0,
+      "nao_atendida": 10.445084820217
+    },
+    {
+      "produto": "CNT233",
+      "mercado": "ME",
+      "demanda": 14.383561643835618,
+      "atendida": 0.0,
+      "nao_atendida": 14.3835616438356
+    },
+    {
+      "produto": "CNT233",
+      "mercado": "MI",
+      "demanda": 8.952929845900275,
+      "atendida": 0.0,
+      "nao_atendida": 8.95292984590028
+    },
+    {
+      "produto": "CNT276",
+      "mercado": "ME",
+      "demanda": 14.383561643835618,
+      "atendida": 0.0,
+      "nao_atendida": 14.3835616438356
+    },
+    {
+      "produto": "EKL100",
+      "mercado": "MI",
+      "demanda": 144.46017001461914,
+      "atendida": 144.460170014619,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "EKL100",
+      "mercado": "Transferência",
+      "demanda": 1904.8305364241485,
+      "atendida": 1904.83053642415,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "EKL110",
+      "mercado": "Transferência",
+      "demanda": 639.5455460657162,
+      "atendida": 639.545546065716,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "EKL120",
+      "mercado": "MI",
+      "demanda": 63.923868103308166,
+      "atendida": 63.9238681033082,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "EKL120",
+      "mercado": "Transferência",
+      "demanda": 1480.8947377194543,
+      "atendida": 1480.89473771945,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "EKL135",
+      "mercado": "Transferência",
+      "demanda": 689.4203459133257,
+      "atendida": 689.420345913326,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "EKL150",
+      "mercado": "MI",
+      "demanda": 20.401234501055782,
+      "atendida": 20.4012345010558,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "EKL150",
+      "mercado": "Transferência",
+      "demanda": 134.54262219617513,
+      "atendida": 134.542622196175,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "EKL170",
+      "mercado": "MI",
+      "demanda": 16.320987600844663,
+      "atendida": 16.3209876008447,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "EKL170",
+      "mercado": "Transferência",
+      "demanda": 97.56860597251313,
+      "atendida": 97.5686059725131,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "EKL200",
+      "mercado": "MI",
+      "demanda": 0.6800411500351939,
+      "atendida": 0.680041150035194,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "EKL200",
+      "mercado": "Transferência",
+      "demanda": 112.73268496908446,
+      "atendida": 112.732684969084,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "EKW135",
+      "mercado": "Transferência",
+      "demanda": 313.28123039592634,
+      "atendida": 313.281230395926,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "EKW150",
+      "mercado": "Transferência",
+      "demanda": 62.096594859773184,
+      "atendida": 62.0965948597732,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "EWC175",
+      "mercado": "ME",
+      "demanda": 341.9376386352932,
+      "atendida": 0.0,
+      "nao_atendida": 341.937638635293
+    },
+    {
+      "produto": "EWC190",
+      "mercado": "ME",
+      "demanda": 234.4345173976822,
+      "atendida": 0.0,
+      "nao_atendida": 234.434517397682
+    },
+    {
+      "produto": "EWC190",
+      "mercado": "Transferência",
+      "demanda": 67.12328767123287,
+      "atendida": 0.0,
+      "nao_atendida": 67.1232876712329
+    },
+    {
+      "produto": "EWP190",
+      "mercado": "ME",
+      "demanda": 58.017727639000746,
+      "atendida": 0.0,
+      "nao_atendida": 58.0177276390007
+    },
+    {
+      "produto": "EWP190",
+      "mercado": "MI",
+      "demanda": 345.2054794520548,
+      "atendida": 0.0,
+      "nao_atendida": 345.205479452055
+    },
+    {
+      "produto": "FCEP1",
+      "mercado": "MI",
+      "demanda": 21356.25205479452,
+      "atendida": 20526.3638658632,
+      "nao_atendida": 829.888188931342
+    },
+    {
+      "produto": "FL1700",
+      "mercado": "MI",
+      "demanda": 5969.650821917809,
+      "atendida": 5969.65082191781,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "FLE700",
+      "mercado": "MI",
+      "demanda": 835.3711780821918,
+      "atendida": 835.371178082192,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "FLEP1",
+      "mercado": "MI",
+      "demanda": 1231.7698630136988,
+      "atendida": 1231.7698630137,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "FTT700",
+      "mercado": "MI",
+      "demanda": 470.0492328767123,
+      "atendida": 470.049232876712,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "KKC205",
+      "mercado": "ME",
+      "demanda": 1812.2364586495767,
+      "atendida": 0.0,
+      "nao_atendida": 1812.23645864958
+    },
+    {
+      "produto": "KKC205",
+      "mercado": "MI",
+      "demanda": 725.7392925744875,
+      "atendida": 0.0,
+      "nao_atendida": 725.739292574488
+    },
+    {
+      "produto": "KKC227",
+      "mercado": "ME",
+      "demanda": 51.8216056206194,
+      "atendida": 0.0,
+      "nao_atendida": 51.8216056206194
+    },
+    {
+      "produto": "KKC233",
+      "mercado": "ME",
+      "demanda": 1141.5872175359498,
+      "atendida": 0.0,
+      "nao_atendida": 1141.58721753595
+    },
+    {
+      "produto": "KKC233",
+      "mercado": "MI",
+      "demanda": 748.9150243717168,
+      "atendida": 0.0,
+      "nao_atendida": 748.915024371717
+    },
+    {
+      "produto": "KKC273",
+      "mercado": "MI",
+      "demanda": 184.29105997893532,
+      "atendida": 3.19892401187302e-14,
+      "nao_atendida": 184.291059978935
+    },
+    {
+      "produto": "KKC274",
+      "mercado": "ME",
+      "demanda": 862.6872844290208,
+      "atendida": 0.0,
+      "nao_atendida": 862.687284429021
+    },
+    {
+      "produto": "KKC274",
+      "mercado": "MI",
+      "demanda": 1861.8114665048492,
+      "atendida": 0.0,
+      "nao_atendida": 1861.81146650485
+    },
+    {
+      "produto": "KKC276",
+      "mercado": "ME",
+      "demanda": 882.6782754620868,
+      "atendida": 0.0,
+      "nao_atendida": 882.678275462087
+    },
+    {
+      "produto": "KKC276",
+      "mercado": "MI",
+      "demanda": 989.7226235580983,
+      "atendida": 0.0,
+      "nao_atendida": 989.722623558098
+    },
+    {
+      "produto": "KKC290",
+      "mercado": "ME",
+      "demanda": 606.1342894264864,
+      "atendida": 0.0,
+      "nao_atendida": 606.134289426486
+    },
+    {
+      "produto": "KKC290",
+      "mercado": "MI",
+      "demanda": 101.09316138352834,
+      "atendida": 0.0,
+      "nao_atendida": 101.093161383528
+    },
+    {
+      "produto": "KKC315",
+      "mercado": "ME",
+      "demanda": 58.18736175665173,
+      "atendida": 0.0,
+      "nao_atendida": 58.1873617566517
+    },
+    {
+      "produto": "KKC315",
+      "mercado": "MI",
+      "demanda": 28.385077894512932,
+      "atendida": 0.0,
+      "nao_atendida": 28.3850778945129
+    },
+    {
+      "produto": "KKC325",
+      "mercado": "ME",
+      "demanda": 485.1469884782491,
+      "atendida": 0.0,
+      "nao_atendida": 485.146988478249
+    },
+    {
+      "produto": "KKC325",
+      "mercado": "MI",
+      "demanda": 137.72073227201417,
+      "atendida": 0.0,
+      "nao_atendida": 137.720732272014
+    },
+    {
+      "produto": "KKL195",
+      "mercado": "ME",
+      "demanda": 588.0878096554712,
+      "atendida": -1.40426874105552e-13,
+      "nao_atendida": 588.087809655471
+    },
+    {
+      "produto": "KKL205",
+      "mercado": "ME",
+      "demanda": 239.57041572415864,
+      "atendida": 0.0,
+      "nao_atendida": 239.570415724159
+    },
+    {
+      "produto": "KKL273",
+      "mercado": "ME",
+      "demanda": 162.6731963402564,
+      "atendida": 0.0,
+      "nao_atendida": 162.673196340256
+    },
+    {
+      "produto": "KKL276",
+      "mercado": "ME",
+      "demanda": 346.1089663987085,
+      "atendida": 0.0,
+      "nao_atendida": 346.108966398709
+    },
+    {
+      "produto": "KKL315",
+      "mercado": "ME",
+      "demanda": 14.646446249122725,
+      "atendida": 0.0,
+      "nao_atendida": 14.6464462491227
+    },
+    {
+      "produto": "KKL325",
+      "mercado": "ME",
+      "demanda": 104.15250600947509,
+      "atendida": 0.0,
+      "nao_atendida": 104.152506009475
+    },
+    {
+      "produto": "KKS195",
+      "mercado": "ME",
+      "demanda": 9.592865653876919,
+      "atendida": 0.0,
+      "nao_atendida": 9.59286565387692
+    },
+    {
+      "produto": "KKS195",
+      "mercado": "MI",
+      "demanda": 35.71408592442773,
+      "atendida": 0.0,
+      "nao_atendida": 35.7140859244277
+    },
+    {
+      "produto": "KKS210",
+      "mercado": "ME",
+      "demanda": 88.59970717920729,
+      "atendida": 0.0,
+      "nao_atendida": 88.5997071792073
+    },
+    {
+      "produto": "KKS210",
+      "mercado": "MI",
+      "demanda": 329.85529759801454,
+      "atendida": 0.0,
+      "nao_atendida": 329.855297598015
+    },
+    {
+      "produto": "KKS250",
+      "mercado": "ME",
+      "demanda": 68.96761838951562,
+      "atendida": 0.0,
+      "nao_atendida": 68.9676183895156
+    },
+    {
+      "produto": "KKS250",
+      "mercado": "MI",
+      "demanda": 437.7356464804036,
+      "atendida": 0.0,
+      "nao_atendida": 437.735646480404
+    },
+    {
+      "produto": "KKS255",
+      "mercado": "ME",
+      "demanda": 62.976795078770145,
+      "atendida": 0.0,
+      "nao_atendida": 62.9767950787701
+    },
+    {
+      "produto": "KKS255",
+      "mercado": "MI",
+      "demanda": 399.71204966619644,
+      "atendida": 0.0,
+      "nao_atendida": 399.712049666196
+    },
+    {
+      "produto": "LLE150",
+      "mercado": "Transferência",
+      "demanda": 1139.2605889283107,
+      "atendida": 1139.26058892831,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "LLE170",
+      "mercado": "Transferência",
+      "demanda": 1479.1368061634357,
+      "atendida": 1479.13680616344,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "LLE200",
+      "mercado": "Transferência",
+      "demanda": 712.1767521144222,
+      "atendida": 712.176752114422,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "LLO090",
+      "mercado": "MI",
+      "demanda": 154.7458100667732,
+      "atendida": 0.0,
+      "nao_atendida": 154.745810066773
+    },
+    {
+      "produto": "LLO100",
+      "mercado": "MI",
+      "demanda": 323.4497611306606,
+      "atendida": 0.0,
+      "nao_atendida": 323.449761130661
+    },
+    {
+      "produto": "LLO100",
+      "mercado": "Transferência",
+      "demanda": 1187.797986964826,
+      "atendida": 0.0,
+      "nao_atendida": 1187.79798696483
+    },
+    {
+      "produto": "LLO110",
+      "mercado": "Transferência",
+      "demanda": 32.94123537789825,
+      "atendida": 0.0,
+      "nao_atendida": 32.9412353778983
+    },
+    {
+      "produto": "LLO125",
+      "mercado": "MI",
+      "demanda": 59.48580582967726,
+      "atendida": 0.0,
+      "nao_atendida": 59.4858058296773
+    },
+    {
+      "produto": "LLO125",
+      "mercado": "Transferência",
+      "demanda": 961.058371394873,
+      "atendida": 0.0,
+      "nao_atendida": 961.058371394873
+    },
+    {
+      "produto": "LLO135",
+      "mercado": "MI",
+      "demanda": 61.41582038730294,
+      "atendida": 0.0,
+      "nao_atendida": 61.4158203873029
+    },
+    {
+      "produto": "LLO135",
+      "mercado": "Transferência",
+      "demanda": 550.8126498107935,
+      "atendida": 0.0,
+      "nao_atendida": 550.812649810793
+    },
+    {
+      "produto": "LLO155",
+      "mercado": "Transferência",
+      "demanda": 942.7859751721888,
+      "atendida": 0.0,
+      "nao_atendida": 942.785975172189
+    },
+    {
+      "produto": "LLO170",
+      "mercado": "MI",
+      "demanda": 161.10796519780357,
+      "atendida": 0.0,
+      "nao_atendida": 161.107965197804
+    },
+    {
+      "produto": "LLO170",
+      "mercado": "Transferência",
+      "demanda": 581.0229003534373,
+      "atendida": 0.0,
+      "nao_atendida": 581.022900353437
+    },
+    {
+      "produto": "LWE175",
+      "mercado": "Transferência",
+      "demanda": 117.32100195176487,
+      "atendida": 117.321001951765,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "LWE200",
+      "mercado": "Transferência",
+      "demanda": 28.88787911965584,
+      "atendida": 28.8878791196558,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "WKC285",
+      "mercado": "ME",
+      "demanda": 19.178082191780824,
+      "atendida": 0.0,
+      "nao_atendida": 19.1780821917808
+    },
+    {
+      "produto": "WTP220",
+      "mercado": "MI",
+      "demanda": 255.095888098194,
+      "atendida": 0.0,
+      "nao_atendida": 255.095888098194
+    },
+    {
+      "produto": "WTP250",
+      "mercado": "ME",
+      "demanda": 13.698630136986296,
+      "atendida": 0.0,
+      "nao_atendida": 13.6986301369863
+    },
+    {
+      "produto": "WTP250",
+      "mercado": "MI",
+      "demanda": 45.341423775722994,
+      "atendida": 0.0,
+      "nao_atendida": 45.341423775723
+    },
+    {
+      "produto": "WTP265",
+      "mercado": "ME",
+      "demanda": 5.4794520547945265,
+      "atendida": 0.0,
+      "nao_atendida": 5.47945205479453
+    },
+    {
+      "produto": "WTP265",
+      "mercado": "MI",
+      "demanda": 250.86402187912492,
+      "atendida": 0.0,
+      "nao_atendida": 250.864021879125
+    },
+    {
+      "produto": "WTP300",
+      "mercado": "ME",
+      "demanda": 19.178082191780824,
+      "atendida": 0.0,
+      "nao_atendida": 19.1780821917808
+    },
+    {
+      "produto": "WTP300",
+      "mercado": "MI",
+      "demanda": 4.5341423775723175,
+      "atendida": 0.0,
+      "nao_atendida": 4.53414237757232
+    },
+    {
+      "produto": "WTP320",
+      "mercado": "MI",
+      "demanda": 28.716235057958002,
+      "atendida": 0.0,
+      "nao_atendida": 28.716235057958
+    },
+    {
+      "produto": "WTR345",
+      "mercado": "MI",
+      "demanda": 93.89589041095891,
+      "atendida": 0.0,
+      "nao_atendida": 93.8958904109589
+    },
+    {
+      "produto": "WUP215",
+      "mercado": "ME",
+      "demanda": 59.85669167049102,
+      "atendida": 0.0,
+      "nao_atendida": 59.856691670491
+    },
+    {
+      "produto": "WUP215",
+      "mercado": "MI",
+      "demanda": 9.484396542093373,
+      "atendida": 0.0,
+      "nao_atendida": 9.48439654209337
+    },
+    {
+      "produto": "WUP250",
+      "mercado": "ME",
+      "demanda": 19.178082191780824,
+      "atendida": 19.1780821917808,
+      "nao_atendida": 0.0
+    },
+    {
+      "produto": "WUP250",
+      "mercado": "MI",
+      "demanda": 51.57140619763271,
+      "atendida": 51.5714061976327,
+      "nao_atendida": 0.0
+    }
+  ],
+  "capacidade_por_maquina": {
+    "25": {
+      "usado": 149.13643835616577,
+      "disponivel": 149.1364383561656,
+      "ocioso": 0.0
+    },
+    "26": {
+      "usado": 145.21715417555603,
+      "disponivel": 152.50219178082065,
+      "ocioso": 7.28503760526462
+    },
+    "27": {
+      "usado": 100.71098383567323,
+      "disponivel": 142.0866638714269,
+      "ocioso": 41.3756800357536
+    },
+    "28": {
+      "usado": 143.14048577736403,
+      "disponivel": 143.1404857773641,
+      "ocioso": 0.0
+    }
+  },
+  "balanco_ORT": [
+    {
+      "nome": "Caustificação",
+      "usado": 17439.94596285196,
+      "limite": 20135.396
+    },
+    {
+      "nome": "Outorga Captação",
+      "usado": 2425.114705415017,
+      "limite": 8160.1
+    },
+    {
+      "nome": "Outorga Emissário",
+      "usado": 1998.7209110563326,
+      "limite": 7390.5
+    },
+    {
+      "nome": "CDR",
+      "usado": 265.7742988420109,
+      "limite": 10931.0
+    },
+    {
+      "nome": "Evaporação ORT",
+      "usado": 44.41375805950004,
+      "limite": 3055.0
+    },
+    {
+      "nome": "CKB-FC",
+      "usado": 3165.548777302904,
+      "limite": 4103.9
+    },
+    {
+      "nome": "CKB-FL",
+      "usado": 1258.4263494748723,
+      "limite": 1500.0
+    },
+    {
+      "nome": "CKN-FC",
+      "usado": 1004.2390648171073,
+      "limite": 1790.0
+    },
+    {
+      "nome": "CKN-FL",
+      "usado": 422.2551834624406,
+      "limite": 664.7
+    },
+    {
+      "nome": "BCTMP",
+      "usado": 150.97096980702142,
+      "limite": 291.5
+    }
+  ],
+  "atendida_por_maquina_produto": {
+    "CKF276": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 776.5
+    },
+    "CBA318": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 7.1
+    },
+    "LWE175": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 117.3,
+      "28": 0.0
+    },
+    "CBA360": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 9.5
+    },
+    "WUP250": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 70.7
+    },
+    "CKF227": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 58.8
+    },
+    "EKL150": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 154.9,
+      "28": 0.0
+    },
+    "EKW150": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 62.1,
+      "28": 0.0
+    },
+    "CKF205": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 239.2
+    },
+    "EKL120": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 1544.8,
+      "28": 0.0
+    },
+    "CBA300": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 4.4
+    },
+    "EKL170": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 113.9,
+      "28": 0.0
+    },
+    "CKF360": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 276.6
+    },
+    "CBA276": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 58.7
+    },
+    "LLE150": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 1139.3
+    },
+    "LLE170": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 1479.1
+    },
+    "EKL100": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 2049.3,
+      "28": 0.0
+    },
+    "FL1700": {
+      "25": 0.0,
+      "26": 5969.7,
+      "27": 0.0,
+      "28": 0.0
+    },
+    "CKF312": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 410.6
+    },
+    "CBA255": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 17.4
+    },
+    "CBA205": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 8.3
+    },
+    "CKF233": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 379.5
+    },
+    "CBA312": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 14.0
+    },
+    "CBA227": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 2.0
+    },
+    "EKL110": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 639.5,
+      "28": 0.0
+    },
+    "FLEP1": {
+      "25": 0.0,
+      "26": 1231.8,
+      "27": 0.0,
+      "28": 0.0
+    },
+    "CKQ276": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 195.6
+    },
+    "CHD318": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 1630.1
+    },
+    "LWE200": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 28.9,
+      "28": 0.0
+    },
+    "LLE200": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 712.2
+    },
+    "CKF250": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 508.6
+    },
+    "FCEP1": {
+      "25": 20526.4,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 0.0
+    },
+    "CKQ300": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 160.8
+    },
+    "EKW135": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 313.3,
+      "28": 0.0
+    },
+    "FLE700": {
+      "25": 0.0,
+      "26": 835.4,
+      "27": 0.0,
+      "28": 0.0
+    },
+    "CKF285": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 202.8
+    },
+    "FTT700": {
+      "25": 0.0,
+      "26": 470.0,
+      "27": 0.0,
+      "28": 0.0
+    },
+    "CBA233": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 12.9
+    },
+    "CKQ232": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 6.6
+    },
+    "EKL135": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 689.4,
+      "28": 0.0
+    },
+    "EKL200": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 113.4,
+      "28": 0.0
+    },
+    "CBA285": {
+      "25": 0.0,
+      "26": 0.0,
+      "27": 0.0,
+      "28": 6.9
+    }
+  },
+  "maquinas_por_produto_mercado": [
+    {
+      "produto": "CBA205",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 8.3
+      }
+    },
+    {
+      "produto": "CBA210",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "CBA227",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 2.0
+      }
+    },
+    {
+      "produto": "CBA233",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 12.9
+      }
+    },
+    {
+      "produto": "CBA255",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "CBA255",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 17.4
+      }
+    },
+    {
+      "produto": "CBA276",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "CBA276",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 58.7
+      }
+    },
+    {
+      "produto": "CBA285",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 6.9
+      }
+    },
+    {
+      "produto": "CBA300",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 4.4
+      }
+    },
+    {
+      "produto": "CBA312",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 14.0
+      }
+    },
+    {
+      "produto": "CBA318",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "CBA318",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 7.1
+      }
+    },
+    {
+      "produto": "CBA332",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "CBA358",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "CBA360",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 9.5
+      }
+    },
+    {
+      "produto": "CHD278",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "CHD318",
+      "mercado": "ME",
+      "maquinas": {
+        "28": 428.5
+      }
+    },
+    {
+      "produto": "CHD318",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 1201.5
+      }
+    },
+    {
+      "produto": "CHD358",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "CHD358",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "CKF205",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "CKF205",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 239.2
+      }
+    },
+    {
+      "produto": "CKF227",
+      "mercado": "ME",
+      "maquinas": {
+        "28": 32.1
+      }
+    },
+    {
+      "produto": "CKF227",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 26.7
+      }
+    },
+    {
+      "produto": "CKF233",
+      "mercado": "ME",
+      "maquinas": {
+        "28": 6.3
+      }
+    },
+    {
+      "produto": "CKF233",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 373.3
+      }
+    },
+    {
+      "produto": "CKF250",
+      "mercado": "ME",
+      "maquinas": {
+        "28": 184.7
+      }
+    },
+    {
+      "produto": "CKF250",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 323.9
+      }
+    },
+    {
+      "produto": "CKF276",
+      "mercado": "ME",
+      "maquinas": {
+        "28": 276.2
+      }
+    },
+    {
+      "produto": "CKF276",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 500.3
+      }
+    },
+    {
+      "produto": "CKF285",
+      "mercado": "ME",
+      "maquinas": {
+        "28": 96.2
+      }
+    },
+    {
+      "produto": "CKF285",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 106.6
+      }
+    },
+    {
+      "produto": "CKF312",
+      "mercado": "ME",
+      "maquinas": {
+        "28": 37.6
+      }
+    },
+    {
+      "produto": "CKF312",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 373.1
+      }
+    },
+    {
+      "produto": "CKF332",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "CKF332",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "CKF360",
+      "mercado": "ME",
+      "maquinas": {
+        "28": 18.8
+      }
+    },
+    {
+      "produto": "CKF360",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 257.8
+      }
+    },
+    {
+      "produto": "CKQ232",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 6.6
+      }
+    },
+    {
+      "produto": "CKQ276",
+      "mercado": "ME",
+      "maquinas": {
+        "28": 45.1
+      }
+    },
+    {
+      "produto": "CKQ276",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 150.6
+      }
+    },
+    {
+      "produto": "CKQ300",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 160.8
+      }
+    },
+    {
+      "produto": "CNT210",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "CNT210",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "CNT233",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "CNT233",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "CNT276",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "EKL100",
+      "mercado": "MI",
+      "maquinas": {
+        "27": 144.5
+      }
+    },
+    {
+      "produto": "EKL100",
+      "mercado": "Transferência",
+      "maquinas": {
+        "27": 1904.8
+      }
+    },
+    {
+      "produto": "EKL110",
+      "mercado": "Transferência",
+      "maquinas": {
+        "27": 639.5
+      }
+    },
+    {
+      "produto": "EKL120",
+      "mercado": "MI",
+      "maquinas": {
+        "27": 63.9
+      }
+    },
+    {
+      "produto": "EKL120",
+      "mercado": "Transferência",
+      "maquinas": {
+        "27": 1480.9
+      }
+    },
+    {
+      "produto": "EKL135",
+      "mercado": "Transferência",
+      "maquinas": {
+        "27": 689.4
+      }
+    },
+    {
+      "produto": "EKL150",
+      "mercado": "MI",
+      "maquinas": {
+        "27": 20.4
+      }
+    },
+    {
+      "produto": "EKL150",
+      "mercado": "Transferência",
+      "maquinas": {
+        "27": 134.5
+      }
+    },
+    {
+      "produto": "EKL170",
+      "mercado": "MI",
+      "maquinas": {
+        "27": 16.3
+      }
+    },
+    {
+      "produto": "EKL170",
+      "mercado": "Transferência",
+      "maquinas": {
+        "27": 97.6
+      }
+    },
+    {
+      "produto": "EKL200",
+      "mercado": "MI",
+      "maquinas": {
+        "27": 0.7
+      }
+    },
+    {
+      "produto": "EKL200",
+      "mercado": "Transferência",
+      "maquinas": {
+        "27": 112.7
+      }
+    },
+    {
+      "produto": "EKW135",
+      "mercado": "Transferência",
+      "maquinas": {
+        "27": 313.3
+      }
+    },
+    {
+      "produto": "EKW150",
+      "mercado": "Transferência",
+      "maquinas": {
+        "27": 62.1
+      }
+    },
+    {
+      "produto": "EWC175",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "EWC190",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "EWC190",
+      "mercado": "Transferência",
+      "maquinas": {}
+    },
+    {
+      "produto": "EWP190",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "EWP190",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "FCEP1",
+      "mercado": "MI",
+      "maquinas": {
+        "25": 20526.4
+      }
+    },
+    {
+      "produto": "FL1700",
+      "mercado": "MI",
+      "maquinas": {
+        "26": 5969.7
+      }
+    },
+    {
+      "produto": "FLE700",
+      "mercado": "MI",
+      "maquinas": {
+        "26": 835.4
+      }
+    },
+    {
+      "produto": "FLEP1",
+      "mercado": "MI",
+      "maquinas": {
+        "26": 1231.8
+      }
+    },
+    {
+      "produto": "FTT700",
+      "mercado": "MI",
+      "maquinas": {
+        "26": 470.0
+      }
+    },
+    {
+      "produto": "KKC205",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKC205",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKC227",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKC233",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKC233",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKC273",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKC274",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKC274",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKC276",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKC276",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKC290",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKC290",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKC315",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKC315",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKC325",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKC325",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKL195",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKL205",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKL273",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKL276",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKL315",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKL325",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKS195",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKS195",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKS210",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKS210",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKS250",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKS250",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKS255",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "KKS255",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "LLE150",
+      "mercado": "Transferência",
+      "maquinas": {
+        "28": 1139.3
+      }
+    },
+    {
+      "produto": "LLE170",
+      "mercado": "Transferência",
+      "maquinas": {
+        "28": 1479.1
+      }
+    },
+    {
+      "produto": "LLE200",
+      "mercado": "Transferência",
+      "maquinas": {
+        "28": 712.2
+      }
+    },
+    {
+      "produto": "LLO090",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "LLO100",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "LLO100",
+      "mercado": "Transferência",
+      "maquinas": {}
+    },
+    {
+      "produto": "LLO110",
+      "mercado": "Transferência",
+      "maquinas": {}
+    },
+    {
+      "produto": "LLO125",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "LLO125",
+      "mercado": "Transferência",
+      "maquinas": {}
+    },
+    {
+      "produto": "LLO135",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "LLO135",
+      "mercado": "Transferência",
+      "maquinas": {}
+    },
+    {
+      "produto": "LLO155",
+      "mercado": "Transferência",
+      "maquinas": {}
+    },
+    {
+      "produto": "LLO170",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "LLO170",
+      "mercado": "Transferência",
+      "maquinas": {}
+    },
+    {
+      "produto": "LWE175",
+      "mercado": "Transferência",
+      "maquinas": {
+        "27": 117.3
+      }
+    },
+    {
+      "produto": "LWE200",
+      "mercado": "Transferência",
+      "maquinas": {
+        "27": 28.9
+      }
+    },
+    {
+      "produto": "WKC285",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "WTP220",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "WTP250",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "WTP250",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "WTP265",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "WTP265",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "WTP300",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "WTP300",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "WTP320",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "WTR345",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "WUP215",
+      "mercado": "ME",
+      "maquinas": {}
+    },
+    {
+      "produto": "WUP215",
+      "mercado": "MI",
+      "maquinas": {}
+    },
+    {
+      "produto": "WUP250",
+      "mercado": "ME",
+      "maquinas": {
+        "28": 19.2
+      }
+    },
+    {
+      "produto": "WUP250",
+      "mercado": "MI",
+      "maquinas": {
+        "28": 51.6
+      }
+    }
+  ],
+  "margem_por_maquina": {
+    "25": 184737275.0,
+    "26": 71153883.0,
+    "27": 51585104.0,
+    "28": 71259810.0
+  },
+  "prod_bruta_max_por_maquina": {
+    "25": 20526.4,
+    "26": 9367.4,
+    "27": 10102.0,
+    "28": 9456.3
+  },
+  "diagnostico_mix": "OTIMIZADOR DE MIX ORT — Horizonte: 7 dias\nFO: R$ 378,736,072\nRestrições críticas/violadas (3): Tempo MP25(100.0%), Tempo MP26(95.2%), Tempo MP28(100.0%)\nDemanda não atendida: 22,828.5t em 58 produtos\nMáquinas: MP27 (ORT), MP28 (ORT), MC25 (ORT), MC26 (ORT)\nMercados: ME (Externo), MI (Interno), Transferência",
+  "restricoes_status": {
+    "Tempo MP25": {
+      "nome": "Tempo MP25",
+      "usado": 149.1,
+      "limite": 149.1,
+      "unidade": "h",
+      "tipo": "maquina",
+      "status": "CRÍTICA",
+      "percentual": 100.0,
+      "folga": 0.0
+    },
+    "Tempo MP26": {
+      "nome": "Tempo MP26",
+      "usado": 145.2,
+      "limite": 152.5,
+      "unidade": "h",
+      "tipo": "maquina",
+      "status": "CRÍTICA",
+      "percentual": 95.2,
+      "folga": 7.3
+    },
+    "Tempo MP27": {
+      "nome": "Tempo MP27",
+      "usado": 100.7,
+      "limite": 142.1,
+      "unidade": "h",
+      "tipo": "maquina",
+      "status": "FOLGADA",
+      "percentual": 70.9,
+      "folga": 41.4
+    },
+    "Tempo MP28": {
+      "nome": "Tempo MP28",
+      "usado": 143.1,
+      "limite": 143.1,
+      "unidade": "h",
+      "tipo": "maquina",
+      "status": "CRÍTICA",
+      "percentual": 100.0,
+      "folga": 0.0
+    },
+    "Caustificação": {
+      "nome": "Caustificação",
+      "usado": 17439.95,
+      "limite": 20135.4,
+      "unidade": "m³/d",
+      "tipo": "ORT",
+      "status": "ATIVA",
+      "percentual": 86.6,
+      "folga": 2695.45
+    },
+    "Outorga Captação": {
+      "nome": "Outorga Captação",
+      "usado": 2425.11,
+      "limite": 8160.1,
+      "unidade": "m³/h",
+      "tipo": "ORT",
+      "status": "FOLGADA",
+      "percentual": 29.7,
+      "folga": 5734.99
+    },
+    "Outorga Emissário": {
+      "nome": "Outorga Emissário",
+      "usado": 1998.72,
+      "limite": 7390.5,
+      "unidade": "m³/h",
+      "tipo": "ORT",
+      "status": "FOLGADA",
+      "percentual": 27.0,
+      "folga": 5391.78
+    },
+    "CDR": {
+      "nome": "CDR",
+      "usado": 265.77,
+      "limite": 10931.0,
+      "unidade": "tss/d",
+      "tipo": "ORT",
+      "status": "FOLGADA",
+      "percentual": 2.4,
+      "folga": 10665.23
+    },
+    "Evaporação ORT": {
+      "nome": "Evaporação ORT",
+      "usado": 44.41,
+      "limite": 3055.0,
+      "unidade": "t_H2O/h",
+      "tipo": "ORT",
+      "status": "FOLGADA",
+      "percentual": 1.5,
+      "folga": 3010.59
+    },
+    "CKB-FC": {
+      "nome": "CKB-FC",
+      "usado": 3165.55,
+      "limite": 4103.9,
+      "unidade": "t/d",
+      "tipo": "ORT",
+      "status": "FOLGADA",
+      "percentual": 77.1,
+      "folga": 938.35
+    },
+    "CKB-FL": {
+      "nome": "CKB-FL",
+      "usado": 1258.43,
+      "limite": 1500.0,
+      "unidade": "t/d",
+      "tipo": "ORT",
+      "status": "ATIVA",
+      "percentual": 83.9,
+      "folga": 241.57
+    },
+    "CKN-FC": {
+      "nome": "CKN-FC",
+      "usado": 1004.24,
+      "limite": 1790.0,
+      "unidade": "t/d",
+      "tipo": "ORT",
+      "status": "FOLGADA",
+      "percentual": 56.1,
+      "folga": 785.76
+    },
+    "CKN-FL": {
+      "nome": "CKN-FL",
+      "usado": 422.26,
+      "limite": 664.7,
+      "unidade": "t/d",
+      "tipo": "ORT",
+      "status": "FOLGADA",
+      "percentual": 63.5,
+      "folga": 242.44
+    },
+    "BCTMP": {
+      "nome": "BCTMP",
+      "usado": 150.97,
+      "limite": 291.5,
+      "unidade": "t/d",
+      "tipo": "ORT",
+      "status": "FOLGADA",
+      "percentual": 51.8,
+      "folga": 140.53
+    }
+  },
+  "restricoes_criticas": {
+    "Tempo MP25": {
+      "nome": "Tempo MP25",
+      "usado": 149.1,
+      "limite": 149.1,
+      "unidade": "h",
+      "tipo": "maquina",
+      "status": "CRÍTICA",
+      "percentual": 100.0,
+      "folga": 0.0
+    },
+    "Tempo MP26": {
+      "nome": "Tempo MP26",
+      "usado": 145.2,
+      "limite": 152.5,
+      "unidade": "h",
+      "tipo": "maquina",
+      "status": "CRÍTICA",
+      "percentual": 95.2,
+      "folga": 7.3
+    },
+    "Tempo MP28": {
+      "nome": "Tempo MP28",
+      "usado": 143.1,
+      "limite": 143.1,
+      "unidade": "h",
+      "tipo": "maquina",
+      "status": "CRÍTICA",
+      "percentual": 100.0,
+      "folga": 0.0
+    }
+  },
+  "alocacao_produtos": [
+    {
+      "produto": "CBA205",
+      "demanda": 112.6,
+      "producao": 8.3,
+      "gap": 104.4,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [],
+      "margem": 82764.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CBA210",
+      "demanda": 64.5,
+      "producao": 0,
+      "gap": 64.5,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CBA227",
+      "demanda": 15.3,
+      "producao": 2.0,
+      "gap": 13.3,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [],
+      "margem": 20008.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CBA233",
+      "demanda": 93.6,
+      "producao": 12.9,
+      "gap": 80.7,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [],
+      "margem": 129125.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CBA255",
+      "demanda": 57.0,
+      "producao": 17.4,
+      "gap": 39.5,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [],
+      "margem": 174458.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CBA276",
+      "demanda": 281.7,
+      "producao": 58.7,
+      "gap": 223.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [],
+      "margem": 587011.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CBA285",
+      "demanda": 65.7,
+      "producao": 6.9,
+      "gap": 58.8,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [],
+      "margem": 68614.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CBA300",
+      "demanda": 14.1,
+      "producao": 4.4,
+      "gap": 9.7,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [],
+      "margem": 44026.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CBA312",
+      "demanda": 104.0,
+      "producao": 14.0,
+      "gap": 90.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [],
+      "margem": 139911.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CBA318",
+      "demanda": 301.2,
+      "producao": 7.1,
+      "gap": 294.1,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [],
+      "margem": 70784.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CBA332",
+      "demanda": 32.3,
+      "producao": 0,
+      "gap": 32.3,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CBA358",
+      "demanda": 5.3,
+      "producao": 0,
+      "gap": 5.3,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CBA360",
+      "demanda": 33.1,
+      "producao": 9.5,
+      "gap": 23.6,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [],
+      "margem": 95154.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CHD278",
+      "demanda": 26.6,
+      "producao": 0,
+      "gap": 26.6,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CHD318",
+      "demanda": 1630.1,
+      "producao": 1630.1,
+      "gap": 0.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 13491924.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "CHD358",
+      "demanda": 176.0,
+      "producao": 0,
+      "gap": 176.0,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CKF205",
+      "demanda": 350.4,
+      "producao": 239.2,
+      "gap": 111.2,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 1929452.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "CKF227",
+      "demanda": 58.8,
+      "producao": 58.8,
+      "gap": 0.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 483296.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "CKF233",
+      "demanda": 379.5,
+      "producao": 379.5,
+      "gap": -0.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 3121346.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "CKF250",
+      "demanda": 508.6,
+      "producao": 508.6,
+      "gap": -0.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 4185919.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "CKF276",
+      "demanda": 776.5,
+      "producao": 776.5,
+      "gap": -0.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 6366504.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "CKF285",
+      "demanda": 202.8,
+      "producao": 202.8,
+      "gap": 0.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 1661923.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "CKF312",
+      "demanda": 410.6,
+      "producao": 410.6,
+      "gap": 0.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 3365029.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "CKF332",
+      "demanda": 153.8,
+      "producao": 0,
+      "gap": 153.8,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "CKF360",
+      "demanda": 276.6,
+      "producao": 276.6,
+      "gap": 0.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 2263885.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "CKQ232",
+      "demanda": 6.6,
+      "producao": 6.6,
+      "gap": -0.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 54566.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "CKQ276",
+      "demanda": 195.6,
+      "producao": 195.6,
+      "gap": 0.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 1557166.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "CKQ300",
+      "demanda": 160.8,
+      "producao": 160.8,
+      "gap": -0.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 1319232.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "CNT210",
+      "demanda": 19.1,
+      "producao": 0,
+      "gap": 19.1,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CNT233",
+      "demanda": 23.3,
+      "producao": 0,
+      "gap": 23.3,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "CNT276",
+      "demanda": 14.4,
+      "producao": 0,
+      "gap": 14.4,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "EKL100",
+      "demanda": 2049.3,
+      "producao": 2049.3,
+      "gap": -0.0,
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "maquinas_disponiveis": [
+        "MP27"
+      ],
+      "margem": 18153298.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "EKL110",
+      "demanda": 639.5,
+      "producao": 639.5,
+      "gap": 0.0,
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "maquinas_disponiveis": [
+        "MP27"
+      ],
+      "margem": 5680055.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "EKL120",
+      "demanda": 1544.8,
+      "producao": 1544.8,
+      "gap": 0.0,
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "maquinas_disponiveis": [
+        "MP27"
+      ],
+      "margem": 13735175.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "EKL135",
+      "demanda": 689.4,
+      "producao": 689.4,
+      "gap": -0.0,
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "maquinas_disponiveis": [
+        "MP27"
+      ],
+      "margem": 6135965.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "EKL150",
+      "demanda": 154.9,
+      "producao": 154.9,
+      "gap": 0.0,
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "maquinas_disponiveis": [
+        "MP27"
+      ],
+      "margem": 1374585.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "EKL170",
+      "demanda": 113.9,
+      "producao": 113.9,
+      "gap": -0.0,
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "maquinas_disponiveis": [
+        "MP27"
+      ],
+      "margem": 1011508.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "EKL200",
+      "demanda": 113.4,
+      "producao": 113.4,
+      "gap": 0.0,
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "maquinas_disponiveis": [
+        "MP27"
+      ],
+      "margem": 1005810.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "EKW135",
+      "demanda": 313.3,
+      "producao": 313.3,
+      "gap": 0.0,
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "maquinas_disponiveis": [
+        "MP27"
+      ],
+      "margem": 2691324.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "EKW150",
+      "demanda": 62.1,
+      "producao": 62.1,
+      "gap": -0.0,
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "maquinas_disponiveis": [
+        "MP27"
+      ],
+      "margem": 537441.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "EWC175",
+      "demanda": 341.9,
+      "producao": 0,
+      "gap": 341.9,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "EWC190",
+      "demanda": 301.6,
+      "producao": 0,
+      "gap": 301.6,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "EWP190",
+      "demanda": 403.2,
+      "producao": 0,
+      "gap": 403.2,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "FCEP1",
+      "demanda": 21356.3,
+      "producao": 20526.4,
+      "gap": 829.9,
+      "maquinas_usadas": [
+        "MP25"
+      ],
+      "maquinas_disponiveis": [
+        "MP25"
+      ],
+      "margem": 184737275.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "FL1700",
+      "demanda": 5969.7,
+      "producao": 5969.7,
+      "gap": -0.0,
+      "maquinas_usadas": [
+        "MP26"
+      ],
+      "maquinas_disponiveis": [
+        "MP26"
+      ],
+      "margem": 49287886.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "FLE700",
+      "demanda": 835.4,
+      "producao": 835.4,
+      "gap": -0.0,
+      "maquinas_usadas": [
+        "MP26"
+      ],
+      "maquinas_disponiveis": [
+        "MP26"
+      ],
+      "margem": 6911954.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "FLEP1",
+      "demanda": 1231.8,
+      "producao": 1231.8,
+      "gap": -0.0,
+      "maquinas_usadas": [
+        "MP26"
+      ],
+      "maquinas_disponiveis": [
+        "MP26"
+      ],
+      "margem": 11085929.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "FTT700",
+      "demanda": 470.0,
+      "producao": 470.0,
+      "gap": 0.0,
+      "maquinas_usadas": [
+        "MP26"
+      ],
+      "maquinas_disponiveis": [
+        "MP26"
+      ],
+      "margem": 3868113.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "KKC205",
+      "demanda": 2538.0,
+      "producao": 0,
+      "gap": 2538.0,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "KKC227",
+      "demanda": 51.8,
+      "producao": 0,
+      "gap": 51.8,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "KKC233",
+      "demanda": 1890.5,
+      "producao": 0,
+      "gap": 1890.5,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "KKC273",
+      "demanda": 184.3,
+      "producao": 0.0,
+      "gap": 184.3,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "KKC274",
+      "demanda": 2724.5,
+      "producao": 0,
+      "gap": 2724.5,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "KKC276",
+      "demanda": 1872.4,
+      "producao": 0,
+      "gap": 1872.4,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "KKC290",
+      "demanda": 707.2,
+      "producao": 0,
+      "gap": 707.2,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "KKC315",
+      "demanda": 86.6,
+      "producao": 0,
+      "gap": 86.6,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "KKC325",
+      "demanda": 622.9,
+      "producao": 0,
+      "gap": 622.9,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "KKL195",
+      "demanda": 588.1,
+      "producao": -0.0,
+      "gap": 588.1,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": -0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "KKL205",
+      "demanda": 239.6,
+      "producao": 0,
+      "gap": 239.6,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "KKL273",
+      "demanda": 162.7,
+      "producao": 0,
+      "gap": 162.7,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "KKL276",
+      "demanda": 346.1,
+      "producao": 0,
+      "gap": 346.1,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "KKL315",
+      "demanda": 14.6,
+      "producao": 0,
+      "gap": 14.6,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "KKL325",
+      "demanda": 104.2,
+      "producao": 0,
+      "gap": 104.2,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "KKS195",
+      "demanda": 45.3,
+      "producao": 0,
+      "gap": 45.3,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "KKS210",
+      "demanda": 418.5,
+      "producao": 0,
+      "gap": 418.5,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "KKS250",
+      "demanda": 506.7,
+      "producao": 0,
+      "gap": 506.7,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "KKS255",
+      "demanda": 462.7,
+      "producao": 0,
+      "gap": 462.7,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0.0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "LLE150",
+      "demanda": 1139.3,
+      "producao": 1139.3,
+      "gap": 0.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 10075576.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "LLE170",
+      "demanda": 1479.1,
+      "producao": 1479.1,
+      "gap": -0.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 13095907.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "LLE200",
+      "demanda": 712.2,
+      "producao": 712.2,
+      "gap": 0.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 6313793.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "LLO090",
+      "demanda": 154.7,
+      "producao": 0,
+      "gap": 154.7,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "LLO100",
+      "demanda": 1511.2,
+      "producao": 0,
+      "gap": 1511.2,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "LLO110",
+      "demanda": 32.9,
+      "producao": 0,
+      "gap": 32.9,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "LLO125",
+      "demanda": 1020.5,
+      "producao": 0,
+      "gap": 1020.5,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "LLO135",
+      "demanda": 612.2,
+      "producao": 0,
+      "gap": 612.2,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "LLO155",
+      "demanda": 942.8,
+      "producao": 0,
+      "gap": 942.8,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "LLO170",
+      "demanda": 742.1,
+      "producao": 0,
+      "gap": 742.1,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada"
+    },
+    {
+      "produto": "LWE175",
+      "demanda": 117.3,
+      "producao": 117.3,
+      "gap": -0.0,
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "maquinas_disponiveis": [
+        "MP27",
+        "MP28"
+      ],
+      "margem": 1010596.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "LWE200",
+      "demanda": 28.9,
+      "producao": 28.9,
+      "gap": 0.0,
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "maquinas_disponiveis": [
+        "MP27",
+        "MP28"
+      ],
+      "margem": 249345.0,
+      "motivo": "Atendida"
+    },
+    {
+      "produto": "WKC285",
+      "demanda": 19.2,
+      "producao": 0,
+      "gap": 19.2,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "WTP220",
+      "demanda": 255.1,
+      "producao": 0,
+      "gap": 255.1,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "WTP250",
+      "demanda": 59.0,
+      "producao": 0,
+      "gap": 59.0,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "WTP265",
+      "demanda": 256.3,
+      "producao": 0,
+      "gap": 256.3,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "WTP300",
+      "demanda": 23.7,
+      "producao": 0,
+      "gap": 23.7,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "WTP320",
+      "demanda": 28.7,
+      "producao": 0,
+      "gap": 28.7,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "WTR345",
+      "demanda": 93.9,
+      "producao": 0,
+      "gap": 93.9,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "WUP215",
+      "demanda": 69.3,
+      "producao": 0,
+      "gap": 69.3,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente"
+    },
+    {
+      "produto": "WUP250",
+      "demanda": 70.7,
+      "producao": 70.7,
+      "gap": 0.0,
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 562439.0,
+      "motivo": "Atendida"
+    }
+  ],
+  "sensibilidade_restricoes": {
+    "Tempo MP25": {
+      "status": "CRÍTICA",
+      "percentual": 100.0,
+      "folga": 0.0,
+      "unidade": "h",
+      "top_consumidores": [
+        {
+          "produto": "FCEP1",
+          "h": 149.1
+        }
+      ],
+      "interpretacao": "Tempo MP25: 100.0% do limite (149.1 / 149.1 h). Folga: 0.0 h."
+    },
+    "Tempo MP26": {
+      "status": "CRÍTICA",
+      "percentual": 95.2,
+      "folga": 7.3,
+      "unidade": "h",
+      "top_consumidores": [
+        {
+          "produto": "FL1700",
+          "h": 101.4
+        },
+        {
+          "produto": "FLEP1",
+          "h": 20.1
+        },
+        {
+          "produto": "FLE700",
+          "h": 14.4
+        },
+        {
+          "produto": "FTT700",
+          "h": 9.3
+        }
+      ],
+      "interpretacao": "Tempo MP26: 95.2% do limite (145.2 / 152.5 h). Folga: 7.3 h."
+    },
+    "Tempo MP28": {
+      "status": "CRÍTICA",
+      "percentual": 100.0,
+      "folga": 0.0,
+      "unidade": "h",
+      "top_consumidores": [
+        {
+          "produto": "CHD318",
+          "h": 27.4
+        },
+        {
+          "produto": "LLE170",
+          "h": 25.6
+        },
+        {
+          "produto": "LLE150",
+          "h": 19.8
+        },
+        {
+          "produto": "CKF276",
+          "h": 13.6
+        },
+        {
+          "produto": "LLE200",
+          "h": 12.3
+        }
+      ],
+      "interpretacao": "Tempo MP28: 100.0% do limite (143.1 / 143.1 h). Folga: 0.0 h."
+    },
+    "Caustificação": {
+      "status": "ATIVA",
+      "percentual": 86.6,
+      "folga": 2695.45,
+      "unidade": "m³/d",
+      "top_consumidores": [],
+      "interpretacao": "Caustificação: 86.6% do limite (17439.95 / 20135.4 m³/d). Folga: 2695.45 m³/d."
+    },
+    "CKB-FL": {
+      "status": "ATIVA",
+      "percentual": 83.9,
+      "folga": 241.57,
+      "unidade": "t/d",
+      "top_consumidores": [],
+      "interpretacao": "CKB-FL: 83.9% do limite (1258.43 / 1500.0 t/d). Folga: 241.57 t/d."
+    }
+  },
+  "trocas_possiveis": [
+    {
+      "produto": "KKC274",
+      "demanda": 2724.5,
+      "producao": 0,
+      "gap": 2724.5,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente",
+      "capacidade_por_maquina": {
+        "MP28": {
+          "ociosa_h": 0,
+          "potencial_t": 0.0
+        }
+      }
+    },
+    {
+      "produto": "KKC205",
+      "demanda": 2538.0,
+      "producao": 0,
+      "gap": 2538.0,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0.0,
+      "motivo": "Sem máquina habilitada",
+      "capacidade_por_maquina": {}
+    },
+    {
+      "produto": "KKC233",
+      "demanda": 1890.5,
+      "producao": 0,
+      "gap": 1890.5,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0.0,
+      "motivo": "Sem máquina habilitada",
+      "capacidade_por_maquina": {}
+    },
+    {
+      "produto": "KKC276",
+      "demanda": 1872.4,
+      "producao": 0,
+      "gap": 1872.4,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [
+        "MP28"
+      ],
+      "margem": 0.0,
+      "motivo": "Gap: capacidade insuficiente",
+      "capacidade_por_maquina": {
+        "MP28": {
+          "ociosa_h": 0,
+          "potencial_t": 0.0
+        }
+      }
+    },
+    {
+      "produto": "LLO100",
+      "demanda": 1511.2,
+      "producao": 0,
+      "gap": 1511.2,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada",
+      "capacidade_por_maquina": {}
+    },
+    {
+      "produto": "LLO125",
+      "demanda": 1020.5,
+      "producao": 0,
+      "gap": 1020.5,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada",
+      "capacidade_por_maquina": {}
+    },
+    {
+      "produto": "LLO155",
+      "demanda": 942.8,
+      "producao": 0,
+      "gap": 942.8,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada",
+      "capacidade_por_maquina": {}
+    },
+    {
+      "produto": "FCEP1",
+      "demanda": 21356.3,
+      "producao": 20526.4,
+      "gap": 829.9,
+      "maquinas_usadas": [
+        "MP25"
+      ],
+      "maquinas_disponiveis": [
+        "MP25"
+      ],
+      "margem": 184737275.0,
+      "motivo": "Gap: capacidade insuficiente",
+      "capacidade_por_maquina": {
+        "MP25": {
+          "ociosa_h": 0,
+          "potencial_t": 0.0
+        }
+      }
+    },
+    {
+      "produto": "LLO170",
+      "demanda": 742.1,
+      "producao": 0,
+      "gap": 742.1,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0,
+      "motivo": "Sem máquina habilitada",
+      "capacidade_por_maquina": {}
+    },
+    {
+      "produto": "KKC290",
+      "demanda": 707.2,
+      "producao": 0,
+      "gap": 707.2,
+      "maquinas_usadas": [],
+      "maquinas_disponiveis": [],
+      "margem": 0.0,
+      "motivo": "Sem máquina habilitada",
+      "capacidade_por_maquina": {}
+    }
+  ],
+  "razao_alocacao": {
+    "CHD318": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 13491924.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.17837,
+          "CKB_FL_t_t": 0.053974,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "CKF205": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 1929452.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.243008,
+          "CKB_FL_t_t": 0.076939,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "CKF227": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 483296.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.243008,
+          "CKB_FL_t_t": 0.076939,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "CKF233": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 3121346.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.240817,
+          "CKB_FL_t_t": 0.047046,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "CKF250": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 4185919.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.248326,
+          "CKB_FL_t_t": 0.026557,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "CKF276": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 6366504.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.211612,
+          "CKB_FL_t_t": 0.030983,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "CKF285": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 1661923.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.211612,
+          "CKB_FL_t_t": 0.030983,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "CKF312": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 3365029.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.183825,
+          "CKB_FL_t_t": 0.052535,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "CKF332": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.183825,
+          "CKB_FL_t_t": 0.052535,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "CKF360": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 2263885.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.164821,
+          "CKB_FL_t_t": 0.036655,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "CKQ232": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 54566.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.223459,
+          "CKB_FL_t_t": 0.037401,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "CKQ276": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 1557166.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.223459,
+          "CKB_FL_t_t": 0.037401,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "CKQ300": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 1319232.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.21245,
+          "CKB_FL_t_t": 0.023623,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "EKL100": {
+      "maquinas_habilitadas": [
+        "MP27"
+      ],
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP27": 18153298.0
+      },
+      "impacto_restricoes": {
+        "MP27": {
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "EKL110": {
+      "maquinas_habilitadas": [
+        "MP27"
+      ],
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP27": 5680055.0
+      },
+      "impacto_restricoes": {
+        "MP27": {
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "EKL120": {
+      "maquinas_habilitadas": [
+        "MP27"
+      ],
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP27": 13735175.0
+      },
+      "impacto_restricoes": {
+        "MP27": {
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "EKL135": {
+      "maquinas_habilitadas": [
+        "MP27"
+      ],
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP27": 6135965.0
+      },
+      "impacto_restricoes": {
+        "MP27": {
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "EKL150": {
+      "maquinas_habilitadas": [
+        "MP27"
+      ],
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP27": 1374585.0
+      },
+      "impacto_restricoes": {
+        "MP27": {
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "EKL170": {
+      "maquinas_habilitadas": [
+        "MP27"
+      ],
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP27": 1011508.0
+      },
+      "impacto_restricoes": {
+        "MP27": {
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "EKL200": {
+      "maquinas_habilitadas": [
+        "MP27"
+      ],
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP27": 1005810.0
+      },
+      "impacto_restricoes": {
+        "MP27": {
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "EKW135": {
+      "maquinas_habilitadas": [
+        "MP27"
+      ],
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP27": 2691324.0
+      },
+      "impacto_restricoes": {
+        "MP27": {
+          "CKB_FC_t_t": 0.382869,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "EKW150": {
+      "maquinas_habilitadas": [
+        "MP27"
+      ],
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP27": 537441.0
+      },
+      "impacto_restricoes": {
+        "MP27": {
+          "CKB_FC_t_t": 0.70435,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "EWC175": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.33642,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "EWC190": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.31899,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "EWP190": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.31899,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "FCEP1": {
+      "maquinas_habilitadas": [
+        "MP25"
+      ],
+      "maquinas_usadas": [
+        "MP25"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP25": 184737275.0
+      },
+      "impacto_restricoes": {
+        "MP25": {
+          "CKB_FC_t_t": 1.002
+        }
+      }
+    },
+    "FL1700": {
+      "maquinas_habilitadas": [
+        "MP26"
+      ],
+      "maquinas_usadas": [
+        "MP26"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP26": 49287886.0
+      },
+      "impacto_restricoes": {
+        "MP26": {
+          "CKB_FL_t_t": 1.02
+        }
+      }
+    },
+    "FLE700": {
+      "maquinas_habilitadas": [
+        "MP26"
+      ],
+      "maquinas_usadas": [
+        "MP26"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP26": 6911954.0
+      },
+      "impacto_restricoes": {
+        "MP26": {
+          "CKB_FC_t_t": 0.337,
+          "CKB_FL_t_t": 0.683
+        }
+      }
+    },
+    "FLEP1": {
+      "maquinas_habilitadas": [
+        "MP26"
+      ],
+      "maquinas_usadas": [
+        "MP26"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP26": 11085929.0
+      },
+      "impacto_restricoes": {
+        "MP26": {
+          "CKB_FL_t_t": 1.002
+        }
+      }
+    },
+    "FTT700": {
+      "maquinas_habilitadas": [
+        "MP26"
+      ],
+      "maquinas_usadas": [
+        "MP26"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP26": 3868113.0
+      },
+      "impacto_restricoes": {
+        "MP26": {
+          "CKB_FL_t_t": 1.023
+        }
+      }
+    },
+    "KKC273": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.213648,
+          "CKB_FL_t_t": 0.056331,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "KKC274": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.213648,
+          "CKB_FL_t_t": 0.056331,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "KKC276": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.213648,
+          "CKB_FL_t_t": 0.056331,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "KKL195": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": -0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.274725,
+          "CKB_FL_t_t": 0.078713,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "KKL205": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.274725,
+          "CKB_FL_t_t": 0.078713,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "KKL273": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.213948,
+          "CKB_FL_t_t": 0.066192,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "KKL276": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.213948,
+          "CKB_FL_t_t": 0.066192,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "KKS195": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.219381,
+          "CKB_FL_t_t": 0.070318,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "LLE150": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 10075576.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "LLE170": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 13095907.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "LLE200": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 6313793.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "LWE175": {
+      "maquinas_habilitadas": [
+        "MP27",
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "razao": "maior_margem",
+      "margem_por_maquina": {
+        "MP27": 1010596.0,
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP27": {
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        },
+        "MP28": {
+          "CKB_FC_t_t": 0.740565,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "LWE200": {
+      "maquinas_habilitadas": [
+        "MP27",
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP27"
+      ],
+      "razao": "maior_margem",
+      "margem_por_maquina": {
+        "MP27": 249345.0,
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP27": {
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        },
+        "MP28": {
+          "CKB_FC_t_t": 0.708619,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "WKC285": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.623915,
+          "CKB_FL_t_t": 0.218321,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "WTP220": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.62952,
+          "CKB_FL_t_t": 0.15738,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "WTP250": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.516219,
+          "CKB_FL_t_t": 0.170932,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "WTP265": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.50777,
+          "CKB_FL_t_t": 0.172157,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "WTP300": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.493221,
+          "CKB_FL_t_t": 0.197096,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "WTP320": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.672435,
+          "CKB_FL_t_t": 0.25456,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "WTR345": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.672435,
+          "CKB_FL_t_t": 0.25456,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "WUP215": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 0.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.62952,
+          "CKB_FL_t_t": 0.15738,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    },
+    "WUP250": {
+      "maquinas_habilitadas": [
+        "MP28"
+      ],
+      "maquinas_usadas": [
+        "MP28"
+      ],
+      "razao": "unica_maquina_habilitada",
+      "margem_por_maquina": {
+        "MP28": 562439.0
+      },
+      "impacto_restricoes": {
+        "MP28": {
+          "CKB_FC_t_t": 0.516219,
+          "CKB_FL_t_t": 0.170932,
+          "Captacao_m3_t": 27.3,
+          "Emissario_m3_t": 22.5
+        }
+      }
+    }
+  },
+  "waste_data": [
+    {
+      "produto": "FCEP1",
+      "maquina": 25,
+      "preco": 10000,
+      "custo_variavel": 1000.0,
+      "produtividade_bruta": 137.6348,
+      "surv_IAC": 1.0,
+      "surv_Refugo": 1.0,
+      "surv_RepExt": 1.0,
+      "surv_MR2": 1.0,
+      "surv_Sala": 1.0,
+      "surv_CortGram": 1.0,
+      "surv_CortCort": 1.0,
+      "surv_EstExp": 1.0,
+      "surv_Vendavel": 1.0,
+      "delta_IAC": 0.0,
+      "delta_Refugo": 0.0,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.0
+    },
+    {
+      "produto": "FL1700",
+      "maquina": 26,
+      "preco": 10000,
+      "custo_variavel": 1700.0,
+      "produtividade_bruta": 60.363,
+      "surv_IAC": 1.0,
+      "surv_Refugo": 0.975,
+      "surv_RepExt": 0.975,
+      "surv_MR2": 0.975,
+      "surv_Sala": 0.975,
+      "surv_CortGram": 0.975,
+      "surv_CortCort": 0.975,
+      "surv_EstExp": 0.975,
+      "surv_Vendavel": 0.975,
+      "delta_IAC": 0.0,
+      "delta_Refugo": 0.025,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.0
+    },
+    {
+      "produto": "FLE700",
+      "maquina": 26,
+      "preco": 10000,
+      "custo_variavel": 1700.0,
+      "produtividade_bruta": 58.8,
+      "surv_IAC": 1.0,
+      "surv_Refugo": 0.985,
+      "surv_RepExt": 0.985,
+      "surv_MR2": 0.985,
+      "surv_Sala": 0.985,
+      "surv_CortGram": 0.985,
+      "surv_CortCort": 0.985,
+      "surv_EstExp": 0.985,
+      "surv_Vendavel": 0.985,
+      "delta_IAC": 0.0,
+      "delta_Refugo": 0.015,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.0
+    },
+    {
+      "produto": "FLEP1",
+      "maquina": 26,
+      "preco": 10000,
+      "custo_variavel": 1000.0,
+      "produtividade_bruta": 61.425,
+      "surv_IAC": 1.0,
+      "surv_Refugo": 1.0,
+      "surv_RepExt": 1.0,
+      "surv_MR2": 1.0,
+      "surv_Sala": 1.0,
+      "surv_CortGram": 1.0,
+      "surv_CortCort": 1.0,
+      "surv_EstExp": 1.0,
+      "surv_Vendavel": 1.0,
+      "delta_IAC": 0.0,
+      "delta_Refugo": 0.0,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.0
+    },
+    {
+      "produto": "FTT700",
+      "maquina": 26,
+      "preco": 10000,
+      "custo_variavel": 1700.0,
+      "produtividade_bruta": 52.5984,
+      "surv_IAC": 1.0,
+      "surv_Refugo": 0.96,
+      "surv_RepExt": 0.96,
+      "surv_MR2": 0.96,
+      "surv_Sala": 0.96,
+      "surv_CortGram": 0.96,
+      "surv_CortCort": 0.96,
+      "surv_EstExp": 0.96,
+      "surv_Vendavel": 0.96,
+      "delta_IAC": 0.0,
+      "delta_Refugo": 0.04,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.0
+    },
+    {
+      "produto": "EKL100",
+      "maquina": 27,
+      "preco": 10000,
+      "custo_variavel": 1106.4,
+      "produtividade_bruta": 54.4495,
+      "surv_IAC": 0.9893,
+      "surv_Refugo": 0.978902,
+      "surv_RepExt": 0.978902,
+      "surv_MR2": 0.978902,
+      "surv_Sala": 0.978902,
+      "surv_CortGram": 0.978902,
+      "surv_CortCort": 0.978902,
+      "surv_EstExp": 0.978902,
+      "surv_Vendavel": 0.969113,
+      "delta_IAC": 0.0107,
+      "delta_Refugo": 0.010398,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009789
+    },
+    {
+      "produto": "EKL110",
+      "maquina": 27,
+      "preco": 10000,
+      "custo_variavel": 1075.68,
+      "produtividade_bruta": 59.855,
+      "surv_IAC": 0.9829,
+      "surv_Refugo": 0.971341,
+      "surv_RepExt": 0.971341,
+      "surv_MR2": 0.971341,
+      "surv_Sala": 0.971341,
+      "surv_CortGram": 0.971341,
+      "surv_CortCort": 0.971341,
+      "surv_EstExp": 0.971341,
+      "surv_Vendavel": 0.961628,
+      "delta_IAC": 0.0171,
+      "delta_Refugo": 0.011559,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009713
+    },
+    {
+      "produto": "EKL120",
+      "maquina": 27,
+      "preco": 10000,
+      "custo_variavel": 1069.62,
+      "produtividade_bruta": 64.2809,
+      "surv_IAC": 0.9833,
+      "surv_Refugo": 0.97434,
+      "surv_RepExt": 0.97434,
+      "surv_MR2": 0.97434,
+      "surv_Sala": 0.97434,
+      "surv_CortGram": 0.97434,
+      "surv_CortCort": 0.97434,
+      "surv_EstExp": 0.97434,
+      "surv_Vendavel": 0.964597,
+      "delta_IAC": 0.0167,
+      "delta_Refugo": 0.00896,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009743
+    },
+    {
+      "produto": "EKL135",
+      "maquina": 27,
+      "preco": 10000,
+      "custo_variavel": 1065.09,
+      "produtividade_bruta": 64.2739,
+      "surv_IAC": 0.9885,
+      "surv_Refugo": 0.978201,
+      "surv_RepExt": 0.978201,
+      "surv_MR2": 0.978201,
+      "surv_Sala": 0.978201,
+      "surv_CortGram": 0.978201,
+      "surv_CortCort": 0.978201,
+      "surv_EstExp": 0.978201,
+      "surv_Vendavel": 0.968419,
+      "delta_IAC": 0.0115,
+      "delta_Refugo": 0.010299,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009782
+    },
+    {
+      "produto": "EKL150",
+      "maquina": 27,
+      "preco": 10000,
+      "custo_variavel": 1077.23,
+      "produtividade_bruta": 66.4178,
+      "surv_IAC": 0.9822,
+      "surv_Refugo": 0.964213,
+      "surv_RepExt": 0.964213,
+      "surv_MR2": 0.964213,
+      "surv_Sala": 0.964213,
+      "surv_CortGram": 0.964213,
+      "surv_CortCort": 0.964213,
+      "surv_EstExp": 0.964213,
+      "surv_Vendavel": 0.95457,
+      "delta_IAC": 0.0178,
+      "delta_Refugo": 0.017987,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009642
+    },
+    {
+      "produto": "EKL170",
+      "maquina": 27,
+      "preco": 10000,
+      "custo_variavel": 1058.5,
+      "produtividade_bruta": 69.7773,
+      "surv_IAC": 0.9804,
+      "surv_Refugo": 0.955897,
+      "surv_RepExt": 0.955897,
+      "surv_MR2": 0.955897,
+      "surv_Sala": 0.955897,
+      "surv_CortGram": 0.955897,
+      "surv_CortCort": 0.955897,
+      "surv_EstExp": 0.955897,
+      "surv_Vendavel": 0.946338,
+      "delta_IAC": 0.0196,
+      "delta_Refugo": 0.024503,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009559
+    },
+    {
+      "produto": "EKL185",
+      "maquina": 27,
+      "preco": 0.0,
+      "custo_variavel": 1074.78,
+      "produtividade_bruta": 71.0976,
+      "surv_IAC": 0.9765,
+      "surv_Refugo": 0.960025,
+      "surv_RepExt": 0.960025,
+      "surv_MR2": 0.960025,
+      "surv_Sala": 0.960025,
+      "surv_CortGram": 0.960025,
+      "surv_CortCort": 0.960025,
+      "surv_EstExp": 0.960025,
+      "surv_Vendavel": 0.950425,
+      "delta_IAC": 0.0235,
+      "delta_Refugo": 0.016475,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.0096
+    },
+    {
+      "produto": "EKL200",
+      "maquina": 27,
+      "preco": 10000,
+      "custo_variavel": 1074.78,
+      "produtividade_bruta": 70.0737,
+      "surv_IAC": 0.9894,
+      "surv_Refugo": 0.959537,
+      "surv_RepExt": 0.959537,
+      "surv_MR2": 0.959537,
+      "surv_Sala": 0.959537,
+      "surv_CortGram": 0.959537,
+      "surv_CortCort": 0.959537,
+      "surv_EstExp": 0.959537,
+      "surv_Vendavel": 0.949942,
+      "delta_IAC": 0.0106,
+      "delta_Refugo": 0.029863,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009595
+    },
+    {
+      "produto": "EKN150",
+      "maquina": 27,
+      "preco": 0.0,
+      "custo_variavel": 1086.54,
+      "produtividade_bruta": 66.4178,
+      "surv_IAC": 0.9624,
+      "surv_Refugo": 0.944775,
+      "surv_RepExt": 0.944775,
+      "surv_MR2": 0.944775,
+      "surv_Sala": 0.944775,
+      "surv_CortGram": 0.944775,
+      "surv_CortCort": 0.944775,
+      "surv_EstExp": 0.944775,
+      "surv_Vendavel": 0.935327,
+      "delta_IAC": 0.0376,
+      "delta_Refugo": 0.017625,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009448
+    },
+    {
+      "produto": "EKW115",
+      "maquina": 27,
+      "preco": 0.0,
+      "custo_variavel": 1426.49,
+      "produtividade_bruta": 53.7142,
+      "surv_IAC": 0.9858,
+      "surv_Refugo": 0.93029,
+      "surv_RepExt": 0.93029,
+      "surv_MR2": 0.93029,
+      "surv_Sala": 0.93029,
+      "surv_CortGram": 0.93029,
+      "surv_CortCort": 0.93029,
+      "surv_EstExp": 0.93029,
+      "surv_Vendavel": 0.920987,
+      "delta_IAC": 0.0142,
+      "delta_Refugo": 0.05551,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009303
+    },
+    {
+      "produto": "EKW125",
+      "maquina": 27,
+      "preco": 0.0,
+      "custo_variavel": 1328.14,
+      "produtividade_bruta": 57.2506,
+      "surv_IAC": 0.9772,
+      "surv_Refugo": 0.913484,
+      "surv_RepExt": 0.913484,
+      "surv_MR2": 0.913484,
+      "surv_Sala": 0.913484,
+      "surv_CortGram": 0.913484,
+      "surv_CortCort": 0.913484,
+      "surv_EstExp": 0.913484,
+      "surv_Vendavel": 0.904349,
+      "delta_IAC": 0.0228,
+      "delta_Refugo": 0.063716,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009135
+    },
+    {
+      "produto": "EKW135",
+      "maquina": 27,
+      "preco": 10000,
+      "custo_variavel": 1317.8,
+      "produtividade_bruta": 62.844,
+      "surv_IAC": 0.9852,
+      "surv_Refugo": 0.944561,
+      "surv_RepExt": 0.944561,
+      "surv_MR2": 0.944561,
+      "surv_Sala": 0.944561,
+      "surv_CortGram": 0.944561,
+      "surv_CortCort": 0.944561,
+      "surv_EstExp": 0.944561,
+      "surv_Vendavel": 0.935115,
+      "delta_IAC": 0.0148,
+      "delta_Refugo": 0.040639,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009446
+    },
+    {
+      "produto": "EKW150",
+      "maquina": 27,
+      "preco": 10000,
+      "custo_variavel": 1229.87,
+      "produtividade_bruta": 65.4139,
+      "surv_IAC": 0.9859,
+      "surv_Refugo": 0.923584,
+      "surv_RepExt": 0.923584,
+      "surv_MR2": 0.923584,
+      "surv_Sala": 0.923584,
+      "surv_CortGram": 0.923584,
+      "surv_CortCort": 0.923584,
+      "surv_EstExp": 0.923584,
+      "surv_Vendavel": 0.914348,
+      "delta_IAC": 0.0141,
+      "delta_Refugo": 0.062316,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009236
+    },
+    {
+      "produto": "EKW175",
+      "maquina": 27,
+      "preco": 0.0,
+      "custo_variavel": 1229.87,
+      "produtividade_bruta": 64.8398,
+      "surv_IAC": 0.9808,
+      "surv_Refugo": 0.885355,
+      "surv_RepExt": 0.885355,
+      "surv_MR2": 0.885355,
+      "surv_Sala": 0.885355,
+      "surv_CortGram": 0.885355,
+      "surv_CortCort": 0.885355,
+      "surv_EstExp": 0.885355,
+      "surv_Vendavel": 0.876501,
+      "delta_IAC": 0.0192,
+      "delta_Refugo": 0.095445,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.008854
+    },
+    {
+      "produto": "EKW200",
+      "maquina": 27,
+      "preco": 0.0,
+      "custo_variavel": 1229.87,
+      "produtividade_bruta": 67.4115,
+      "surv_IAC": 0.986,
+      "surv_Refugo": 0.89613,
+      "surv_RepExt": 0.89613,
+      "surv_MR2": 0.89613,
+      "surv_Sala": 0.89613,
+      "surv_CortGram": 0.89613,
+      "surv_CortCort": 0.89613,
+      "surv_EstExp": 0.89613,
+      "surv_Vendavel": 0.887168,
+      "delta_IAC": 0.014,
+      "delta_Refugo": 0.08987,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.008961
+    },
+    {
+      "produto": "LLE120",
+      "maquina": 27,
+      "preco": 0.0,
+      "custo_variavel": 1069.62,
+      "produtividade_bruta": 64.2809,
+      "surv_IAC": 0.9788,
+      "surv_Refugo": 0.969881,
+      "surv_RepExt": 0.969881,
+      "surv_MR2": 0.969881,
+      "surv_Sala": 0.969881,
+      "surv_CortGram": 0.969881,
+      "surv_CortCort": 0.969881,
+      "surv_EstExp": 0.969881,
+      "surv_Vendavel": 0.960182,
+      "delta_IAC": 0.0212,
+      "delta_Refugo": 0.008919,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009699
+    },
+    {
+      "produto": "LLE185",
+      "maquina": 27,
+      "preco": 0.0,
+      "custo_variavel": 1074.78,
+      "produtividade_bruta": 69.7773,
+      "surv_IAC": 0.9808,
+      "surv_Refugo": 0.964252,
+      "surv_RepExt": 0.964252,
+      "surv_MR2": 0.964252,
+      "surv_Sala": 0.964252,
+      "surv_CortGram": 0.964252,
+      "surv_CortCort": 0.964252,
+      "surv_EstExp": 0.964252,
+      "surv_Vendavel": 0.95461,
+      "delta_IAC": 0.0192,
+      "delta_Refugo": 0.016548,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009643
+    },
+    {
+      "produto": "LTE135",
+      "maquina": 27,
+      "preco": 0.0,
+      "custo_variavel": 1126.74,
+      "produtividade_bruta": 70.0737,
+      "surv_IAC": 0.9856,
+      "surv_Refugo": 0.924719,
+      "surv_RepExt": 0.924719,
+      "surv_MR2": 0.924719,
+      "surv_Sala": 0.924719,
+      "surv_CortGram": 0.924719,
+      "surv_CortCort": 0.924719,
+      "surv_EstExp": 0.924719,
+      "surv_Vendavel": 0.915472,
+      "delta_IAC": 0.0144,
+      "delta_Refugo": 0.060881,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009247
+    },
+    {
+      "produto": "LWE125",
+      "maquina": 27,
+      "preco": 0.0,
+      "custo_variavel": 1328.14,
+      "produtividade_bruta": 57.2506,
+      "surv_IAC": 0.9674,
+      "surv_Refugo": 0.904323,
+      "surv_RepExt": 0.904323,
+      "surv_MR2": 0.904323,
+      "surv_Sala": 0.904323,
+      "surv_CortGram": 0.904323,
+      "surv_CortCort": 0.904323,
+      "surv_EstExp": 0.904323,
+      "surv_Vendavel": 0.89528,
+      "delta_IAC": 0.0326,
+      "delta_Refugo": 0.063077,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009043
+    },
+    {
+      "produto": "LWE135",
+      "maquina": 27,
+      "preco": 0.0,
+      "custo_variavel": 1317.8,
+      "produtividade_bruta": 62.844,
+      "surv_IAC": 0.9674,
+      "surv_Refugo": 0.927495,
+      "surv_RepExt": 0.927495,
+      "surv_MR2": 0.927495,
+      "surv_Sala": 0.927495,
+      "surv_CortGram": 0.927495,
+      "surv_CortCort": 0.927495,
+      "surv_EstExp": 0.927495,
+      "surv_Vendavel": 0.91822,
+      "delta_IAC": 0.0326,
+      "delta_Refugo": 0.039905,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009275
+    },
+    {
+      "produto": "LWE150",
+      "maquina": 27,
+      "preco": 0.0,
+      "custo_variavel": 1229.87,
+      "produtividade_bruta": 65.4139,
+      "surv_IAC": 0.9929,
+      "surv_Refugo": 0.930141,
+      "surv_RepExt": 0.930141,
+      "surv_MR2": 0.930141,
+      "surv_Sala": 0.930141,
+      "surv_CortGram": 0.930141,
+      "surv_CortCort": 0.930141,
+      "surv_EstExp": 0.930141,
+      "surv_Vendavel": 0.92084,
+      "delta_IAC": 0.0071,
+      "delta_Refugo": 0.062759,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009301
+    },
+    {
+      "produto": "LWE175",
+      "maquina": 27,
+      "preco": 10000,
+      "custo_variavel": 1229.87,
+      "produtividade_bruta": 64.8398,
+      "surv_IAC": 0.9929,
+      "surv_Refugo": 0.896277,
+      "surv_RepExt": 0.896277,
+      "surv_MR2": 0.896277,
+      "surv_Sala": 0.896277,
+      "surv_CortGram": 0.896277,
+      "surv_CortCort": 0.896277,
+      "surv_EstExp": 0.896277,
+      "surv_Vendavel": 0.887314,
+      "delta_IAC": 0.0071,
+      "delta_Refugo": 0.096623,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.008963
+    },
+    {
+      "produto": "LWE200",
+      "maquina": 27,
+      "preco": 10000,
+      "custo_variavel": 1229.87,
+      "produtividade_bruta": 65.2802,
+      "surv_IAC": 0.9988,
+      "surv_Refugo": 0.907763,
+      "surv_RepExt": 0.907763,
+      "surv_MR2": 0.907763,
+      "surv_Sala": 0.907763,
+      "surv_CortGram": 0.907763,
+      "surv_CortCort": 0.907763,
+      "surv_EstExp": 0.907763,
+      "surv_Vendavel": 0.898685,
+      "delta_IAC": 0.0012,
+      "delta_Refugo": 0.091037,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.009078
+    },
+    {
+      "produto": "CHD318",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1616.08,
+      "produtividade_bruta": 63.454,
+      "surv_IAC": 0.9955,
+      "surv_Refugo": 0.956277,
+      "surv_RepExt": 0.956277,
+      "surv_MR2": 0.956277,
+      "surv_Sala": 0.956277,
+      "surv_CortGram": 0.956277,
+      "surv_CortCort": 0.956277,
+      "surv_EstExp": 0.956277,
+      "surv_Vendavel": 0.941933,
+      "delta_IAC": 0.0045,
+      "delta_Refugo": 0.039223,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014344
+    },
+    {
+      "produto": "CKF205",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1750.9,
+      "produtividade_bruta": 63.2644,
+      "surv_IAC": 0.9933,
+      "surv_Refugo": 0.950389,
+      "surv_RepExt": 0.950389,
+      "surv_MR2": 0.950389,
+      "surv_Sala": 0.950389,
+      "surv_CortGram": 0.950389,
+      "surv_CortCort": 0.950389,
+      "surv_EstExp": 0.950389,
+      "surv_Vendavel": 0.936134,
+      "delta_IAC": 0.0067,
+      "delta_Refugo": 0.042911,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014256
+    },
+    {
+      "produto": "CKF227",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1594.2,
+      "produtividade_bruta": 63.2644,
+      "surv_IAC": 0.984485,
+      "surv_Refugo": 0.941955,
+      "surv_RepExt": 0.941955,
+      "surv_MR2": 0.941955,
+      "surv_Sala": 0.941955,
+      "surv_CortGram": 0.941955,
+      "surv_CortCort": 0.941955,
+      "surv_EstExp": 0.941955,
+      "surv_Vendavel": 0.927826,
+      "delta_IAC": 0.015515,
+      "delta_Refugo": 0.04253,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014129
+    },
+    {
+      "produto": "CKF233",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1594.2,
+      "produtividade_bruta": 63.2644,
+      "surv_IAC": 0.9851,
+      "surv_Refugo": 0.942544,
+      "surv_RepExt": 0.942544,
+      "surv_MR2": 0.942544,
+      "surv_Sala": 0.942544,
+      "surv_CortGram": 0.942544,
+      "surv_CortCort": 0.942544,
+      "surv_EstExp": 0.942544,
+      "surv_Vendavel": 0.928406,
+      "delta_IAC": 0.0149,
+      "delta_Refugo": 0.042556,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014138
+    },
+    {
+      "produto": "CKF250",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1594.2,
+      "produtividade_bruta": 63.2644,
+      "surv_IAC": 0.9883,
+      "surv_Refugo": 0.945605,
+      "surv_RepExt": 0.945605,
+      "surv_MR2": 0.945605,
+      "surv_Sala": 0.945605,
+      "surv_CortGram": 0.945605,
+      "surv_CortCort": 0.945605,
+      "surv_EstExp": 0.945605,
+      "surv_Vendavel": 0.931421,
+      "delta_IAC": 0.0117,
+      "delta_Refugo": 0.042695,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014184
+    },
+    {
+      "produto": "CKF276",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1625.74,
+      "produtividade_bruta": 63.2644,
+      "surv_IAC": 0.9903,
+      "surv_Refugo": 0.947519,
+      "surv_RepExt": 0.947519,
+      "surv_MR2": 0.947519,
+      "surv_Sala": 0.947519,
+      "surv_CortGram": 0.947519,
+      "surv_CortCort": 0.947519,
+      "surv_EstExp": 0.947519,
+      "surv_Vendavel": 0.933306,
+      "delta_IAC": 0.0097,
+      "delta_Refugo": 0.042781,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014213
+    },
+    {
+      "produto": "CKF285",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1625.74,
+      "produtividade_bruta": 63.2644,
+      "surv_IAC": 0.9878,
+      "surv_Refugo": 0.945127,
+      "surv_RepExt": 0.945127,
+      "surv_MR2": 0.945127,
+      "surv_Sala": 0.945127,
+      "surv_CortGram": 0.945127,
+      "surv_CortCort": 0.945127,
+      "surv_EstExp": 0.945127,
+      "surv_Vendavel": 0.93095,
+      "delta_IAC": 0.0122,
+      "delta_Refugo": 0.042673,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014177
+    },
+    {
+      "produto": "CKF312",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1625.74,
+      "produtividade_bruta": 63.2644,
+      "surv_IAC": 0.9882,
+      "surv_Refugo": 0.94551,
+      "surv_RepExt": 0.94551,
+      "surv_MR2": 0.94551,
+      "surv_Sala": 0.94551,
+      "surv_CortGram": 0.94551,
+      "surv_CortCort": 0.94551,
+      "surv_EstExp": 0.94551,
+      "surv_Vendavel": 0.931327,
+      "delta_IAC": 0.0118,
+      "delta_Refugo": 0.04269,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014183
+    },
+    {
+      "produto": "CKF332",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1625.74,
+      "produtividade_bruta": 63.2644,
+      "surv_IAC": 0.979076,
+      "surv_Refugo": 0.93678,
+      "surv_RepExt": 0.93678,
+      "surv_MR2": 0.93678,
+      "surv_Sala": 0.93678,
+      "surv_CortGram": 0.93678,
+      "surv_CortCort": 0.93678,
+      "surv_EstExp": 0.93678,
+      "surv_Vendavel": 0.922728,
+      "delta_IAC": 0.020924,
+      "delta_Refugo": 0.042296,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014052
+    },
+    {
+      "produto": "CKF360",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1625.74,
+      "produtividade_bruta": 63.2644,
+      "surv_IAC": 0.9825,
+      "surv_Refugo": 0.940056,
+      "surv_RepExt": 0.940056,
+      "surv_MR2": 0.940056,
+      "surv_Sala": 0.940056,
+      "surv_CortGram": 0.940056,
+      "surv_CortCort": 0.940056,
+      "surv_EstExp": 0.940056,
+      "surv_Vendavel": 0.925955,
+      "delta_IAC": 0.0175,
+      "delta_Refugo": 0.042444,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014101
+    },
+    {
+      "produto": "CKQ232",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1625.74,
+      "produtividade_bruta": 63.2644,
+      "surv_IAC": 0.9871,
+      "surv_Refugo": 0.942275,
+      "surv_RepExt": 0.942275,
+      "surv_MR2": 0.942275,
+      "surv_Sala": 0.942275,
+      "surv_CortGram": 0.942275,
+      "surv_CortCort": 0.942275,
+      "surv_EstExp": 0.942275,
+      "surv_Vendavel": 0.928141,
+      "delta_IAC": 0.0129,
+      "delta_Refugo": 0.044825,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014134
+    },
+    {
+      "produto": "CKQ276",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1625.74,
+      "produtividade_bruta": 63.2644,
+      "surv_IAC": 0.9871,
+      "surv_Refugo": 0.942275,
+      "surv_RepExt": 0.942275,
+      "surv_MR2": 0.942275,
+      "surv_Sala": 0.942275,
+      "surv_CortGram": 0.942275,
+      "surv_CortCort": 0.942275,
+      "surv_EstExp": 0.942275,
+      "surv_Vendavel": 0.928141,
+      "delta_IAC": 0.0129,
+      "delta_Refugo": 0.044825,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014134
+    },
+    {
+      "produto": "CKQ300",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1625.74,
+      "produtividade_bruta": 63.2644,
+      "surv_IAC": 0.9885,
+      "surv_Refugo": 0.943611,
+      "surv_RepExt": 0.943611,
+      "surv_MR2": 0.943611,
+      "surv_Sala": 0.943611,
+      "surv_CortGram": 0.943611,
+      "surv_CortCort": 0.943611,
+      "surv_EstExp": 0.943611,
+      "surv_Vendavel": 0.929457,
+      "delta_IAC": 0.0115,
+      "delta_Refugo": 0.044889,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014154
+    },
+    {
+      "produto": "CQT233",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 1594.2,
+      "produtividade_bruta": 63.2644,
+      "surv_IAC": 0.9901,
+      "surv_Refugo": 0.947328,
+      "surv_RepExt": 0.947328,
+      "surv_MR2": 0.947328,
+      "surv_Sala": 0.947328,
+      "surv_CortGram": 0.947328,
+      "surv_CortCort": 0.947328,
+      "surv_EstExp": 0.947328,
+      "surv_Vendavel": 0.933118,
+      "delta_IAC": 0.0099,
+      "delta_Refugo": 0.042772,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.01421
+    },
+    {
+      "produto": "CQT255",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 1594.2,
+      "produtividade_bruta": 63.2644,
+      "surv_IAC": 0.985,
+      "surv_Refugo": 0.942448,
+      "surv_RepExt": 0.942448,
+      "surv_MR2": 0.942448,
+      "surv_Sala": 0.942448,
+      "surv_CortGram": 0.942448,
+      "surv_CortCort": 0.942448,
+      "surv_EstExp": 0.942448,
+      "surv_Vendavel": 0.928311,
+      "delta_IAC": 0.015,
+      "delta_Refugo": 0.042552,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014137
+    },
+    {
+      "produto": "CQT276",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 1625.74,
+      "produtividade_bruta": 63.2644,
+      "surv_IAC": 0.9927,
+      "surv_Refugo": 0.949815,
+      "surv_RepExt": 0.949815,
+      "surv_MR2": 0.949815,
+      "surv_Sala": 0.949815,
+      "surv_CortGram": 0.949815,
+      "surv_CortCort": 0.949815,
+      "surv_EstExp": 0.949815,
+      "surv_Vendavel": 0.935568,
+      "delta_IAC": 0.0073,
+      "delta_Refugo": 0.042885,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014247
+    },
+    {
+      "produto": "EKW175",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 1337.07,
+      "produtividade_bruta": 66.0632,
+      "surv_IAC": 0.9896,
+      "surv_Refugo": 0.978912,
+      "surv_RepExt": 0.978912,
+      "surv_MR2": 0.978912,
+      "surv_Sala": 0.978912,
+      "surv_CortGram": 0.978912,
+      "surv_CortCort": 0.978912,
+      "surv_EstExp": 0.978912,
+      "surv_Vendavel": 0.964229,
+      "delta_IAC": 0.0104,
+      "delta_Refugo": 0.010688,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014684
+    },
+    {
+      "produto": "EKW200",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 1314.61,
+      "produtividade_bruta": 62.7246,
+      "surv_IAC": 0.9867,
+      "surv_Refugo": 0.976044,
+      "surv_RepExt": 0.976044,
+      "surv_MR2": 0.976044,
+      "surv_Sala": 0.976044,
+      "surv_CortGram": 0.976044,
+      "surv_CortCort": 0.976044,
+      "surv_EstExp": 0.976044,
+      "surv_Vendavel": 0.961403,
+      "delta_IAC": 0.0133,
+      "delta_Refugo": 0.010656,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014641
+    },
+    {
+      "produto": "EWC175",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 2023.17,
+      "produtividade_bruta": 57.4526,
+      "surv_IAC": 0.9881,
+      "surv_Refugo": 0.958062,
+      "surv_RepExt": 0.958062,
+      "surv_MR2": 0.958062,
+      "surv_Sala": 0.958062,
+      "surv_CortGram": 0.958062,
+      "surv_CortCort": 0.958062,
+      "surv_EstExp": 0.958062,
+      "surv_Vendavel": 0.943691,
+      "delta_IAC": 0.0119,
+      "delta_Refugo": 0.030038,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014371
+    },
+    {
+      "produto": "EWC190",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1690.9,
+      "produtividade_bruta": 57.4526,
+      "surv_IAC": 0.9871,
+      "surv_Refugo": 0.957092,
+      "surv_RepExt": 0.957092,
+      "surv_MR2": 0.957092,
+      "surv_Sala": 0.957092,
+      "surv_CortGram": 0.957092,
+      "surv_CortCort": 0.957092,
+      "surv_EstExp": 0.957092,
+      "surv_Vendavel": 0.942736,
+      "delta_IAC": 0.0129,
+      "delta_Refugo": 0.030008,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014356
+    },
+    {
+      "produto": "EWP190",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1690.9,
+      "produtividade_bruta": 57.4526,
+      "surv_IAC": 0.9888,
+      "surv_Refugo": 0.946084,
+      "surv_RepExt": 0.946084,
+      "surv_MR2": 0.946084,
+      "surv_Sala": 0.946084,
+      "surv_CortGram": 0.946084,
+      "surv_CortCort": 0.946084,
+      "surv_EstExp": 0.946084,
+      "surv_Vendavel": 0.931893,
+      "delta_IAC": 0.0112,
+      "delta_Refugo": 0.042716,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014191
+    },
+    {
+      "produto": "K28135",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 1115.36,
+      "produtividade_bruta": 63.0058,
+      "surv_IAC": 0.9922,
+      "surv_Refugo": 0.981484,
+      "surv_RepExt": 0.981484,
+      "surv_MR2": 0.981484,
+      "surv_Sala": 0.981484,
+      "surv_CortGram": 0.981484,
+      "surv_CortCort": 0.981484,
+      "surv_EstExp": 0.981484,
+      "surv_Vendavel": 0.966762,
+      "delta_IAC": 0.0078,
+      "delta_Refugo": 0.010716,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014722
+    },
+    {
+      "produto": "K28150",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 1115.36,
+      "produtividade_bruta": 63.0058,
+      "surv_IAC": 0.9922,
+      "surv_Refugo": 0.981484,
+      "surv_RepExt": 0.981484,
+      "surv_MR2": 0.981484,
+      "surv_Sala": 0.981484,
+      "surv_CortGram": 0.981484,
+      "surv_CortCort": 0.981484,
+      "surv_EstExp": 0.981484,
+      "surv_Vendavel": 0.966762,
+      "delta_IAC": 0.0078,
+      "delta_Refugo": 0.010716,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014722
+    },
+    {
+      "produto": "K28170",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 1106.48,
+      "produtividade_bruta": 63.0058,
+      "surv_IAC": 0.9907,
+      "surv_Refugo": 0.98,
+      "surv_RepExt": 0.98,
+      "surv_MR2": 0.98,
+      "surv_Sala": 0.98,
+      "surv_CortGram": 0.98,
+      "surv_CortCort": 0.98,
+      "surv_EstExp": 0.98,
+      "surv_Vendavel": 0.9653,
+      "delta_IAC": 0.0093,
+      "delta_Refugo": 0.0107,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.0147
+    },
+    {
+      "produto": "K28200",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 1095.7,
+      "produtividade_bruta": 63.0058,
+      "surv_IAC": 0.9902,
+      "surv_Refugo": 0.979506,
+      "surv_RepExt": 0.979506,
+      "surv_MR2": 0.979506,
+      "surv_Sala": 0.979506,
+      "surv_CortGram": 0.979506,
+      "surv_CortCort": 0.979506,
+      "surv_EstExp": 0.979506,
+      "surv_Vendavel": 0.964813,
+      "delta_IAC": 0.0098,
+      "delta_Refugo": 0.010694,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014693
+    },
+    {
+      "produto": "K28240",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 1092.99,
+      "produtividade_bruta": 63.0058,
+      "surv_IAC": 0.995,
+      "surv_Refugo": 0.984254,
+      "surv_RepExt": 0.984254,
+      "surv_MR2": 0.984254,
+      "surv_Sala": 0.984254,
+      "surv_CortGram": 0.984254,
+      "surv_CortCort": 0.984254,
+      "surv_EstExp": 0.984254,
+      "surv_Vendavel": 0.96949,
+      "delta_IAC": 0.005,
+      "delta_Refugo": 0.010746,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014764
+    },
+    {
+      "produto": "K28280",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 1102.76,
+      "produtividade_bruta": 63.0058,
+      "surv_IAC": 0.9939,
+      "surv_Refugo": 0.983166,
+      "surv_RepExt": 0.983166,
+      "surv_MR2": 0.983166,
+      "surv_Sala": 0.983166,
+      "surv_CortGram": 0.983166,
+      "surv_CortCort": 0.983166,
+      "surv_EstExp": 0.983166,
+      "surv_Vendavel": 0.968418,
+      "delta_IAC": 0.0061,
+      "delta_Refugo": 0.010734,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014747
+    },
+    {
+      "produto": "K28320",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 1102.76,
+      "produtividade_bruta": 63.0058,
+      "surv_IAC": 0.993,
+      "surv_Refugo": 0.982276,
+      "surv_RepExt": 0.982276,
+      "surv_MR2": 0.982276,
+      "surv_Sala": 0.982276,
+      "surv_CortGram": 0.982276,
+      "surv_CortCort": 0.982276,
+      "surv_EstExp": 0.982276,
+      "surv_Vendavel": 0.967541,
+      "delta_IAC": 0.007,
+      "delta_Refugo": 0.010724,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014734
+    },
+    {
+      "produto": "KKC273",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1894.32,
+      "produtividade_bruta": 62.3351,
+      "surv_IAC": 0.989,
+      "surv_Refugo": 0.947363,
+      "surv_RepExt": 0.947363,
+      "surv_MR2": 0.947363,
+      "surv_Sala": 0.947363,
+      "surv_CortGram": 0.947363,
+      "surv_CortCort": 0.947363,
+      "surv_EstExp": 0.947363,
+      "surv_Vendavel": 0.933153,
+      "delta_IAC": 0.011,
+      "delta_Refugo": 0.041637,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.01421
+    },
+    {
+      "produto": "KKC274",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1894.32,
+      "produtividade_bruta": 62.3351,
+      "surv_IAC": 0.968624,
+      "surv_Refugo": 0.927845,
+      "surv_RepExt": 0.927845,
+      "surv_MR2": 0.927845,
+      "surv_Sala": 0.927845,
+      "surv_CortGram": 0.927845,
+      "surv_CortCort": 0.927845,
+      "surv_EstExp": 0.927845,
+      "surv_Vendavel": 0.913927,
+      "delta_IAC": 0.031376,
+      "delta_Refugo": 0.040779,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.013918
+    },
+    {
+      "produto": "KKC276",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1894.32,
+      "produtividade_bruta": 62.3351,
+      "surv_IAC": 0.967399,
+      "surv_Refugo": 0.926672,
+      "surv_RepExt": 0.926672,
+      "surv_MR2": 0.926672,
+      "surv_Sala": 0.926672,
+      "surv_CortGram": 0.926672,
+      "surv_CortCort": 0.926672,
+      "surv_EstExp": 0.926672,
+      "surv_Vendavel": 0.912772,
+      "delta_IAC": 0.032601,
+      "delta_Refugo": 0.040728,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.0139
+    },
+    {
+      "produto": "KKL195",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 2049.76,
+      "produtividade_bruta": 62.3351,
+      "surv_IAC": 0.9949,
+      "surv_Refugo": 0.953015,
+      "surv_RepExt": 0.953015,
+      "surv_MR2": 0.953015,
+      "surv_Sala": 0.953015,
+      "surv_CortGram": 0.953015,
+      "surv_CortCort": 0.953015,
+      "surv_EstExp": 0.953015,
+      "surv_Vendavel": 0.938719,
+      "delta_IAC": 0.0051,
+      "delta_Refugo": 0.041885,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014295
+    },
+    {
+      "produto": "KKL200",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 2049.76,
+      "produtividade_bruta": 62.3351,
+      "surv_IAC": 0.9985,
+      "surv_Refugo": 0.956463,
+      "surv_RepExt": 0.956463,
+      "surv_MR2": 0.956463,
+      "surv_Sala": 0.956463,
+      "surv_CortGram": 0.956463,
+      "surv_CortCort": 0.956463,
+      "surv_EstExp": 0.956463,
+      "surv_Vendavel": 0.942116,
+      "delta_IAC": 0.0015,
+      "delta_Refugo": 0.042037,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014347
+    },
+    {
+      "produto": "KKL205",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 2049.76,
+      "produtividade_bruta": 62.3351,
+      "surv_IAC": 0.9784,
+      "surv_Refugo": 0.937209,
+      "surv_RepExt": 0.937209,
+      "surv_MR2": 0.937209,
+      "surv_Sala": 0.937209,
+      "surv_CortGram": 0.937209,
+      "surv_CortCort": 0.937209,
+      "surv_EstExp": 0.937209,
+      "surv_Vendavel": 0.923151,
+      "delta_IAC": 0.0216,
+      "delta_Refugo": 0.041191,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014058
+    },
+    {
+      "produto": "KKL273",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 2029.79,
+      "produtividade_bruta": 62.3351,
+      "surv_IAC": 0.9836,
+      "surv_Refugo": 0.94219,
+      "surv_RepExt": 0.94219,
+      "surv_MR2": 0.94219,
+      "surv_Sala": 0.94219,
+      "surv_CortGram": 0.94219,
+      "surv_CortCort": 0.94219,
+      "surv_EstExp": 0.94219,
+      "surv_Vendavel": 0.928058,
+      "delta_IAC": 0.0164,
+      "delta_Refugo": 0.04141,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014133
+    },
+    {
+      "produto": "KKL276",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 2029.79,
+      "produtividade_bruta": 62.3351,
+      "surv_IAC": 0.9836,
+      "surv_Refugo": 0.94219,
+      "surv_RepExt": 0.94219,
+      "surv_MR2": 0.94219,
+      "surv_Sala": 0.94219,
+      "surv_CortGram": 0.94219,
+      "surv_CortCort": 0.94219,
+      "surv_EstExp": 0.94219,
+      "surv_Vendavel": 0.928058,
+      "delta_IAC": 0.0164,
+      "delta_Refugo": 0.04141,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014133
+    },
+    {
+      "produto": "KKS195",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 2059.98,
+      "produtividade_bruta": 62.3351,
+      "surv_IAC": 0.9685,
+      "surv_Refugo": 0.927726,
+      "surv_RepExt": 0.927726,
+      "surv_MR2": 0.927726,
+      "surv_Sala": 0.927726,
+      "surv_CortGram": 0.927726,
+      "surv_CortCort": 0.927726,
+      "surv_EstExp": 0.927726,
+      "surv_Vendavel": 0.91381,
+      "delta_IAC": 0.0315,
+      "delta_Refugo": 0.040774,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.013916
+    },
+    {
+      "produto": "LBS170",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 1106.48,
+      "produtividade_bruta": 59.7803,
+      "surv_IAC": 0.9935,
+      "surv_Refugo": 0.98277,
+      "surv_RepExt": 0.98277,
+      "surv_MR2": 0.98277,
+      "surv_Sala": 0.98277,
+      "surv_CortGram": 0.98277,
+      "surv_CortCort": 0.98277,
+      "surv_EstExp": 0.98277,
+      "surv_Vendavel": 0.968029,
+      "delta_IAC": 0.0065,
+      "delta_Refugo": 0.01073,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014742
+    },
+    {
+      "produto": "LLE150",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1115.36,
+      "produtividade_bruta": 59.7803,
+      "surv_IAC": 0.9902,
+      "surv_Refugo": 0.979506,
+      "surv_RepExt": 0.979506,
+      "surv_MR2": 0.979506,
+      "surv_Sala": 0.979506,
+      "surv_CortGram": 0.979506,
+      "surv_CortCort": 0.979506,
+      "surv_EstExp": 0.979506,
+      "surv_Vendavel": 0.964813,
+      "delta_IAC": 0.0098,
+      "delta_Refugo": 0.010694,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014693
+    },
+    {
+      "produto": "LLE170",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1106.48,
+      "produtividade_bruta": 59.7803,
+      "surv_IAC": 0.9907,
+      "surv_Refugo": 0.98,
+      "surv_RepExt": 0.98,
+      "surv_MR2": 0.98,
+      "surv_Sala": 0.98,
+      "surv_CortGram": 0.98,
+      "surv_CortCort": 0.98,
+      "surv_EstExp": 0.98,
+      "surv_Vendavel": 0.9653,
+      "delta_IAC": 0.0093,
+      "delta_Refugo": 0.0107,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.0147
+    },
+    {
+      "produto": "LLE200",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1095.7,
+      "produtividade_bruta": 59.7803,
+      "surv_IAC": 0.9912,
+      "surv_Refugo": 0.980495,
+      "surv_RepExt": 0.980495,
+      "surv_MR2": 0.980495,
+      "surv_Sala": 0.980495,
+      "surv_CortGram": 0.980495,
+      "surv_CortCort": 0.980495,
+      "surv_EstExp": 0.980495,
+      "surv_Vendavel": 0.965788,
+      "delta_IAC": 0.0088,
+      "delta_Refugo": 0.010705,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014707
+    },
+    {
+      "produto": "LLE240",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 1092.99,
+      "produtividade_bruta": 63.0058,
+      "surv_IAC": 0.9872,
+      "surv_Refugo": 0.976538,
+      "surv_RepExt": 0.976538,
+      "surv_MR2": 0.976538,
+      "surv_Sala": 0.976538,
+      "surv_CortGram": 0.976538,
+      "surv_CortCort": 0.976538,
+      "surv_EstExp": 0.976538,
+      "surv_Vendavel": 0.96189,
+      "delta_IAC": 0.0128,
+      "delta_Refugo": 0.010662,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014648
+    },
+    {
+      "produto": "LWE175",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1337.07,
+      "produtividade_bruta": 62.7246,
+      "surv_IAC": 0.9916,
+      "surv_Refugo": 0.980891,
+      "surv_RepExt": 0.980891,
+      "surv_MR2": 0.980891,
+      "surv_Sala": 0.980891,
+      "surv_CortGram": 0.980891,
+      "surv_CortCort": 0.980891,
+      "surv_EstExp": 0.980891,
+      "surv_Vendavel": 0.966177,
+      "delta_IAC": 0.0084,
+      "delta_Refugo": 0.010709,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014713
+    },
+    {
+      "produto": "LWE200",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1314.61,
+      "produtividade_bruta": 62.7246,
+      "surv_IAC": 0.982,
+      "surv_Refugo": 0.971394,
+      "surv_RepExt": 0.971394,
+      "surv_MR2": 0.971394,
+      "surv_Sala": 0.971394,
+      "surv_CortGram": 0.971394,
+      "surv_CortCort": 0.971394,
+      "surv_EstExp": 0.971394,
+      "surv_Vendavel": 0.956823,
+      "delta_IAC": 0.018,
+      "delta_Refugo": 0.010606,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014571
+    },
+    {
+      "produto": "WCP250",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 2371.9,
+      "produtividade_bruta": 64.6014,
+      "surv_IAC": 0.9891,
+      "surv_Refugo": 0.924642,
+      "surv_RepExt": 0.924642,
+      "surv_MR2": 0.924642,
+      "surv_Sala": 0.924642,
+      "surv_CortGram": 0.924642,
+      "surv_CortCort": 0.924642,
+      "surv_EstExp": 0.924642,
+      "surv_Vendavel": 0.910773,
+      "delta_IAC": 0.0109,
+      "delta_Refugo": 0.064458,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.01387
+    },
+    {
+      "produto": "WKC285",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1940.75,
+      "produtividade_bruta": 64.6014,
+      "surv_IAC": 0.964591,
+      "surv_Refugo": 0.933821,
+      "surv_RepExt": 0.933821,
+      "surv_MR2": 0.933821,
+      "surv_Sala": 0.933821,
+      "surv_CortGram": 0.933821,
+      "surv_CortCort": 0.933821,
+      "surv_EstExp": 0.933821,
+      "surv_Vendavel": 0.919813,
+      "delta_IAC": 0.035409,
+      "delta_Refugo": 0.03077,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014007
+    },
+    {
+      "produto": "WTP205",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 2067.06,
+      "produtividade_bruta": 64.6014,
+      "surv_IAC": 0.9851,
+      "surv_Refugo": 0.953675,
+      "surv_RepExt": 0.953675,
+      "surv_MR2": 0.953675,
+      "surv_Sala": 0.953675,
+      "surv_CortGram": 0.953675,
+      "surv_CortCort": 0.953675,
+      "surv_EstExp": 0.953675,
+      "surv_Vendavel": 0.93937,
+      "delta_IAC": 0.0149,
+      "delta_Refugo": 0.031425,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014305
+    },
+    {
+      "produto": "WTP220",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 2067.06,
+      "produtividade_bruta": 64.6014,
+      "surv_IAC": 0.9916,
+      "surv_Refugo": 0.959968,
+      "surv_RepExt": 0.959968,
+      "surv_MR2": 0.959968,
+      "surv_Sala": 0.959968,
+      "surv_CortGram": 0.959968,
+      "surv_CortCort": 0.959968,
+      "surv_EstExp": 0.959968,
+      "surv_Vendavel": 0.945568,
+      "delta_IAC": 0.0084,
+      "delta_Refugo": 0.031632,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.0144
+    },
+    {
+      "produto": "WTP235",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 2239.61,
+      "produtividade_bruta": 64.6014,
+      "surv_IAC": 0.9891,
+      "surv_Refugo": 0.957548,
+      "surv_RepExt": 0.957548,
+      "surv_MR2": 0.957548,
+      "surv_Sala": 0.957548,
+      "surv_CortGram": 0.957548,
+      "surv_CortCort": 0.957548,
+      "surv_EstExp": 0.957548,
+      "surv_Vendavel": 0.943184,
+      "delta_IAC": 0.0109,
+      "delta_Refugo": 0.031552,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014363
+    },
+    {
+      "produto": "WTP250",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 2239.61,
+      "produtividade_bruta": 64.6014,
+      "surv_IAC": 0.9898,
+      "surv_Refugo": 0.958225,
+      "surv_RepExt": 0.958225,
+      "surv_MR2": 0.958225,
+      "surv_Sala": 0.958225,
+      "surv_CortGram": 0.958225,
+      "surv_CortCort": 0.958225,
+      "surv_EstExp": 0.958225,
+      "surv_Vendavel": 0.943852,
+      "delta_IAC": 0.0102,
+      "delta_Refugo": 0.031575,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014373
+    },
+    {
+      "produto": "WTP265",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1940.75,
+      "produtividade_bruta": 64.6014,
+      "surv_IAC": 0.9891,
+      "surv_Refugo": 0.957548,
+      "surv_RepExt": 0.957548,
+      "surv_MR2": 0.957548,
+      "surv_Sala": 0.957548,
+      "surv_CortGram": 0.957548,
+      "surv_CortCort": 0.957548,
+      "surv_EstExp": 0.957548,
+      "surv_Vendavel": 0.943184,
+      "delta_IAC": 0.0109,
+      "delta_Refugo": 0.031552,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014363
+    },
+    {
+      "produto": "WTP280",
+      "maquina": 28,
+      "preco": 0.0,
+      "custo_variavel": 1809.34,
+      "produtividade_bruta": 64.6014,
+      "surv_IAC": 0.9891,
+      "surv_Refugo": 0.957548,
+      "surv_RepExt": 0.957548,
+      "surv_MR2": 0.957548,
+      "surv_Sala": 0.957548,
+      "surv_CortGram": 0.957548,
+      "surv_CortCort": 0.957548,
+      "surv_EstExp": 0.957548,
+      "surv_Vendavel": 0.943184,
+      "delta_IAC": 0.0109,
+      "delta_Refugo": 0.031552,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014363
+    },
+    {
+      "produto": "WTP300",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1809.34,
+      "produtividade_bruta": 64.6014,
+      "surv_IAC": 0.9905,
+      "surv_Refugo": 0.958903,
+      "surv_RepExt": 0.958903,
+      "surv_MR2": 0.958903,
+      "surv_Sala": 0.958903,
+      "surv_CortGram": 0.958903,
+      "surv_CortCort": 0.958903,
+      "surv_EstExp": 0.958903,
+      "surv_Vendavel": 0.94452,
+      "delta_IAC": 0.0095,
+      "delta_Refugo": 0.031597,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014384
+    },
+    {
+      "produto": "WTP320",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1809.34,
+      "produtividade_bruta": 64.6014,
+      "surv_IAC": 0.9897,
+      "surv_Refugo": 0.958129,
+      "surv_RepExt": 0.958129,
+      "surv_MR2": 0.958129,
+      "surv_Sala": 0.958129,
+      "surv_CortGram": 0.958129,
+      "surv_CortCort": 0.958129,
+      "surv_EstExp": 0.958129,
+      "surv_Vendavel": 0.943757,
+      "delta_IAC": 0.0103,
+      "delta_Refugo": 0.031571,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014372
+    },
+    {
+      "produto": "WTR345",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1773.3,
+      "produtividade_bruta": 64.6014,
+      "surv_IAC": 0.964591,
+      "surv_Refugo": 0.933821,
+      "surv_RepExt": 0.933821,
+      "surv_MR2": 0.933821,
+      "surv_Sala": 0.933821,
+      "surv_CortGram": 0.933821,
+      "surv_CortCort": 0.933821,
+      "surv_EstExp": 0.933821,
+      "surv_Vendavel": 0.919813,
+      "delta_IAC": 0.035409,
+      "delta_Refugo": 0.03077,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014007
+    },
+    {
+      "produto": "WUP215",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 2077.77,
+      "produtividade_bruta": 64.6014,
+      "surv_IAC": 0.9891,
+      "surv_Refugo": 0.957548,
+      "surv_RepExt": 0.957548,
+      "surv_MR2": 0.957548,
+      "surv_Sala": 0.957548,
+      "surv_CortGram": 0.957548,
+      "surv_CortCort": 0.957548,
+      "surv_EstExp": 0.957548,
+      "surv_Vendavel": 0.943184,
+      "delta_IAC": 0.0109,
+      "delta_Refugo": 0.031552,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014363
+    },
+    {
+      "produto": "WUP250",
+      "maquina": 28,
+      "preco": 10000,
+      "custo_variavel": 1933.79,
+      "produtividade_bruta": 64.6014,
+      "surv_IAC": 0.9891,
+      "surv_Refugo": 0.957548,
+      "surv_RepExt": 0.957548,
+      "surv_MR2": 0.957548,
+      "surv_Sala": 0.957548,
+      "surv_CortGram": 0.957548,
+      "surv_CortCort": 0.957548,
+      "surv_EstExp": 0.957548,
+      "surv_Vendavel": 0.943184,
+      "delta_IAC": 0.0109,
+      "delta_Refugo": 0.031552,
+      "delta_RepExt": 0.0,
+      "delta_MR2": 0.0,
+      "delta_Sala": 0.0,
+      "delta_CortGram": 0.0,
+      "delta_CortCort": 0.0,
+      "delta_EstExp": 0.0,
+      "delta_EstRef": 0.014363
+    }
+  ],
+  "bridge_data": {
+    "capac_instalada_t": 49452.2,
+    "capac_ociosa_t": 3022.3,
+    "producao_bruta_real_t": 44142.4,
+    "gap_demanda_t": 9109.8,
+    "perda_waste_t": 893.9,
+    "producao_vendavel_t": 43248.4,
+    "demanda_total_t": 52217.1,
+    "pct_capac_ociosa": 6.11,
+    "pct_gap_demanda": 18.42,
+    "pct_waste": 1.81,
+    "pct_vendavel": 87.46,
+    "preco_medio_ponderado": 10000.0,
+    "custo_medio_ponderado": 1217.61,
+    "margem_media_ponderada": 8782.39
+  }
+}

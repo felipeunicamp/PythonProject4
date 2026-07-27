@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planejamento ORT — Klabin</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #07111f; --surf: #0e1f33; --surf2: #132843; --border: #1e3a55;
+      --text: #e8f0fa; --muted: #7a9bbf; --teal: #00c9b1; --blue: #2d82e8;
+      --orange: #f5973a; --red: #e85c5c; --green: #3dc98e; --r: 12px;
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; min-height: 100vh; }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #0a1e38, #0d2e50);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 36px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .logo {
+      width: 42px; height: 42px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--teal), var(--blue));
+      display: grid; place-items: center; font-size: 18px; font-weight: 900; color: #fff;
+    }
+    header h1 { font-size: 17px; font-weight: 700; }
+    header p  { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    /* ── Persistência toggle ── */
+    .persist-wrap {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 12px; color: var(--muted);
+    }
+    .toggle-switch {
+      position: relative; width: 40px; height: 22px; cursor: pointer;
+    }
+    .toggle-switch input { opacity: 0; width: 0; height: 0; }
+    .toggle-slider {
+      position: absolute; inset: 0; background: var(--surf2);
+      border: 1px solid var(--border); border-radius: 22px; transition: .2s;
+    }
+    .toggle-slider::before {
+      content: ''; position: absolute; width: 16px; height: 16px;
+      left: 2px; top: 2px; background: var(--muted);
+      border-radius: 50%; transition: .2s;
+    }
+    .toggle-switch input:checked + .toggle-slider { background: rgba(0,201,177,.25); border-color: var(--teal); }
+    .toggle-switch input:checked + .toggle-slider::before { background: var(--teal); transform: translateX(18px); }
+
+    /* ── Layout ── */
+    main { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 28px 36px; max-width: 1400px; margin: 0 auto; }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--surf); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 22px 24px;
+      box-shadow: 0 4px 24px rgba(0,0,0,.4);
+    }
+    .card-full { grid-column: 1 / -1; }
+    .card h2 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .card-sub { font-size: 11px; color: var(--muted); margin-bottom: 18px; }
+    .section-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--muted); margin: 20px 0 12px;
+    }
+    .section-label:first-of-type { margin-top: 0; }
+
+    /* ── Tabs dentro do card ── */
+    .inner-tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--border); margin-bottom: 18px; }
+    .inner-tab {
+      padding: 8px 16px; font-size: 12px; font-weight: 600;
+      color: var(--muted); background: none; border: none;
+      border-bottom: 2px solid transparent; cursor: pointer; transition: .15s;
+    }
+    .inner-tab:hover { color: var(--text); }
+    .inner-tab.active { color: var(--teal); border-bottom-color: var(--teal); }
+    .inner-panel { display: none; }
+    .inner-panel.active { display: block; }
+
+    /* ── Formulários ── */
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+    .field { display: flex; flex-direction: column; gap: 5px; }
+    .field label { font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: .5px; }
+    .field input, .field select {
+      background: var(--surf2); color: var(--text);
+      border: 1px solid var(--border); border-radius: 8px;
+      padding: 8px 12px; font-size: 13px; outline: none;
+      transition: border-color .15s;
+    }
+    .field input:focus, .field select:focus { border-color: var(--teal); }
+    .field input:disabled { opacity: .4; cursor: not-allowed; }
+    .field-checkbox { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .field-checkbox input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--teal); cursor: pointer; }
+    .field-checkbox label { font-size: 12px; color: var(--text); cursor: pointer; }
+
+    /* ── Tabelas editáveis ── */
+    .table-wrap { overflow-x: auto; max-height: 340px; overflow-y: auto; border: 1px solid var(--border); border-radius: 8px; }
+    .edit-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .edit-table th {
+      background: var(--surf2); color: var(--muted); padding: 8px 10px;
+      text-align: left; font-size: 10px; text-transform: uppercase;
+      letter-spacing: .6px; position: sticky; top: 0; z-index: 1;
+      border-bottom: 1px solid var(--border);
+    }
+    .edit-table td { padding: 6px 8px; border-bottom: 1px solid rgba(30,58,85,.4); }
+    .edit-table tr:hover td { background: rgba(255,255,255,.03); }
+    .edit-table input {
+      background: transparent; color: var(--text); border: none;
+      width: 100%; outline: none; font-size: 12px; padding: 2px 4px;
+    }
+    .edit-table input:focus { background: rgba(0,201,177,.07); border-radius: 4px; }
+    .btn-remove {
+      background: none; border: none; color: var(--red);
+      cursor: pointer; font-size: 14px; padding: 2px 6px;
+    }
+
+    /* ── Botões ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; border-radius: 9px; font-size: 13px; font-weight: 700;
+      cursor: pointer; border: none; transition: all .15s;
+    }
+    .btn-primary { background: var(--teal); color: #07111f; }
+    .btn-primary:hover:not(:disabled) { background: #00e0c5; }
+    .btn-secondary { background: var(--surf2); color: var(--text); border: 1px solid var(--border); }
+    .btn-secondary:hover:not(:disabled) { border-color: var(--teal); color: var(--teal); }
+    .btn-danger { background: rgba(232,92,92,.12); color: var(--red); border: 1px solid rgba(232,92,92,.3); }
+    .btn-danger:hover:not(:disabled) { background: rgba(232,92,92,.22); }
+    .btn:disabled { opacity: .4; cursor: not-allowed; }
+    .btn-sm { padding: 6px 14px; font-size: 12px; }
+    .btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+
+    /* ── Execução ── */
+    .exec-card { grid-column: 1 / -1; }
+    .exec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .exec-box {
+      background: var(--surf2); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 22px;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .exec-box h3 { font-size: 15px; font-weight: 700; }
+    .exec-box p  { font-size: 12px; color: var(--muted); line-height: 1.6; }
+    .exec-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    /* ── Status badge ── */
+    .status-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700;
+    }
+    .status-badge::before { content: ''; width: 7px; height: 7px; border-radius: 50%; }
+    .status-idle    { background: rgba(120,160,190,.1); color: var(--muted); }
+    .status-idle::before { background: var(--muted); }
+    .status-running { background: rgba(45,130,232,.15); color: var(--blue); }
+    .status-running::before { background: var(--blue); animation: pulse 1s infinite; }
+    .status-ok      { background: rgba(61,201,142,.15); color: var(--green); }
+    .status-ok::before { background: var(--green); }
+    .status-erro    { background: rgba(232,92,92,.15); color: var(--red); }
+    .status-erro::before { background: var(--red); }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+    /* ── Mensagem de erro expandida ── */
+    .error-detail {
+      background: rgba(232,92,92,.08); border: 1px solid rgba(232,92,92,.2);
+      border-radius: 8px; padding: 12px; font-size: 11px; color: var(--red);
+      white-space: pre-wrap; font-family: monospace; max-height: 160px;
+      overflow-y: auto; margin-top: 4px; display: none;
+    }
+    .error-detail.show { display: block; }
+
+    /* ── Toast ── */
+    #toast {
+      position: fixed; bottom: 28px; right: 28px;
+      background: var(--surf); border: 1px solid var(--border);
+      border-radius: 10px; padding: 12px 20px; font-size: 13px;
+      box-shadow: 0 8px 32px rgba(0,0,0,.5);
+      transform: translateY(20px); opacity: 0;
+      transition: all .25s; pointer-events: none; z-index: 999;
+    }
+    #toast.show { transform: translateY(0); opacity: 1; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo">K</div>
+    <div>
+      <h1>Planejamento ORT</h1>
+      <p>Fábrica ORT · MP27 / MP28 / MC25 / MC26 · Paraná</p>
+    </div>
+  </div>
+  <div class="persist-wrap">
+    <span>Manter configurações entre sessões</span>
+    <label class="toggle-switch">
+      <input type="checkbox" id="togglePersistir" onchange="setSessao()">
+      <span class="toggle-slider"></span>
+    </label>
+  </div>
+</header>
+
+<main>
+
+  <!-- ══════════════════════════════════════════════════
+       CARD 1 — DADOS EDITÁVEIS (largura total)
+  ══════════════════════════════════════════════════════ -->
+  <div class="card card-full">
+    <h2>Dados de Entrada</h2>
+    <p class="card-sub">Valores pré-carregados do Excel · edite e salve para usar na próxima execução · use "Resetar" para voltar ao Excel original</p>
+
+    <div class="inner-tabs">
+      <button class="inner-tab active" onclick="switchInner('capacidades', this)">Capacidades MSR</button>
+      <button class="inner-tab" onclick="switchInner('demanda', this)">Demanda</button>
+      <button class="inner-tab" onclick="switchInner('custos', this)">Custos</button>
+      <button class="inner-tab" onclick="switchInner('parametros', this)">Parâmetros Celulose</button>
+    </div>
+
+    <!-- Capacidades -->
+    <div class="inner-panel active" id="inner-capacidades">
+      <div class="field-row" id="cap-fields" style="grid-template-columns: repeat(3, 1fr);"></div>
+      <div class="btn-row">
+        <button class="btn btn-primary btn-sm" onclick="salvarCapacidades()">💾 Salvar</button>
+        <button class="btn btn-danger btn-sm" onclick="resetSecao('capacidades', carregarCapacidades)">↩ Resetar para Excel</button>
+      </div>
+    </div>
+
+    <!-- Demanda -->
+    <div class="inner-panel" id="inner-demanda">
+      <div class="table-wrap">
+        <table class="edit-table">
+          <thead><tr>
+            <th>Mercado</th><th>Produto</th><th>Quantidade (TO)</th><th>Preço</th><th></th>
+          </tr></thead>
+          <tbody id="tbody-demanda"></tbody>
+        </table>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-secondary btn-sm" onclick="addRowDemanda()">+ Linha</button>
+        <button class="btn btn-primary btn-sm" onclick="salvarDemanda()">💾 Salvar</button>
+        <button class="btn btn-danger btn-sm" onclick="resetSecao('demanda', carregarDemanda)">↩ Resetar para Excel</button>
+      </div>
+    </div>
+
+    <!-- Custos -->
+    <div class="inner-panel" id="inner-custos">
+      <div class="table-wrap">
+        <table class="edit-table">
+          <thead><tr>
+            <th>Produto</th><th>Máquina</th><th>Custo Variavel</th><th></th>
+          </tr></thead>
+          <tbody id="tbody-custos"></tbody>
+        </table>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-secondary btn-sm" onclick="addRowCustos()">+ Linha</button>
+        <button class="btn btn-primary btn-sm" onclick="salvarCustos()">💾 Salvar</button>
+        <button class="btn btn-danger btn-sm" onclick="resetSecao('custos', carregarCustos)">↩ Resetar para Excel</button>
+      </div>
+    </div>
+
+    <!-- Parâmetros celulose -->
+    <div class="inner-panel" id="inner-parametros">
+      <div class="field-row" id="param-fields" style="grid-template-columns: repeat(3, 1fr);"></div>
+      <div class="btn-row">
+        <button class="btn btn-primary btn-sm" onclick="salvarParametros()">💾 Salvar</button>
+        <button class="btn btn-danger btn-sm" onclick="resetSecao('parametros', carregarParametros)">↩ Resetar para Excel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       CARD 2 — PARÂMETROS DO MIX
+  ══════════════════════════════════════════════════════ -->
+  <div class="card">
+    <h2>Parâmetros — Otimização de Mix</h2>
+    <p class="card-sub">Configurações de execução do mix_ort_30dias.py</p>
+
+    <div class="field-row">
+      <div class="field">
+        <label>DIAS_PERÍODO</label>
+        <input type="number" id="mp-dias" min="1" max="365" step="1"
+          title="Horizonte de planejamento em dias (mesmo valor usado no Sequenciamento)">
+      </div>
+      <div class="field">
+        <label>BASE_DEMANDA_DIAS</label>
+        <input type="number" id="mp-base" min="1" max="365" step="1"
+          title="Base da demanda no Excel: 365 = anual, 30 = mensal">
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary btn-sm" onclick="salvarMixParams()">💾 Salvar</button>
+      <button class="btn btn-danger btn-sm" onclick="resetSecao('mix_params', carregarMixParams)">↩ Restaurar padrões</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       CARD 3 — PARÂMETROS DO SEQUENCIAMENTO
+  ══════════════════════════════════════════════════════ -->
+  <div class="card">
+    <h2>Parâmetros — Sequenciamento de Lotes</h2>
+    <p class="card-sub">Configurações de execução do sequenciamento_30dias_ort.py · DIAS_PERÍODO sincronizado com o Mix</p>
+
+    <div class="field-row">
+      <div class="field">
+        <label>LOTE_T (toneladas)</label>
+        <input type="number" id="sp-lote" min="100" step="50"
+          title="Tamanho do lote padrão em toneladas">
+      </div>
+      <div class="field">
+        <label>PERDA_SETUP_T_DEFAULT (t)</label>
+        <input type="number" id="sp-setup" min="0" step="1"
+          title="Perda de setup padrão em toneladas (MC25/MC26 e fallback MP27/MP28)">
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>FATOR_TOLERANCIA_RITMO</label>
+        <input type="number" id="sp-ritmo" min="0" max="1" step="0.05"
+          title="Fração mínima do ritmo acumulado exigida (0 a 1)">
+      </div>
+      <div class="field">
+        <label>FATOR_SPREAD</label>
+        <input type="number" id="sp-spread" min="0" step="0.1"
+          title="Teto proporcional de produção por ciclo (1.0 = proporcional exato)">
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>FRACAO_MIN_LOTE_PARCIAL</label>
+        <input type="number" id="sp-frac" min="0" max="1" step="0.05"
+          title="Piso mínimo do lote parcial como fração de LOTE_T">
+      </div>
+      <div class="field">
+        <label>FATOR_DISPERSAO_ORT</label>
+        <input type="number" id="sp-disp" min="0" max="1" step="0.1"
+          title="Grau de uniformidade na dispersão de lotes (0 = compactado, 1 = uniforme)">
+      </div>
+    </div>
+    <div class="field-checkbox">
+      <input type="checkbox" id="sp-dispersao-toggle" onchange="toggleDispersao()">
+      <label for="sp-dispersao-toggle">DISPERSAO_UNIFORME_ORT — ativa dispersão uniforme de lotes ao longo do ciclo</label>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary btn-sm" onclick="salvarSeqParams()">💾 Salvar</button>
+      <button class="btn btn-danger btn-sm" onclick="resetSecao('seq_params', carregarSeqParams)">↩ Restaurar padrões</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       CARD 4 — EXECUÇÃO (largura total)
+  ══════════════════════════════════════════════════════ -->
+  <div class="card exec-card">
+    <h2>Execução</h2>
+    <p class="card-sub">Salve os parâmetros desejados antes de executar · O Sequenciamento só é habilitado após o Mix concluir com sucesso</p>
+    <div class="exec-grid">
+
+      <div class="exec-box">
+        <h3>📊 Otimização de Mix</h3>
+        <p>Resolve o MILP de alocação de demanda nas máquinas ORT considerando restrições de balanço de fábrica.</p>
+        <div>
+          <span id="status-mix" class="status-badge status-idle">Aguardando</span>
+          <div id="error-mix" class="error-detail"></div>
+        </div>
+        <div class="exec-actions">
+          <button class="btn btn-primary" id="btn-mix" onclick="rodarMix()">▶ Rodar Mix</button>
+          <button class="btn btn-secondary" id="btn-dash-mix" onclick="window.open('/dashboard/mix','_blank')" disabled>
+            🔗 Ver Dashboard
+          </button>
+        </div>
+        <div id="fim-mix" style="font-size:11px;color:var(--muted);"></div>
+      </div>
+
+      <div class="exec-box">
+        <h3>🗓️ Sequenciamento de Lotes</h3>
+        <p>Gera o Gantt de produção por lotes para as máquinas ORT respeitando restrições horárias e de setup.</p>
+        <div>
+          <span id="status-seq" class="status-badge status-idle">Aguardando Mix</span>
+          <div id="error-seq" class="error-detail"></div>
+        </div>
+        <div class="exec-actions">
+          <button class="btn btn-primary" id="btn-seq" onclick="rodarSeq()" disabled>▶ Rodar Sequenciamento</button>
+          <button class="btn btn-secondary" id="btn-dash-seq" onclick="window.open('/dashboard/sequenciamento','_blank')" disabled>
+            🔗 Ver Dashboard
+          </button>
+        </div>
+        <div id="fim-seq" style="font-size:11px;color:var(--muted);"></div>
+      </div>
+
+    </div>
+
+    <div class="btn-row" style="margin-top:20px;border-top:1px solid var(--border);padding-top:16px;">
+      <button class="btn btn-danger btn-sm" onclick="resetTudo()">🗑️ Apagar todo o cache</button>
+    </div>
+  </div>
+
+</main>
+
+<div id="toast"></div>
+
+<script>
+// ═══════════════════════════════════════════════════
+// UTILS
+// ═══════════════════════════════════════════════════
+
+const toast = (msg, dur=2800) => {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), dur);
+};
+
+async function api(url, method='GET', body=null) {
+  const opts = { method, headers: { 'Content-Type': 'application/json' } };
+  if (body !== null) opts.body = JSON.stringify(body);
+  const r = await fetch(url, opts);
+  return r.json();
+}
+
+function switchInner(name, btn) {
+  document.querySelectorAll('.inner-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.inner-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('inner-' + name).classList.add('active');
+}
+
+async function resetSecao(secao, recarregar) {
+  if (!confirm(`Resetar "${secao}" para os valores do Excel?`)) return;
+  await api(`/api/cache/${secao}/reset`, 'POST');
+  toast(`${secao} resetado para o Excel`);
+  recarregar();
+}
+
+async function resetTudo() {
+  if (!confirm('Apagar todo o cache? Todos os overrides serão perdidos.')) return;
+  await api('/api/cache/reset_tudo', 'POST');
+  toast('Cache apagado — recarregando...');
+  setTimeout(() => location.reload(), 800);
+}
+
+// ═══════════════════════════════════════════════════
+// SESSÃO / PERSISTÊNCIA
+// ═══════════════════════════════════════════════════
+
+async function carregarSessao() {
+  const d = await api('/api/cache/sessao');
+  document.getElementById('togglePersistir').checked = !!d.persistir;
+}
+
+async function setSessao() {
+  const persistir = document.getElementById('togglePersistir').checked;
+  await api('/api/cache/sessao', 'POST', { persistir });
+  toast(persistir ? 'Configurações serão mantidas entre sessões' : 'Cache será limpo ao reiniciar o servidor');
+}
+
+// ═══════════════════════════════════════════════════
+// CAPACIDADES
+// ═══════════════════════════════════════════════════
+
+// Pares [chave_no_json, label_exibido]
+// A chave_no_json deve bater exatamente com o que vem do Excel via pandas
+const CAP_AREAS = [
+  ['Outorga Emissario',  'Outorga Emissário'],
+  ['Outorga Captação',   'Outorga Captação'],
+  ['Caustificação',      'Caustificação'],
+  ['CKB-FC',             'CKB-FC'],
+  ['CKB-FL',             'CKB-FL'],
+  ['CKN-FC',             'CKN-FC'],
+  ['CKN-FL',             'CKN-FL'],
+  ['BCTMP',              'BCTMP'],
+  ['Evaporação',         'Evaporação'],
+  ['CDR',                'CDR'],
+];
+
+async function carregarCapacidades() {
+  let d = {};
+  try {
+    const resp = await api('/api/cache/capacidades');
+    // Se vier {"erro": "..."}, ignora e deixa campos em branco
+    if (resp && !resp.erro) d = resp;
+    else if (resp && resp.erro) console.warn('Capacidades:', resp.erro);
+  } catch(e) { console.warn('Erro ao carregar capacidades:', e); }
+
+  const wrap = document.getElementById('cap-fields');
+  // Tenta encontrar o valor pela chave exata OU por match parcial
+  // (acomoda variações de acento entre Excel e JS)
+  const getVal = (chave) => {
+    if (d[chave] != null) return d[chave];
+    // Busca case-insensitive sem acento como fallback
+    const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+    const match = Object.keys(d).find(k => norm(k) === norm(chave));
+    return match ? d[match] : '';
+  };
+
+  wrap.innerHTML = CAP_AREAS.map(([chave, label]) => `
+    <div class="field">
+      <label>${label}</label>
+      <input type="number" step="any"
+        id="cap-${chave.replace(/[\s\-]/g,'_')}"
+        data-chave="${chave}"
+        value="${getVal(chave)}"
+        placeholder="—">
+    </div>`).join('');
+}
+
+async function salvarCapacidades() {
+  const obj = {};
+  document.querySelectorAll('#cap-fields input').forEach(inp => {
+    const chave = inp.dataset.chave;
+    const v = inp.value;
+    if (v !== '' && v !== undefined) obj[chave] = parseFloat(v);
+  });
+  await api('/api/cache/capacidades', 'POST', obj);
+  toast('Capacidades salvas');
+}
+
+// ═══════════════════════════════════════════════════
+// DEMANDA
+// ═══════════════════════════════════════════════════
+
+async function carregarDemanda() {
+  const rows = await api('/api/cache/demanda');
+  const tbody = document.getElementById('tbody-demanda');
+  tbody.innerHTML = '';
+  (Array.isArray(rows) ? rows : []).forEach(r => addRowDemanda(r));
+}
+
+function addRowDemanda(r={}) {
+  const tbody = document.getElementById('tbody-demanda');
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td><input value="${r['Mercado']||''}"></td>
+    <td><input value="${r['Produto']||''}"></td>
+    <td><input type="number" step="any" value="${r['Quantidade (TO)']??''}"></td>
+    <td><input type="number" step="any" value="${r['Preço']??''}"></td>
+    <td><button class="btn-remove" onclick="this.closest('tr').remove()">✕</button></td>`;
+  tbody.appendChild(tr);
+}
+
+async function salvarDemanda() {
+  const rows = [...document.querySelectorAll('#tbody-demanda tr')].map(tr => {
+    const inputs = tr.querySelectorAll('input');
+    return {
+      'Mercado': inputs[0].value,
+      'Produto': inputs[1].value,
+      'Quantidade (TO)': parseFloat(inputs[2].value) || 0,
+      'Preço': parseFloat(inputs[3].value) || 0,
+    };
+  }).filter(r => r['Produto']);
+  await api('/api/cache/demanda', 'POST', rows);
+  toast('Demanda salva');
+}
+
+// ═══════════════════════════════════════════════════
+// CUSTOS
+// ═══════════════════════════════════════════════════
+
+async function carregarCustos() {
+  const rows = await api('/api/cache/custos');
+  const tbody = document.getElementById('tbody-custos');
+  tbody.innerHTML = '';
+  (Array.isArray(rows) ? rows : []).forEach(r => addRowCustos(r));
+}
+
+function addRowCustos(r={}) {
+  const tbody = document.getElementById('tbody-custos');
+  const tr = document.createElement('tr');
+  tr.innerHTML = `
+    <td><input value="${r['Produto']||''}"></td>
+    <td><input type="number" step="1" value="${r['Máquina']??''}"></td>
+    <td><input type="number" step="any" value="${r['Custo Variavel']??''}"></td>
+    <td><button class="btn-remove" onclick="this.closest('tr').remove()">✕</button></td>`;
+  tbody.appendChild(tr);
+}
+
+async function salvarCustos() {
+  const rows = [...document.querySelectorAll('#tbody-custos tr')].map(tr => {
+    const inputs = tr.querySelectorAll('input');
+    return {
+      'Produto': inputs[0].value,
+      'Máquina': parseInt(inputs[1].value) || 0,
+      'Custo Variavel': parseFloat(inputs[2].value) || 0,
+    };
+  }).filter(r => r['Produto']);
+  await api('/api/cache/custos', 'POST', rows);
+  toast('Custos salvos');
+}
+
+// ═══════════════════════════════════════════════════
+// PARÂMETROS CELULOSE
+// ═══════════════════════════════════════════════════
+
+const PARAM_KEYS = [
+  ['Custo Variavel Celulose FC', 'Custo Variável Cel. FC'],
+  ['Custo Variavel Celulose FL', 'Custo Variável Cel. FL'],
+  ['Preço de Cel. Merc. ME FC', 'Preço Cel. ME FC'],
+  ['Preço de Cel. Merc. ME FF', 'Preço Cel. ME FL'],
+  ['Cambio', 'Câmbio (R$/USD)'],
+];
+
+async function carregarParametros() {
+  const d = await api('/api/cache/parametros');
+  const wrap = document.getElementById('param-fields');
+  wrap.innerHTML = PARAM_KEYS.map(([k, label]) => `
+    <div class="field">
+      <label>${label}</label>
+      <input type="number" step="any" id="param-${k.replace(/\s/g,'_')}" value="${d[k] ?? ''}" placeholder="—">
+    </div>`).join('');
+}
+
+async function salvarParametros() {
+  const obj = {};
+  PARAM_KEYS.forEach(([k]) => {
+    const v = document.getElementById('param-' + k.replace(/\s/g,'_'))?.value;
+    if (v !== '' && v !== undefined) obj[k] = parseFloat(v);
+  });
+  await api('/api/cache/parametros', 'POST', obj);
+  toast('Parâmetros de celulose salvos');
+}
+
+// ═══════════════════════════════════════════════════
+// PARÂMETROS DO MIX
+// ═══════════════════════════════════════════════════
+
+async function carregarMixParams() {
+  const d = await api('/api/cache/mix_params');
+  document.getElementById('mp-dias').value = d.DIAS_PERIODO ?? 7;
+  document.getElementById('mp-base').value = d.BASE_DEMANDA_DIAS ?? 365;
+}
+
+async function salvarMixParams() {
+  const obj = {
+    DIAS_PERIODO: parseInt(document.getElementById('mp-dias').value),
+    BASE_DEMANDA_DIAS: parseInt(document.getElementById('mp-base').value),
+  };
+  await api('/api/cache/mix_params', 'POST', obj);
+  // Sincroniza DIAS_PERIODO no sequenciamento
+  const seq = await api('/api/cache/seq_params');
+  seq.DIAS_PERIODO = obj.DIAS_PERIODO;
+  await api('/api/cache/seq_params', 'POST', seq);
+  toast('Parâmetros do Mix salvos · DIAS_PERÍODO sincronizado');
+}
+
+// ═══════════════════════════════════════════════════
+// PARÂMETROS DO SEQUENCIAMENTO
+// ═══════════════════════════════════════════════════
+
+async function carregarSeqParams() {
+  const d = await api('/api/cache/seq_params');
+  document.getElementById('sp-lote').value   = d.LOTE_T ?? 700;
+  document.getElementById('sp-setup').value  = d.PERDA_SETUP_T_DEFAULT ?? 20;
+  document.getElementById('sp-ritmo').value  = d.FATOR_TOLERANCIA_RITMO ?? 0.5;
+  document.getElementById('sp-spread').value = d.FATOR_SPREAD ?? 1.0;
+  document.getElementById('sp-frac').value   = d.FRACAO_MIN_LOTE_PARCIAL ?? 0.5;
+  document.getElementById('sp-disp').value   = d.FATOR_DISPERSAO_ORT ?? 0.5;
+  document.getElementById('sp-dispersao-toggle').checked = !!d.DISPERSAO_UNIFORME_ORT;
+  toggleDispersao();
+}
+
+function toggleDispersao() {
+  const on = document.getElementById('sp-dispersao-toggle').checked;
+  document.getElementById('sp-disp').disabled = !on;
+}
+
+async function salvarSeqParams() {
+  // DIAS_PERIODO vem do Mix (sincronizado pelo backend)
+  const mixP = await api('/api/cache/mix_params');
+  const obj = {
+    DIAS_PERIODO: mixP.DIAS_PERIODO,
+    LOTE_T: parseFloat(document.getElementById('sp-lote').value),
+    PERDA_SETUP_T_DEFAULT: parseFloat(document.getElementById('sp-setup').value),
+    FATOR_TOLERANCIA_RITMO: parseFloat(document.getElementById('sp-ritmo').value),
+    FATOR_SPREAD: parseFloat(document.getElementById('sp-spread').value),
+    FRACAO_MIN_LOTE_PARCIAL: parseFloat(document.getElementById('sp-frac').value),
+    DISPERSAO_UNIFORME_ORT: document.getElementById('sp-dispersao-toggle').checked,
+    FATOR_DISPERSAO_ORT: parseFloat(document.getElementById('sp-disp').value),
+  };
+  await api('/api/cache/seq_params', 'POST', obj);
+  toast('Parâmetros do Sequenciamento salvos');
+}
+
+// ═══════════════════════════════════════════════════
+// EXECUÇÃO E POLLING DE STATUS
+// ═══════════════════════════════════════════════════
+
+let _pollingInterval = null;
+
+function setStatusBadge(id, estado, msg) {
+  const el = document.getElementById(id);
+  el.className = 'status-badge status-' + estado;
+  el.textContent = msg;
+}
+
+function atualizarUI(state) {
+  const rodando = state.rodando;
+  const mixOk   = state.mix_concluido;
+  const job      = state.ultimo_job;
+  const status   = state.ultimo_status;
+  const msg      = state.ultima_mensagem || '';
+  const fim      = state.ultimo_fim || '';
+
+  // Botões
+  document.getElementById('btn-mix').disabled  = rodando;
+  document.getElementById('btn-seq').disabled  = rodando || !mixOk;
+  document.getElementById('btn-dash-mix').disabled = !mixOk;
+  document.getElementById('btn-dash-seq').disabled = !(state.seq_concluido ?? false);
+
+  // Status Mix
+  if (rodando && job === 'mix') {
+    setStatusBadge('status-mix', 'running', 'Executando…');
+  } else if (job === 'mix' && status === 'ok') {
+    setStatusBadge('status-mix', 'ok', 'Concluído com sucesso');
+    document.getElementById('btn-dash-mix').disabled = false;
+    document.getElementById('fim-mix').textContent = 'Finalizado em ' + fim;
+  } else if (job === 'mix' && status === 'erro') {
+    setStatusBadge('status-mix', 'erro', 'Erro na execução');
+    const errEl = document.getElementById('error-mix');
+    errEl.textContent = msg;
+    errEl.classList.add('show');
+    document.getElementById('fim-mix').textContent = 'Falhou em ' + fim;
+  }
+
+  // Status Sequenciamento
+  if (!mixOk && job !== 'sequenciamento') {
+    setStatusBadge('status-seq', 'idle', 'Aguardando Mix');
+  } else if (rodando && job === 'sequenciamento') {
+    setStatusBadge('status-seq', 'running', 'Executando…');
+  } else if (job === 'sequenciamento' && status === 'ok') {
+    setStatusBadge('status-seq', 'ok', 'Concluído com sucesso');
+    document.getElementById('btn-dash-seq').disabled = false;
+    document.getElementById('fim-seq').textContent = 'Finalizado em ' + fim;
+  } else if (job === 'sequenciamento' && status === 'erro') {
+    setStatusBadge('status-seq', 'erro', 'Erro na execução');
+    const errEl = document.getElementById('error-seq');
+    errEl.textContent = msg;
+    errEl.classList.add('show');
+    document.getElementById('fim-seq').textContent = 'Falhou em ' + fim;
+  } else if (mixOk && job !== 'sequenciamento') {
+    setStatusBadge('status-seq', 'idle', 'Pronto para executar');
+  }
+
+  // Para ou mantém polling
+  if (!rodando && _pollingInterval) {
+    clearInterval(_pollingInterval);
+    _pollingInterval = null;
+  }
+}
+
+function iniciarPolling() {
+  if (_pollingInterval) return;
+  _pollingInterval = setInterval(async () => {
+    const state = await api('/api/status');
+    atualizarUI(state);
+  }, 1500);
+}
+
+async function rodarMix() {
+  document.getElementById('error-mix').classList.remove('show');
+  const r = await api('/api/mix/run', 'POST');
+  if (r.ok) {
+    setStatusBadge('status-mix', 'running', 'Iniciando…');
+    toast('Otimização de Mix iniciada');
+    iniciarPolling();
+  } else {
+    toast('Erro: ' + r.mensagem);
+  }
+}
+
+async function rodarSeq() {
+  document.getElementById('error-seq').classList.remove('show');
+  const r = await api('/api/sequenciamento/run', 'POST');
+  if (r.ok) {
+    setStatusBadge('status-seq', 'running', 'Iniciando…');
+    toast('Sequenciamento iniciado');
+    iniciarPolling();
+  } else {
+    toast('Erro: ' + r.mensagem);
+  }
+}
+
+// ═══════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════
+
+async function init() {
+  await carregarSessao();
+  await Promise.all([
+    carregarCapacidades(),
+    carregarDemanda(),
+    carregarCustos(),
+    carregarParametros(),
+    carregarMixParams(),
+    carregarSeqParams(),
+  ]);
+  // Verifica status inicial (ex: servidor reiniciado com mix_concluido=False)
+  const state = await api('/api/status');
+  atualizarUI(state);
+  if (state.rodando) iniciarPolling();
+}
+
+init();
+</script>
+</body>
+</html>

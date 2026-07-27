@@ -1,0 +1,4883 @@
+{
+  "meta_dados": {
+    "lote_t": 700.0,
+    "perda_setup_t": {
+      "27": 20.0,
+      "28": 20.0,
+      "25": 20.0,
+      "26": 20.0
+    },
+    "perda_setup_default": 20.0,
+    "dias_periodo": 7,
+    "janela_max_dias": 7,
+    "fator_tolerancia_ritmo": 0.5,
+    "fator_spread": 1,
+    "dispersao_uniforme_ort": true,
+    "fator_dispersao_ort": 0.5,
+    "maquinas_ORT": [
+      27,
+      28,
+      25,
+      26
+    ],
+    "n_ciclos_ORT": 1,
+    "total_dias_ano": 7,
+    "n_ciclos_max": 1
+  },
+  "ciclos": {
+    "ORT": [
+      {
+        "ciclo": 1,
+        "dias": [
+          1,
+          7
+        ],
+        "dias_ciclo": 7,
+        "status": "otimo",
+        "ritmo_ok": true,
+        "pares_ritmo_nok": [],
+        "n_lotes": {
+          "CKF276": {
+            "28": 1
+          },
+          "EKL120": {
+            "27": 2
+          },
+          "LLE150": {
+            "28": 1
+          },
+          "LLE170": {
+            "28": 2
+          },
+          "EKL100": {
+            "27": 2
+          },
+          "FL1700": {
+            "26": 8
+          },
+          "FLEP1": {
+            "26": 1
+          },
+          "CHD318": {
+            "28": 2
+          },
+          "LLE200": {
+            "28": 1
+          },
+          "FCEP1": {
+            "25": 28
+          },
+          "FLE700": {
+            "26": 1
+          }
+        },
+        "schedule": {
+          "27": [
+            {
+              "produto": "EKL120",
+              "lote_num": 1,
+              "dia_inicio": 1,
+              "dia_fim": 1,
+              "hora_inicio": 0.0,
+              "duracao_h": 11.201,
+              "horas_por_dia": {
+                "1": 11.201
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "EKL120",
+              "lote_num": 2,
+              "dia_inicio": 3,
+              "dia_fim": 3,
+              "hora_inicio": 0.0,
+              "duracao_h": 11.201,
+              "horas_por_dia": {
+                "3": 11.201
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "EKL100",
+              "lote_num": 1,
+              "dia_inicio": 4,
+              "dia_fim": 4,
+              "hora_inicio": 0.0,
+              "duracao_h": 13.223,
+              "horas_por_dia": {
+                "4": 13.223
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "EKL100",
+              "lote_num": 2,
+              "dia_inicio": 4,
+              "dia_fim": 5,
+              "hora_inicio": 13.223,
+              "duracao_h": 13.223,
+              "horas_por_dia": {
+                "4": 7.075,
+                "5": 6.148
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "LWE175",
+              "lote_num": 1,
+              "dia_inicio": 5,
+              "dia_fim": 5,
+              "hora_inicio": 6.148,
+              "duracao_h": 2.118,
+              "horas_por_dia": {
+                "5": 2.118
+              },
+              "parcial": true,
+              "volume_t": 117.3
+            },
+            {
+              "produto": "EKL150",
+              "lote_num": 1,
+              "dia_inicio": 5,
+              "dia_fim": 5,
+              "hora_inicio": 8.266,
+              "duracao_h": 2.633,
+              "horas_por_dia": {
+                "5": 2.633
+              },
+              "parcial": true,
+              "volume_t": 154.9
+            },
+            {
+              "produto": "EKW150",
+              "lote_num": 1,
+              "dia_inicio": 5,
+              "dia_fim": 5,
+              "hora_inicio": 10.899,
+              "duracao_h": 1.255,
+              "horas_por_dia": {
+                "5": 1.255
+              },
+              "parcial": true,
+              "volume_t": 62.1
+            },
+            {
+              "produto": "EKL170",
+              "lote_num": 1,
+              "dia_inicio": 5,
+              "dia_fim": 5,
+              "hora_inicio": 12.154,
+              "duracao_h": 1.919,
+              "horas_por_dia": {
+                "5": 1.919
+              },
+              "parcial": true,
+              "volume_t": 113.9
+            },
+            {
+              "produto": "EKL100",
+              "lote_num": 1,
+              "dia_inicio": 5,
+              "dia_fim": 6,
+              "hora_inicio": 14.073,
+              "duracao_h": 12.292,
+              "horas_por_dia": {
+                "5": 6.225,
+                "6": 6.067
+              },
+              "parcial": true,
+              "volume_t": 649.3
+            },
+            {
+              "produto": "EKL110",
+              "lote_num": 1,
+              "dia_inicio": 6,
+              "dia_fim": 6,
+              "hora_inicio": 6.067,
+              "duracao_h": 11.018,
+              "horas_por_dia": {
+                "6": 11.018
+              },
+              "parcial": true,
+              "volume_t": 639.5
+            },
+            {
+              "produto": "LWE200",
+              "lote_num": 1,
+              "dia_inicio": 6,
+              "dia_fim": 6,
+              "hora_inicio": 17.085,
+              "duracao_h": 0.749,
+              "horas_por_dia": {
+                "6": 0.749
+              },
+              "parcial": true,
+              "volume_t": 28.9
+            },
+            {
+              "produto": "EKW135",
+              "lote_num": 1,
+              "dia_inicio": 6,
+              "dia_fim": 7,
+              "hora_inicio": 17.834,
+              "duracao_h": 5.304,
+              "horas_por_dia": {
+                "6": 2.464,
+                "7": 2.84
+              },
+              "parcial": true,
+              "volume_t": 313.3
+            },
+            {
+              "produto": "EKL135",
+              "lote_num": 1,
+              "dia_inicio": 7,
+              "dia_fim": 7,
+              "hora_inicio": 2.84,
+              "duracao_h": 11.037,
+              "horas_por_dia": {
+                "7": 11.037
+              },
+              "parcial": true,
+              "volume_t": 689.4
+            },
+            {
+              "produto": "EKL200",
+              "lote_num": 1,
+              "dia_inicio": 7,
+              "dia_fim": 7,
+              "hora_inicio": 13.877,
+              "duracao_h": 1.904,
+              "horas_por_dia": {
+                "7": 1.904
+              },
+              "parcial": true,
+              "volume_t": 113.4
+            }
+          ],
+          "28": [
+            {
+              "produto": "LLE170",
+              "lote_num": 1,
+              "dia_inicio": 1,
+              "dia_fim": 1,
+              "hora_inicio": 0.0,
+              "duracao_h": 12.044,
+              "horas_por_dia": {
+                "1": 12.044
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "LLE170",
+              "lote_num": 2,
+              "dia_inicio": 2,
+              "dia_fim": 2,
+              "hora_inicio": 0.0,
+              "duracao_h": 12.044,
+              "horas_por_dia": {
+                "2": 12.044
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "CHD318",
+              "lote_num": 1,
+              "dia_inicio": 2,
+              "dia_fim": 3,
+              "hora_inicio": 12.044,
+              "duracao_h": 11.347,
+              "horas_por_dia": {
+                "2": 8.405,
+                "3": 2.942
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "CHD318",
+              "lote_num": 2,
+              "dia_inicio": 3,
+              "dia_fim": 3,
+              "hora_inicio": 2.942,
+              "duracao_h": 11.347,
+              "horas_por_dia": {
+                "3": 11.347
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "LLE150",
+              "lote_num": 1,
+              "dia_inicio": 3,
+              "dia_fim": 4,
+              "hora_inicio": 14.289,
+              "duracao_h": 12.044,
+              "horas_por_dia": {
+                "3": 6.16,
+                "4": 5.885
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "CKF276",
+              "lote_num": 1,
+              "dia_inicio": 4,
+              "dia_fim": 4,
+              "hora_inicio": 5.885,
+              "duracao_h": 11.381,
+              "horas_por_dia": {
+                "4": 11.381
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "LLE200",
+              "lote_num": 1,
+              "dia_inicio": 4,
+              "dia_fim": 5,
+              "hora_inicio": 17.265,
+              "duracao_h": 12.044,
+              "horas_por_dia": {
+                "4": 3.183,
+                "5": 8.861
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "WUP250",
+              "lote_num": 1,
+              "dia_inicio": 5,
+              "dia_fim": 5,
+              "hora_inicio": 8.861,
+              "duracao_h": 1.404,
+              "horas_por_dia": {
+                "5": 1.404
+              },
+              "parcial": true,
+              "volume_t": 70.7
+            },
+            {
+              "produto": "CKF227",
+              "lote_num": 1,
+              "dia_inicio": 5,
+              "dia_fim": 5,
+              "hora_inicio": 10.265,
+              "duracao_h": 1.246,
+              "horas_por_dia": {
+                "5": 1.246
+              },
+              "parcial": true,
+              "volume_t": 58.8
+            },
+            {
+              "produto": "CKF205",
+              "lote_num": 1,
+              "dia_inicio": 5,
+              "dia_fim": 5,
+              "hora_inicio": 11.51,
+              "duracao_h": 4.097,
+              "horas_por_dia": {
+                "5": 4.097
+              },
+              "parcial": true,
+              "volume_t": 239.2
+            },
+            {
+              "produto": "CKF360",
+              "lote_num": 1,
+              "dia_inicio": 5,
+              "dia_fim": 5,
+              "hora_inicio": 15.607,
+              "duracao_h": 4.688,
+              "horas_por_dia": {
+                "5": 4.688
+              },
+              "parcial": true,
+              "volume_t": 276.6
+            },
+            {
+              "produto": "LLE150",
+              "lote_num": 1,
+              "dia_inicio": 5,
+              "dia_fim": 6,
+              "hora_inicio": 20.296,
+              "duracao_h": 7.683,
+              "horas_por_dia": {
+                "5": 0.153,
+                "6": 7.53
+              },
+              "parcial": true,
+              "volume_t": 439.3
+            },
+            {
+              "produto": "CKF312",
+              "lote_num": 1,
+              "dia_inicio": 6,
+              "dia_fim": 6,
+              "hora_inicio": 7.53,
+              "duracao_h": 6.806,
+              "horas_por_dia": {
+                "6": 6.806
+              },
+              "parcial": true,
+              "volume_t": 410.6
+            },
+            {
+              "produto": "CKF233",
+              "lote_num": 1,
+              "dia_inicio": 6,
+              "dia_fim": 7,
+              "hora_inicio": 14.337,
+              "duracao_h": 6.315,
+              "horas_por_dia": {
+                "6": 6.112,
+                "7": 0.203
+              },
+              "parcial": true,
+              "volume_t": 379.5
+            },
+            {
+              "produto": "CKQ276",
+              "lote_num": 1,
+              "dia_inicio": 7,
+              "dia_fim": 7,
+              "hora_inicio": 0.203,
+              "duracao_h": 3.408,
+              "horas_por_dia": {
+                "7": 3.408
+              },
+              "parcial": true,
+              "volume_t": 195.6
+            },
+            {
+              "produto": "CKF250",
+              "lote_num": 1,
+              "dia_inicio": 7,
+              "dia_fim": 7,
+              "hora_inicio": 3.611,
+              "duracao_h": 8.355,
+              "horas_por_dia": {
+                "7": 8.355
+              },
+              "parcial": true,
+              "volume_t": 508.6
+            },
+            {
+              "produto": "CKQ300",
+              "lote_num": 1,
+              "dia_inicio": 7,
+              "dia_fim": 7,
+              "hora_inicio": 11.966,
+              "duracao_h": 2.858,
+              "horas_por_dia": {
+                "7": 2.858
+              },
+              "parcial": true,
+              "volume_t": 160.8
+            },
+            {
+              "produto": "CKF285",
+              "lote_num": 1,
+              "dia_inicio": 7,
+              "dia_fim": 7,
+              "hora_inicio": 14.824,
+              "duracao_h": 3.522,
+              "horas_por_dia": {
+                "7": 3.522
+              },
+              "parcial": true,
+              "volume_t": 202.8
+            },
+            {
+              "produto": "CKQ232",
+              "lote_num": 1,
+              "dia_inicio": 7,
+              "dia_fim": 7,
+              "hora_inicio": 18.346,
+              "duracao_h": 0.42,
+              "horas_por_dia": {
+                "7": 0.42
+              },
+              "parcial": true,
+              "volume_t": 6.6
+            }
+          ],
+          "25": [
+            {
+              "produto": "FCEP1",
+              "lote_num": 1,
+              "dia_inicio": 1,
+              "dia_fim": 1,
+              "hora_inicio": 0.0,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "1": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 2,
+              "dia_inicio": 2,
+              "dia_fim": 2,
+              "hora_inicio": 0.0,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "2": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 3,
+              "dia_inicio": 2,
+              "dia_fim": 2,
+              "hora_inicio": 5.231,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "2": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 4,
+              "dia_inicio": 2,
+              "dia_fim": 2,
+              "hora_inicio": 10.462,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "2": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 5,
+              "dia_inicio": 2,
+              "dia_fim": 2,
+              "hora_inicio": 15.694,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "2": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 6,
+              "dia_inicio": 2,
+              "dia_fim": 3,
+              "hora_inicio": 20.925,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "2": 0.38,
+                "3": 4.851
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 7,
+              "dia_inicio": 3,
+              "dia_fim": 3,
+              "hora_inicio": 4.851,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "3": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 8,
+              "dia_inicio": 3,
+              "dia_fim": 3,
+              "hora_inicio": 10.082,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "3": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 9,
+              "dia_inicio": 3,
+              "dia_fim": 3,
+              "hora_inicio": 15.313,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "3": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 10,
+              "dia_inicio": 3,
+              "dia_fim": 4,
+              "hora_inicio": 20.545,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "3": 0.761,
+                "4": 4.471
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 11,
+              "dia_inicio": 4,
+              "dia_fim": 4,
+              "hora_inicio": 4.471,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "4": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 12,
+              "dia_inicio": 4,
+              "dia_fim": 4,
+              "hora_inicio": 9.702,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "4": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 13,
+              "dia_inicio": 4,
+              "dia_fim": 4,
+              "hora_inicio": 14.933,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "4": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 14,
+              "dia_inicio": 4,
+              "dia_fim": 5,
+              "hora_inicio": 20.164,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "4": 1.141,
+                "5": 4.09
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 15,
+              "dia_inicio": 5,
+              "dia_fim": 5,
+              "hora_inicio": 4.09,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "5": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 16,
+              "dia_inicio": 5,
+              "dia_fim": 5,
+              "hora_inicio": 9.322,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "5": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 17,
+              "dia_inicio": 5,
+              "dia_fim": 5,
+              "hora_inicio": 14.553,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "5": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 18,
+              "dia_inicio": 5,
+              "dia_fim": 6,
+              "hora_inicio": 19.784,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "5": 1.521,
+                "6": 3.71
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 19,
+              "dia_inicio": 6,
+              "dia_fim": 6,
+              "hora_inicio": 3.71,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "6": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 20,
+              "dia_inicio": 6,
+              "dia_fim": 6,
+              "hora_inicio": 8.941,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "6": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 21,
+              "dia_inicio": 6,
+              "dia_fim": 6,
+              "hora_inicio": 14.173,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "6": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 22,
+              "dia_inicio": 6,
+              "dia_fim": 7,
+              "hora_inicio": 19.404,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "6": 1.901,
+                "7": 3.33
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 23,
+              "dia_inicio": 7,
+              "dia_fim": 7,
+              "hora_inicio": 3.33,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "7": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 24,
+              "dia_inicio": 7,
+              "dia_fim": 7,
+              "hora_inicio": 8.561,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "7": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 25,
+              "dia_inicio": 7,
+              "dia_fim": 7,
+              "hora_inicio": 13.792,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "7": 5.231
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FCEP1",
+              "lote_num": 26,
+              "dia_inicio": 7,
+              "dia_fim": 7,
+              "hora_inicio": 19.024,
+              "duracao_h": 5.231,
+              "horas_por_dia": {
+                "7": 2.282
+              },
+              "volume_t": 700.0
+            }
+          ],
+          "26": [
+            {
+              "produto": "FL1700",
+              "lote_num": 1,
+              "dia_inicio": 1,
+              "dia_fim": 1,
+              "hora_inicio": 0.0,
+              "duracao_h": 11.928,
+              "horas_por_dia": {
+                "1": 11.928
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FL1700",
+              "lote_num": 2,
+              "dia_inicio": 2,
+              "dia_fim": 2,
+              "hora_inicio": 0.0,
+              "duracao_h": 11.928,
+              "horas_por_dia": {
+                "2": 11.928
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FL1700",
+              "lote_num": 3,
+              "dia_inicio": 2,
+              "dia_fim": 3,
+              "hora_inicio": 11.928,
+              "duracao_h": 11.928,
+              "horas_por_dia": {
+                "2": 9.858,
+                "3": 2.07
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FL1700",
+              "lote_num": 4,
+              "dia_inicio": 3,
+              "dia_fim": 3,
+              "hora_inicio": 2.07,
+              "duracao_h": 11.928,
+              "horas_por_dia": {
+                "3": 11.928
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FL1700",
+              "lote_num": 5,
+              "dia_inicio": 3,
+              "dia_fim": 4,
+              "hora_inicio": 13.997,
+              "duracao_h": 11.928,
+              "horas_por_dia": {
+                "3": 7.789,
+                "4": 4.139
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FL1700",
+              "lote_num": 6,
+              "dia_inicio": 4,
+              "dia_fim": 4,
+              "hora_inicio": 4.139,
+              "duracao_h": 11.928,
+              "horas_por_dia": {
+                "4": 11.928
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FL1700",
+              "lote_num": 7,
+              "dia_inicio": 4,
+              "dia_fim": 5,
+              "hora_inicio": 16.067,
+              "duracao_h": 11.928,
+              "horas_por_dia": {
+                "4": 5.719,
+                "5": 6.209
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FL1700",
+              "lote_num": 8,
+              "dia_inicio": 5,
+              "dia_fim": 5,
+              "hora_inicio": 6.209,
+              "duracao_h": 11.928,
+              "horas_por_dia": {
+                "5": 11.928
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FLEP1",
+              "lote_num": 1,
+              "dia_inicio": 5,
+              "dia_fim": 6,
+              "hora_inicio": 18.137,
+              "duracao_h": 11.722,
+              "horas_por_dia": {
+                "5": 3.649,
+                "6": 8.072
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FLE700",
+              "lote_num": 1,
+              "dia_inicio": 6,
+              "dia_fim": 6,
+              "hora_inicio": 8.072,
+              "duracao_h": 12.245,
+              "horas_por_dia": {
+                "6": 12.245
+              },
+              "volume_t": 700.0
+            },
+            {
+              "produto": "FL1700",
+              "lote_num": 1,
+              "dia_inicio": 6,
+              "dia_fim": 7,
+              "hora_inicio": 20.317,
+              "duracao_h": 6.456,
+              "horas_por_dia": {
+                "6": 1.469,
+                "7": 4.987
+              },
+              "parcial": true,
+              "volume_t": 369.7
+            },
+            {
+              "produto": "FLEP1",
+              "lote_num": 1,
+              "dia_inicio": 7,
+              "dia_fim": 7,
+              "hora_inicio": 4.987,
+              "duracao_h": 8.983,
+              "horas_por_dia": {
+                "7": 8.983
+              },
+              "parcial": true,
+              "volume_t": 531.8
+            },
+            {
+              "produto": "FTT700",
+              "lote_num": 1,
+              "dia_inicio": 7,
+              "dia_fim": 7,
+              "hora_inicio": 13.97,
+              "duracao_h": 9.316,
+              "horas_por_dia": {
+                "7": 7.816
+              },
+              "parcial": true,
+              "volume_t": 470.0
+            }
+          ]
+        },
+        "volume_parcial": {
+          "LWE175|27": 117.3,
+          "WUP250|28": 70.7,
+          "CKF227|28": 58.8,
+          "EKL150|27": 154.9,
+          "EKW150|27": 62.1,
+          "CKF205|28": 239.2,
+          "EKL170|27": 113.9,
+          "CKF360|28": 276.6,
+          "LLE150|28": 439.3,
+          "EKL100|27": 649.3,
+          "FL1700|26": 369.7,
+          "CKF312|28": 410.6,
+          "CKF233|28": 379.5,
+          "EKL110|27": 639.5,
+          "FLEP1|26": 531.8,
+          "CKQ276|28": 195.6,
+          "LWE200|27": 28.9,
+          "CKF250|28": 508.6,
+          "FCEP1|25": 356.187,
+          "CKQ300|28": 160.8,
+          "EKW135|27": 313.3,
+          "CKF285|28": 202.8,
+          "FTT700|26": 470.0,
+          "CKQ232|28": 6.6,
+          "EKL135|27": 689.4,
+          "EKL200|27": 113.4
+        },
+        "violacoes_diarias": [
+          {
+            "dia": 1,
+            "restricao": "Outorga Captação",
+            "usado": 8547.983499,
+            "limite": 8160.1,
+            "excesso_pct": 4.75
+          },
+          {
+            "dia": 3,
+            "restricao": "CKB-FL",
+            "usado": 1526.494198,
+            "limite": 1500.0,
+            "excesso_pct": 1.77
+          },
+          {
+            "dia": 3,
+            "restricao": "Outorga Captação",
+            "usado": 8645.489339,
+            "limite": 8160.1,
+            "excesso_pct": 5.95
+          },
+          {
+            "dia": 4,
+            "restricao": "Outorga Captação",
+            "usado": 8379.513528,
+            "limite": 8160.1,
+            "excesso_pct": 2.69
+          },
+          {
+            "dia": 5,
+            "restricao": "CKB-FL",
+            "usado": 1508.171225,
+            "limite": 1500.0,
+            "excesso_pct": 0.54
+          },
+          {
+            "dia": 5,
+            "restricao": "Outorga Captação",
+            "usado": 8514.427607,
+            "limite": 8160.1,
+            "excesso_pct": 4.34
+          },
+          {
+            "dia": 6,
+            "restricao": "Outorga Captação",
+            "usado": 8542.969883,
+            "limite": 8160.1,
+            "excesso_pct": 4.69
+          },
+          {
+            "dia": 7,
+            "restricao": "Outorga Captação",
+            "usado": 8636.159401,
+            "limite": 8160.1,
+            "excesso_pct": 5.83
+          }
+        ],
+        "residuos_tratados": [
+          {
+            "produto": "CBA318",
+            "maquina": 28,
+            "residuo_t": 7.1,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "LWE175",
+            "maquina": 27,
+            "residuo_t": 117.3,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CBA360",
+            "maquina": 28,
+            "residuo_t": 9.5,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "WUP250",
+            "maquina": 28,
+            "residuo_t": 70.7,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CKF227",
+            "maquina": 28,
+            "residuo_t": 58.8,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "EKL150",
+            "maquina": 27,
+            "residuo_t": 154.9,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "EKW150",
+            "maquina": 27,
+            "residuo_t": 62.1,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CKF205",
+            "maquina": 28,
+            "residuo_t": 239.2,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CBA300",
+            "maquina": 28,
+            "residuo_t": 4.4,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "EKL170",
+            "maquina": 27,
+            "residuo_t": 113.9,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CKF360",
+            "maquina": 28,
+            "residuo_t": 276.6,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CBA276",
+            "maquina": 28,
+            "residuo_t": 58.7,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CKF312",
+            "maquina": 28,
+            "residuo_t": 410.6,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CBA255",
+            "maquina": 28,
+            "residuo_t": 17.4,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CBA205",
+            "maquina": 28,
+            "residuo_t": 8.3,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CKF233",
+            "maquina": 28,
+            "residuo_t": 379.5,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CBA312",
+            "maquina": 28,
+            "residuo_t": 14.0,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CBA227",
+            "maquina": 28,
+            "residuo_t": 2.0,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "EKL110",
+            "maquina": 27,
+            "residuo_t": 639.5,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CKQ276",
+            "maquina": 28,
+            "residuo_t": 195.6,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "LWE200",
+            "maquina": 27,
+            "residuo_t": 28.9,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CKF250",
+            "maquina": 28,
+            "residuo_t": 508.6,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CKQ300",
+            "maquina": 28,
+            "residuo_t": 160.8,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "EKW135",
+            "maquina": 27,
+            "residuo_t": 313.3,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CKF285",
+            "maquina": 28,
+            "residuo_t": 202.8,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "FTT700",
+            "maquina": 26,
+            "residuo_t": 470.0,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CBA233",
+            "maquina": 28,
+            "residuo_t": 12.9,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CKQ232",
+            "maquina": 28,
+            "residuo_t": 6.6,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "EKL135",
+            "maquina": 27,
+            "residuo_t": 689.4,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "EKL200",
+            "maquina": 27,
+            "residuo_t": 113.4,
+            "opcao": "A_lote_reduzido"
+          },
+          {
+            "produto": "CBA285",
+            "maquina": 28,
+            "residuo_t": 6.9,
+            "opcao": "A_lote_reduzido"
+          }
+        ],
+        "pico_nao_resolvido": true,
+        "violacoes_pico": {
+          "1": {
+            "Outorga Captação": 8547.983498857675
+          },
+          "3": {
+            "CKB-FL": 1526.4941979229554,
+            "Outorga Captação": 8645.489338693525
+          },
+          "4": {
+            "Outorga Captação": 8379.51352832297
+          },
+          "5": {
+            "CKB-FL": 1508.1712251043216,
+            "Outorga Captação": 8514.427606592295
+          },
+          "6": {
+            "Outorga Captação": 8542.969883092464
+          },
+          "7": {
+            "Outorga Captação": 8636.15940139235
+          }
+        },
+        "n_iteracoes_pico": 2
+      }
+    ]
+  },
+  "schedule": {
+    "ORT": {
+      "27": [
+        {
+          "produto": "EKL120",
+          "lote_num": 1,
+          "dia_inicio": 1,
+          "dia_fim": 1,
+          "hora_inicio": 0.0,
+          "duracao_h": 11.201,
+          "horas_por_dia": {
+            "1": 11.201
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "EKL120",
+          "lote_num": 2,
+          "dia_inicio": 3,
+          "dia_fim": 3,
+          "hora_inicio": 0.0,
+          "duracao_h": 11.201,
+          "horas_por_dia": {
+            "3": 11.201
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "EKL100",
+          "lote_num": 1,
+          "dia_inicio": 4,
+          "dia_fim": 4,
+          "hora_inicio": 0.0,
+          "duracao_h": 13.223,
+          "horas_por_dia": {
+            "4": 13.223
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "EKL100",
+          "lote_num": 2,
+          "dia_inicio": 4,
+          "dia_fim": 5,
+          "hora_inicio": 13.223,
+          "duracao_h": 13.223,
+          "horas_por_dia": {
+            "4": 7.075,
+            "5": 6.148
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "LWE175",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 6.148,
+          "duracao_h": 2.118,
+          "horas_por_dia": {
+            "5": 2.118
+          },
+          "parcial": true,
+          "volume_t": 117.3
+        },
+        {
+          "produto": "EKL150",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 8.266,
+          "duracao_h": 2.633,
+          "horas_por_dia": {
+            "5": 2.633
+          },
+          "parcial": true,
+          "volume_t": 154.9
+        },
+        {
+          "produto": "EKW150",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 10.899,
+          "duracao_h": 1.255,
+          "horas_por_dia": {
+            "5": 1.255
+          },
+          "parcial": true,
+          "volume_t": 62.1
+        },
+        {
+          "produto": "EKL170",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 12.154,
+          "duracao_h": 1.919,
+          "horas_por_dia": {
+            "5": 1.919
+          },
+          "parcial": true,
+          "volume_t": 113.9
+        },
+        {
+          "produto": "EKL100",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 6,
+          "hora_inicio": 14.073,
+          "duracao_h": 12.292,
+          "horas_por_dia": {
+            "5": 6.225,
+            "6": 6.067
+          },
+          "parcial": true,
+          "volume_t": 649.3
+        },
+        {
+          "produto": "EKL110",
+          "lote_num": 1,
+          "dia_inicio": 6,
+          "dia_fim": 6,
+          "hora_inicio": 6.067,
+          "duracao_h": 11.018,
+          "horas_por_dia": {
+            "6": 11.018
+          },
+          "parcial": true,
+          "volume_t": 639.5
+        },
+        {
+          "produto": "LWE200",
+          "lote_num": 1,
+          "dia_inicio": 6,
+          "dia_fim": 6,
+          "hora_inicio": 17.085,
+          "duracao_h": 0.749,
+          "horas_por_dia": {
+            "6": 0.749
+          },
+          "parcial": true,
+          "volume_t": 28.9
+        },
+        {
+          "produto": "EKW135",
+          "lote_num": 1,
+          "dia_inicio": 6,
+          "dia_fim": 7,
+          "hora_inicio": 17.834,
+          "duracao_h": 5.304,
+          "horas_por_dia": {
+            "6": 2.464,
+            "7": 2.84
+          },
+          "parcial": true,
+          "volume_t": 313.3
+        },
+        {
+          "produto": "EKL135",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 2.84,
+          "duracao_h": 11.037,
+          "horas_por_dia": {
+            "7": 11.037
+          },
+          "parcial": true,
+          "volume_t": 689.4
+        },
+        {
+          "produto": "EKL200",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 13.877,
+          "duracao_h": 1.904,
+          "horas_por_dia": {
+            "7": 1.904
+          },
+          "parcial": true,
+          "volume_t": 113.4
+        }
+      ],
+      "28": [
+        {
+          "produto": "LLE170",
+          "lote_num": 1,
+          "dia_inicio": 1,
+          "dia_fim": 1,
+          "hora_inicio": 0.0,
+          "duracao_h": 12.044,
+          "horas_por_dia": {
+            "1": 12.044
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "LLE170",
+          "lote_num": 2,
+          "dia_inicio": 2,
+          "dia_fim": 2,
+          "hora_inicio": 0.0,
+          "duracao_h": 12.044,
+          "horas_por_dia": {
+            "2": 12.044
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "CHD318",
+          "lote_num": 1,
+          "dia_inicio": 2,
+          "dia_fim": 3,
+          "hora_inicio": 12.044,
+          "duracao_h": 11.347,
+          "horas_por_dia": {
+            "2": 8.405,
+            "3": 2.942
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "CHD318",
+          "lote_num": 2,
+          "dia_inicio": 3,
+          "dia_fim": 3,
+          "hora_inicio": 2.942,
+          "duracao_h": 11.347,
+          "horas_por_dia": {
+            "3": 11.347
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "LLE150",
+          "lote_num": 1,
+          "dia_inicio": 3,
+          "dia_fim": 4,
+          "hora_inicio": 14.289,
+          "duracao_h": 12.044,
+          "horas_por_dia": {
+            "3": 6.16,
+            "4": 5.885
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "CKF276",
+          "lote_num": 1,
+          "dia_inicio": 4,
+          "dia_fim": 4,
+          "hora_inicio": 5.885,
+          "duracao_h": 11.381,
+          "horas_por_dia": {
+            "4": 11.381
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "LLE200",
+          "lote_num": 1,
+          "dia_inicio": 4,
+          "dia_fim": 5,
+          "hora_inicio": 17.265,
+          "duracao_h": 12.044,
+          "horas_por_dia": {
+            "4": 3.183,
+            "5": 8.861
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "WUP250",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 8.861,
+          "duracao_h": 1.404,
+          "horas_por_dia": {
+            "5": 1.404
+          },
+          "parcial": true,
+          "volume_t": 70.7
+        },
+        {
+          "produto": "CKF227",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 10.265,
+          "duracao_h": 1.246,
+          "horas_por_dia": {
+            "5": 1.246
+          },
+          "parcial": true,
+          "volume_t": 58.8
+        },
+        {
+          "produto": "CKF205",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 11.51,
+          "duracao_h": 4.097,
+          "horas_por_dia": {
+            "5": 4.097
+          },
+          "parcial": true,
+          "volume_t": 239.2
+        },
+        {
+          "produto": "CKF360",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 15.607,
+          "duracao_h": 4.688,
+          "horas_por_dia": {
+            "5": 4.688
+          },
+          "parcial": true,
+          "volume_t": 276.6
+        },
+        {
+          "produto": "LLE150",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 6,
+          "hora_inicio": 20.296,
+          "duracao_h": 7.683,
+          "horas_por_dia": {
+            "5": 0.153,
+            "6": 7.53
+          },
+          "parcial": true,
+          "volume_t": 439.3
+        },
+        {
+          "produto": "CKF312",
+          "lote_num": 1,
+          "dia_inicio": 6,
+          "dia_fim": 6,
+          "hora_inicio": 7.53,
+          "duracao_h": 6.806,
+          "horas_por_dia": {
+            "6": 6.806
+          },
+          "parcial": true,
+          "volume_t": 410.6
+        },
+        {
+          "produto": "CKF233",
+          "lote_num": 1,
+          "dia_inicio": 6,
+          "dia_fim": 7,
+          "hora_inicio": 14.337,
+          "duracao_h": 6.315,
+          "horas_por_dia": {
+            "6": 6.112,
+            "7": 0.203
+          },
+          "parcial": true,
+          "volume_t": 379.5
+        },
+        {
+          "produto": "CKQ276",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 0.203,
+          "duracao_h": 3.408,
+          "horas_por_dia": {
+            "7": 3.408
+          },
+          "parcial": true,
+          "volume_t": 195.6
+        },
+        {
+          "produto": "CKF250",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 3.611,
+          "duracao_h": 8.355,
+          "horas_por_dia": {
+            "7": 8.355
+          },
+          "parcial": true,
+          "volume_t": 508.6
+        },
+        {
+          "produto": "CKQ300",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 11.966,
+          "duracao_h": 2.858,
+          "horas_por_dia": {
+            "7": 2.858
+          },
+          "parcial": true,
+          "volume_t": 160.8
+        },
+        {
+          "produto": "CKF285",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 14.824,
+          "duracao_h": 3.522,
+          "horas_por_dia": {
+            "7": 3.522
+          },
+          "parcial": true,
+          "volume_t": 202.8
+        },
+        {
+          "produto": "CKQ232",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 18.346,
+          "duracao_h": 0.42,
+          "horas_por_dia": {
+            "7": 0.42
+          },
+          "parcial": true,
+          "volume_t": 6.6
+        }
+      ],
+      "25": [
+        {
+          "produto": "FCEP1",
+          "lote_num": 1,
+          "dia_inicio": 1,
+          "dia_fim": 1,
+          "hora_inicio": 0.0,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "1": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 2,
+          "dia_inicio": 2,
+          "dia_fim": 2,
+          "hora_inicio": 0.0,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "2": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 3,
+          "dia_inicio": 2,
+          "dia_fim": 2,
+          "hora_inicio": 5.231,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "2": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 4,
+          "dia_inicio": 2,
+          "dia_fim": 2,
+          "hora_inicio": 10.462,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "2": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 5,
+          "dia_inicio": 2,
+          "dia_fim": 2,
+          "hora_inicio": 15.694,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "2": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 6,
+          "dia_inicio": 2,
+          "dia_fim": 3,
+          "hora_inicio": 20.925,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "2": 0.38,
+            "3": 4.851
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 7,
+          "dia_inicio": 3,
+          "dia_fim": 3,
+          "hora_inicio": 4.851,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "3": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 8,
+          "dia_inicio": 3,
+          "dia_fim": 3,
+          "hora_inicio": 10.082,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "3": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 9,
+          "dia_inicio": 3,
+          "dia_fim": 3,
+          "hora_inicio": 15.313,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "3": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 10,
+          "dia_inicio": 3,
+          "dia_fim": 4,
+          "hora_inicio": 20.545,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "3": 0.761,
+            "4": 4.471
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 11,
+          "dia_inicio": 4,
+          "dia_fim": 4,
+          "hora_inicio": 4.471,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "4": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 12,
+          "dia_inicio": 4,
+          "dia_fim": 4,
+          "hora_inicio": 9.702,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "4": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 13,
+          "dia_inicio": 4,
+          "dia_fim": 4,
+          "hora_inicio": 14.933,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "4": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 14,
+          "dia_inicio": 4,
+          "dia_fim": 5,
+          "hora_inicio": 20.164,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "4": 1.141,
+            "5": 4.09
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 15,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 4.09,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "5": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 16,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 9.322,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "5": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 17,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 14.553,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "5": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 18,
+          "dia_inicio": 5,
+          "dia_fim": 6,
+          "hora_inicio": 19.784,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "5": 1.521,
+            "6": 3.71
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 19,
+          "dia_inicio": 6,
+          "dia_fim": 6,
+          "hora_inicio": 3.71,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "6": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 20,
+          "dia_inicio": 6,
+          "dia_fim": 6,
+          "hora_inicio": 8.941,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "6": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 21,
+          "dia_inicio": 6,
+          "dia_fim": 6,
+          "hora_inicio": 14.173,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "6": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 22,
+          "dia_inicio": 6,
+          "dia_fim": 7,
+          "hora_inicio": 19.404,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "6": 1.901,
+            "7": 3.33
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 23,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 3.33,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "7": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 24,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 8.561,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "7": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 25,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 13.792,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "7": 5.231
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 26,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 19.024,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "7": 2.282
+          },
+          "volume_t": 700.0
+        }
+      ],
+      "26": [
+        {
+          "produto": "FL1700",
+          "lote_num": 1,
+          "dia_inicio": 1,
+          "dia_fim": 1,
+          "hora_inicio": 0.0,
+          "duracao_h": 11.928,
+          "horas_por_dia": {
+            "1": 11.928
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FL1700",
+          "lote_num": 2,
+          "dia_inicio": 2,
+          "dia_fim": 2,
+          "hora_inicio": 0.0,
+          "duracao_h": 11.928,
+          "horas_por_dia": {
+            "2": 11.928
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FL1700",
+          "lote_num": 3,
+          "dia_inicio": 2,
+          "dia_fim": 3,
+          "hora_inicio": 11.928,
+          "duracao_h": 11.928,
+          "horas_por_dia": {
+            "2": 9.858,
+            "3": 2.07
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FL1700",
+          "lote_num": 4,
+          "dia_inicio": 3,
+          "dia_fim": 3,
+          "hora_inicio": 2.07,
+          "duracao_h": 11.928,
+          "horas_por_dia": {
+            "3": 11.928
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FL1700",
+          "lote_num": 5,
+          "dia_inicio": 3,
+          "dia_fim": 4,
+          "hora_inicio": 13.997,
+          "duracao_h": 11.928,
+          "horas_por_dia": {
+            "3": 7.789,
+            "4": 4.139
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FL1700",
+          "lote_num": 6,
+          "dia_inicio": 4,
+          "dia_fim": 4,
+          "hora_inicio": 4.139,
+          "duracao_h": 11.928,
+          "horas_por_dia": {
+            "4": 11.928
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FL1700",
+          "lote_num": 7,
+          "dia_inicio": 4,
+          "dia_fim": 5,
+          "hora_inicio": 16.067,
+          "duracao_h": 11.928,
+          "horas_por_dia": {
+            "4": 5.719,
+            "5": 6.209
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FL1700",
+          "lote_num": 8,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 6.209,
+          "duracao_h": 11.928,
+          "horas_por_dia": {
+            "5": 11.928
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FLEP1",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 6,
+          "hora_inicio": 18.137,
+          "duracao_h": 11.722,
+          "horas_por_dia": {
+            "5": 3.649,
+            "6": 8.072
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FLE700",
+          "lote_num": 1,
+          "dia_inicio": 6,
+          "dia_fim": 6,
+          "hora_inicio": 8.072,
+          "duracao_h": 12.245,
+          "horas_por_dia": {
+            "6": 12.245
+          },
+          "volume_t": 700.0
+        },
+        {
+          "produto": "FL1700",
+          "lote_num": 1,
+          "dia_inicio": 6,
+          "dia_fim": 7,
+          "hora_inicio": 20.317,
+          "duracao_h": 6.456,
+          "horas_por_dia": {
+            "6": 1.469,
+            "7": 4.987
+          },
+          "parcial": true,
+          "volume_t": 369.7
+        },
+        {
+          "produto": "FLEP1",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 4.987,
+          "duracao_h": 8.983,
+          "horas_por_dia": {
+            "7": 8.983
+          },
+          "parcial": true,
+          "volume_t": 531.8
+        },
+        {
+          "produto": "FTT700",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 13.97,
+          "duracao_h": 9.316,
+          "horas_por_dia": {
+            "7": 7.816
+          },
+          "parcial": true,
+          "volume_t": 470.0
+        }
+      ]
+    }
+  },
+  "resumo_producao": {
+    "ORT": {
+      "CKF276": {
+        "28": {
+          "produzido_t": 700.0,
+          "meta_t": 776.5,
+          "cobertura_pct": 90.1
+        }
+      },
+      "EKL120": {
+        "27": {
+          "produzido_t": 1400.0,
+          "meta_t": 1544.8,
+          "cobertura_pct": 90.6
+        }
+      },
+      "LLE150": {
+        "28": {
+          "produzido_t": 1139.3,
+          "meta_t": 1139.3,
+          "cobertura_pct": 100.0
+        }
+      },
+      "LLE170": {
+        "28": {
+          "produzido_t": 1400.0,
+          "meta_t": 1479.1,
+          "cobertura_pct": 94.7
+        }
+      },
+      "EKL100": {
+        "27": {
+          "produzido_t": 2049.3,
+          "meta_t": 2049.3,
+          "cobertura_pct": 100.0
+        }
+      },
+      "FL1700": {
+        "26": {
+          "produzido_t": 5969.7,
+          "meta_t": 5969.7,
+          "cobertura_pct": 100.0
+        }
+      },
+      "FLEP1": {
+        "26": {
+          "produzido_t": 1231.8,
+          "meta_t": 1231.8,
+          "cobertura_pct": 100.0
+        }
+      },
+      "CHD318": {
+        "28": {
+          "produzido_t": 1400.0,
+          "meta_t": 1630.1,
+          "cobertura_pct": 85.9
+        }
+      },
+      "LLE200": {
+        "28": {
+          "produzido_t": 700.0,
+          "meta_t": 712.2,
+          "cobertura_pct": 98.3
+        }
+      },
+      "FCEP1": {
+        "25": {
+          "produzido_t": 19956.19,
+          "meta_t": 20526.4,
+          "cobertura_pct": 97.2
+        }
+      },
+      "FLE700": {
+        "26": {
+          "produzido_t": 700.0,
+          "meta_t": 835.4,
+          "cobertura_pct": 83.8
+        }
+      },
+      "LWE175": {
+        "27": {
+          "produzido_t": 117.3,
+          "meta_t": 117.3,
+          "cobertura_pct": 100.0
+        }
+      },
+      "WUP250": {
+        "28": {
+          "produzido_t": 70.7,
+          "meta_t": 70.7,
+          "cobertura_pct": 100.0
+        }
+      },
+      "CKF227": {
+        "28": {
+          "produzido_t": 58.8,
+          "meta_t": 58.8,
+          "cobertura_pct": 100.0
+        }
+      },
+      "EKL150": {
+        "27": {
+          "produzido_t": 154.9,
+          "meta_t": 154.9,
+          "cobertura_pct": 100.0
+        }
+      },
+      "EKW150": {
+        "27": {
+          "produzido_t": 62.1,
+          "meta_t": 62.1,
+          "cobertura_pct": 100.0
+        }
+      },
+      "CKF205": {
+        "28": {
+          "produzido_t": 239.2,
+          "meta_t": 239.2,
+          "cobertura_pct": 100.0
+        }
+      },
+      "EKL170": {
+        "27": {
+          "produzido_t": 113.9,
+          "meta_t": 113.9,
+          "cobertura_pct": 100.0
+        }
+      },
+      "CKF360": {
+        "28": {
+          "produzido_t": 276.6,
+          "meta_t": 276.6,
+          "cobertura_pct": 100.0
+        }
+      },
+      "CKF312": {
+        "28": {
+          "produzido_t": 410.6,
+          "meta_t": 410.6,
+          "cobertura_pct": 100.0
+        }
+      },
+      "CKF233": {
+        "28": {
+          "produzido_t": 379.5,
+          "meta_t": 379.5,
+          "cobertura_pct": 100.0
+        }
+      },
+      "EKL110": {
+        "27": {
+          "produzido_t": 639.5,
+          "meta_t": 639.5,
+          "cobertura_pct": 100.0
+        }
+      },
+      "CKQ276": {
+        "28": {
+          "produzido_t": 195.6,
+          "meta_t": 195.6,
+          "cobertura_pct": 100.0
+        }
+      },
+      "LWE200": {
+        "27": {
+          "produzido_t": 28.9,
+          "meta_t": 28.9,
+          "cobertura_pct": 100.0
+        }
+      },
+      "CKF250": {
+        "28": {
+          "produzido_t": 508.6,
+          "meta_t": 508.6,
+          "cobertura_pct": 100.0
+        }
+      },
+      "CKQ300": {
+        "28": {
+          "produzido_t": 160.8,
+          "meta_t": 160.8,
+          "cobertura_pct": 100.0
+        }
+      },
+      "EKW135": {
+        "27": {
+          "produzido_t": 313.3,
+          "meta_t": 313.3,
+          "cobertura_pct": 100.0
+        }
+      },
+      "CKF285": {
+        "28": {
+          "produzido_t": 202.8,
+          "meta_t": 202.8,
+          "cobertura_pct": 100.0
+        }
+      },
+      "FTT700": {
+        "26": {
+          "produzido_t": 470.0,
+          "meta_t": 470.0,
+          "cobertura_pct": 100.0
+        }
+      },
+      "CKQ232": {
+        "28": {
+          "produzido_t": 6.6,
+          "meta_t": 6.6,
+          "cobertura_pct": 100.0
+        }
+      },
+      "EKL135": {
+        "27": {
+          "produzido_t": 689.4,
+          "meta_t": 689.4,
+          "cobertura_pct": 100.0
+        }
+      },
+      "EKL200": {
+        "27": {
+          "produzido_t": 113.4,
+          "meta_t": 113.4,
+          "cobertura_pct": 100.0
+        }
+      }
+    }
+  },
+  "limites": {
+    "ORT": {
+      "Caustificação": 20135.396,
+      "Outorga Captação": 8160.1,
+      "Outorga Emissario": 7390.5,
+      "CKB-FC": 4103.9,
+      "CKB-FL": 1500.0,
+      "CDR": 10931.0,
+      "Evaporação ORT": 3055.0
+    }
+  },
+  "diagnostico": {
+    "ORT": [
+      {
+        "dia": 1,
+        "restricao": "Outorga Captação",
+        "usado": 8547.983499,
+        "limite": 8160.1,
+        "excesso_pct": 4.75
+      },
+      {
+        "dia": 3,
+        "restricao": "CKB-FL",
+        "usado": 1526.494198,
+        "limite": 1500.0,
+        "excesso_pct": 1.77
+      },
+      {
+        "dia": 3,
+        "restricao": "Outorga Captação",
+        "usado": 8645.489339,
+        "limite": 8160.1,
+        "excesso_pct": 5.95
+      },
+      {
+        "dia": 4,
+        "restricao": "Outorga Captação",
+        "usado": 8379.513528,
+        "limite": 8160.1,
+        "excesso_pct": 2.69
+      },
+      {
+        "dia": 5,
+        "restricao": "CKB-FL",
+        "usado": 1508.171225,
+        "limite": 1500.0,
+        "excesso_pct": 0.54
+      },
+      {
+        "dia": 5,
+        "restricao": "Outorga Captação",
+        "usado": 8514.427607,
+        "limite": 8160.1,
+        "excesso_pct": 4.34
+      },
+      {
+        "dia": 6,
+        "restricao": "Outorga Captação",
+        "usado": 8542.969883,
+        "limite": 8160.1,
+        "excesso_pct": 4.69
+      },
+      {
+        "dia": 7,
+        "restricao": "Outorga Captação",
+        "usado": 8636.159401,
+        "limite": 8160.1,
+        "excesso_pct": 5.83
+      }
+    ],
+    "ciclos_infeasiveis": [],
+    "ciclos_ritmo_nok": [],
+    "ciclos_pico_nao_resolvido": [
+      1
+    ],
+    "pares_nao_sequenciaveis": [
+      {
+        "produto": "CBA318",
+        "maquina": 28,
+        "meta_t": 7.1,
+        "sem_mapeamento_MP": true,
+        "sem_produtividade": false
+      },
+      {
+        "produto": "CBA360",
+        "maquina": 28,
+        "meta_t": 9.5,
+        "sem_mapeamento_MP": true,
+        "sem_produtividade": true
+      },
+      {
+        "produto": "CBA300",
+        "maquina": 28,
+        "meta_t": 4.4,
+        "sem_mapeamento_MP": true,
+        "sem_produtividade": true
+      },
+      {
+        "produto": "CBA276",
+        "maquina": 28,
+        "meta_t": 58.7,
+        "sem_mapeamento_MP": true,
+        "sem_produtividade": false
+      },
+      {
+        "produto": "CBA255",
+        "maquina": 28,
+        "meta_t": 17.4,
+        "sem_mapeamento_MP": true,
+        "sem_produtividade": true
+      },
+      {
+        "produto": "CBA205",
+        "maquina": 28,
+        "meta_t": 8.3,
+        "sem_mapeamento_MP": true,
+        "sem_produtividade": false
+      },
+      {
+        "produto": "CBA312",
+        "maquina": 28,
+        "meta_t": 14.0,
+        "sem_mapeamento_MP": true,
+        "sem_produtividade": false
+      },
+      {
+        "produto": "CBA227",
+        "maquina": 28,
+        "meta_t": 2.0,
+        "sem_mapeamento_MP": true,
+        "sem_produtividade": true
+      },
+      {
+        "produto": "CBA233",
+        "maquina": 28,
+        "meta_t": 12.9,
+        "sem_mapeamento_MP": true,
+        "sem_produtividade": true
+      },
+      {
+        "produto": "CBA285",
+        "maquina": 28,
+        "meta_t": 6.9,
+        "sem_mapeamento_MP": true,
+        "sem_produtividade": false
+      }
+    ]
+  },
+  "resumo_geral": {
+    "factibilidade_anual": false,
+    "pares_problematicos": [],
+    "n_pares_nao_seq": 10,
+    "meta_t_nao_seq": 141.2,
+    "total_lotes_aprox": 60.0,
+    "total_perda_setup_t": 1196.0,
+    "n_violacoes_diarias_ORT": 8
+  },
+  "utilizacao_restricoes": {
+    "ORT": [
+      {
+        "dia": 1,
+        "Caustificação": {
+          "usado": 7468.952613,
+          "limite": 20135.396,
+          "pct": 37.1
+        },
+        "Outorga Captação": {
+          "usado": 8547.983499,
+          "limite": 8160.1,
+          "pct": 104.8
+        },
+        "Outorga Emissario": {
+          "usado": 7045.041345,
+          "limite": 7390.5,
+          "pct": 95.3
+        },
+        "CKB-FC": {
+          "usado": 721.157746,
+          "limite": 4103.9,
+          "pct": 17.6
+        },
+        "CKB-FL": {
+          "usado": 734.112676,
+          "limite": 1500.0,
+          "pct": 48.9
+        },
+        "CDR": {
+          "usado": 3267.387571,
+          "limite": 10931.0,
+          "pct": 29.9
+        },
+        "Evaporação ORT": {
+          "usado": 2422.516049,
+          "limite": 3055.0,
+          "pct": 79.3
+        }
+      },
+      {
+        "dia": 2,
+        "Caustificação": {
+          "usado": 16306.710038,
+          "limite": 20135.396,
+          "pct": 81.0
+        },
+        "Outorga Captação": {
+          "usado": 6939.366057,
+          "limite": 8160.1,
+          "pct": 85.0
+        },
+        "Outorga Emissario": {
+          "usado": 5719.25774,
+          "limite": 7390.5,
+          "pct": 77.4
+        },
+        "CKB-FC": {
+          "usado": 3309.397798,
+          "limite": 4103.9,
+          "pct": 80.6
+        },
+        "CKB-FL": {
+          "usado": 1120.591963,
+          "limite": 1500.0,
+          "pct": 74.7
+        },
+        "CDR": {
+          "usado": 6993.069606,
+          "limite": 10931.0,
+          "pct": 64.0
+        },
+        "Evaporação ORT": {
+          "usado": 2083.845803,
+          "limite": 3055.0,
+          "pct": 68.2
+        }
+      },
+      {
+        "dia": 3,
+        "Caustificação": {
+          "usado": 18370.432886,
+          "limite": 20135.396,
+          "pct": 91.2
+        },
+        "Outorga Captação": {
+          "usado": 8645.489339,
+          "limite": 8160.1,
+          "pct": 105.9
+        },
+        "Outorga Emissario": {
+          "usado": 7125.403301,
+          "limite": 7390.5,
+          "pct": 96.4
+        },
+        "CKB-FC": {
+          "usado": 3077.194804,
+          "limite": 4103.9,
+          "pct": 75.0
+        },
+        "CKB-FL": {
+          "usado": 1526.494198,
+          "limite": 1500.0,
+          "pct": 101.8
+        },
+        "CDR": {
+          "usado": 7878.241334,
+          "limite": 10931.0,
+          "pct": 72.1
+        },
+        "Evaporação ORT": {
+          "usado": 2468.12308,
+          "limite": 3055.0,
+          "pct": 80.8
+        }
+      },
+      {
+        "dia": 4,
+        "Caustificação": {
+          "usado": 18524.569198,
+          "limite": 20135.396,
+          "pct": 92.0
+        },
+        "Outorga Captação": {
+          "usado": 8379.513528,
+          "limite": 8160.1,
+          "pct": 102.7
+        },
+        "Outorga Emissario": {
+          "usado": 6906.192468,
+          "limite": 7390.5,
+          "pct": 93.4
+        },
+        "CKB-FC": {
+          "usado": 3036.932102,
+          "limite": 4103.9,
+          "pct": 74.0
+        },
+        "CKB-FL": {
+          "usado": 1490.524641,
+          "limite": 1500.0,
+          "pct": 99.4
+        },
+        "CDR": {
+          "usado": 7979.700248,
+          "limite": 10931.0,
+          "pct": 73.0
+        },
+        "Evaporação ORT": {
+          "usado": 2377.801008,
+          "limite": 3055.0,
+          "pct": 77.8
+        }
+      },
+      {
+        "dia": 5,
+        "Caustificação": {
+          "usado": 18411.981308,
+          "limite": 20135.396,
+          "pct": 91.4
+        },
+        "Outorga Captação": {
+          "usado": 8514.427607,
+          "limite": 8160.1,
+          "pct": 104.3
+        },
+        "Outorga Emissario": {
+          "usado": 7017.38539,
+          "limite": 7390.5,
+          "pct": 95.0
+        },
+        "CKB-FC": {
+          "usado": 3088.457835,
+          "limite": 4103.9,
+          "pct": 75.3
+        },
+        "CKB-FL": {
+          "usado": 1508.171225,
+          "limite": 1500.0,
+          "pct": 100.5
+        },
+        "CDR": {
+          "usado": 7930.882077,
+          "limite": 10931.0,
+          "pct": 72.6
+        },
+        "Evaporação ORT": {
+          "usado": 2678.225722,
+          "limite": 3055.0,
+          "pct": 87.7
+        }
+      },
+      {
+        "dia": 6,
+        "Caustificação": {
+          "usado": 16876.4345,
+          "limite": 20135.396,
+          "pct": 83.8
+        },
+        "Outorga Captação": {
+          "usado": 8542.969883,
+          "limite": 8160.1,
+          "pct": 104.7
+        },
+        "Outorga Emissario": {
+          "usado": 7040.909244,
+          "limite": 7390.5,
+          "pct": 95.3
+        },
+        "CKB-FC": {
+          "usado": 3313.428998,
+          "limite": 4103.9,
+          "pct": 80.7
+        },
+        "CKB-FL": {
+          "usado": 1077.361501,
+          "limite": 1500.0,
+          "pct": 71.8
+        },
+        "CDR": {
+          "usado": 7287.114793,
+          "limite": 10931.0,
+          "pct": 66.7
+        },
+        "Evaporação ORT": {
+          "usado": 2451.295292,
+          "limite": 3055.0,
+          "pct": 80.2
+        }
+      },
+      {
+        "dia": 7,
+        "Caustificação": {
+          "usado": 18533.191424,
+          "limite": 20135.396,
+          "pct": 92.0
+        },
+        "Outorga Captação": {
+          "usado": 8636.159401,
+          "limite": 8160.1,
+          "pct": 105.8
+        },
+        "Outorga Emissario": {
+          "usado": 7117.713792,
+          "limite": 7390.5,
+          "pct": 96.3
+        },
+        "CKB-FC": {
+          "usado": 3609.418754,
+          "limite": 4103.9,
+          "pct": 88.0
+        },
+        "CKB-FL": {
+          "usado": 1277.293135,
+          "limite": 1500.0,
+          "pct": 85.2
+        },
+        "CDR": {
+          "usado": 7973.249698,
+          "limite": 10931.0,
+          "pct": 72.9
+        },
+        "Evaporação ORT": {
+          "usado": 2408.658907,
+          "limite": 3055.0,
+          "pct": 78.8
+        }
+      }
+    ]
+  },
+  "utilizacao_horas_maquina": {
+    "ORT": {
+      "27": {
+        "1": {
+          "usado_h": 11.201,
+          "capacidade_h": 20.298,
+          "pct": 55.2
+        },
+        "3": {
+          "usado_h": 11.201,
+          "capacidade_h": 20.298,
+          "pct": 55.2
+        },
+        "4": {
+          "usado_h": 20.298,
+          "capacidade_h": 20.298,
+          "pct": 100.0
+        },
+        "5": {
+          "usado_h": 20.298,
+          "capacidade_h": 20.298,
+          "pct": 100.0
+        },
+        "6": {
+          "usado_h": 20.298,
+          "capacidade_h": 20.298,
+          "pct": 100.0
+        },
+        "7": {
+          "usado_h": 15.781,
+          "capacidade_h": 20.298,
+          "pct": 77.7
+        }
+      },
+      "28": {
+        "1": {
+          "usado_h": 12.044,
+          "capacidade_h": 20.449,
+          "pct": 58.9
+        },
+        "2": {
+          "usado_h": 20.449,
+          "capacidade_h": 20.449,
+          "pct": 100.0
+        },
+        "3": {
+          "usado_h": 20.449,
+          "capacidade_h": 20.449,
+          "pct": 100.0
+        },
+        "4": {
+          "usado_h": 20.449,
+          "capacidade_h": 20.449,
+          "pct": 100.0
+        },
+        "5": {
+          "usado_h": 20.449,
+          "capacidade_h": 20.449,
+          "pct": 100.0
+        },
+        "6": {
+          "usado_h": 20.448,
+          "capacidade_h": 20.449,
+          "pct": 100.0
+        },
+        "7": {
+          "usado_h": 18.766,
+          "capacidade_h": 20.449,
+          "pct": 91.8
+        }
+      },
+      "25": {
+        "1": {
+          "usado_h": 5.231,
+          "capacidade_h": 21.305,
+          "pct": 24.6
+        },
+        "2": {
+          "usado_h": 21.304,
+          "capacidade_h": 21.305,
+          "pct": 100.0
+        },
+        "3": {
+          "usado_h": 21.305,
+          "capacidade_h": 21.305,
+          "pct": 100.0
+        },
+        "4": {
+          "usado_h": 21.305,
+          "capacidade_h": 21.305,
+          "pct": 100.0
+        },
+        "5": {
+          "usado_h": 21.304,
+          "capacidade_h": 21.305,
+          "pct": 100.0
+        },
+        "6": {
+          "usado_h": 21.304,
+          "capacidade_h": 21.305,
+          "pct": 100.0
+        },
+        "7": {
+          "usado_h": 21.305,
+          "capacidade_h": 21.305,
+          "pct": 100.0
+        }
+      },
+      "26": {
+        "1": {
+          "usado_h": 11.928,
+          "capacidade_h": 21.786,
+          "pct": 54.8
+        },
+        "2": {
+          "usado_h": 21.786,
+          "capacidade_h": 21.786,
+          "pct": 100.0
+        },
+        "3": {
+          "usado_h": 21.787,
+          "capacidade_h": 21.786,
+          "pct": 100.0
+        },
+        "4": {
+          "usado_h": 21.786,
+          "capacidade_h": 21.786,
+          "pct": 100.0
+        },
+        "5": {
+          "usado_h": 21.786,
+          "capacidade_h": 21.786,
+          "pct": 100.0
+        },
+        "6": {
+          "usado_h": 21.786,
+          "capacidade_h": 21.786,
+          "pct": 100.0
+        },
+        "7": {
+          "usado_h": 21.786,
+          "capacidade_h": 21.786,
+          "pct": 100.0
+        }
+      }
+    }
+  },
+  "resumo_producao_v2": {
+    "ORT": {
+      "CKF276": {
+        "28": {
+          "produzido_t": 700.0,
+          "meta_t": 776.5,
+          "cobertura_pct": 90.1,
+          "horas_tot": 11.38,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 76.5
+        }
+      },
+      "EKL120": {
+        "27": {
+          "produzido_t": 1400.0,
+          "meta_t": 1544.8,
+          "cobertura_pct": 90.6,
+          "horas_tot": 22.4,
+          "n_setups": 2,
+          "dias_prod": 2,
+          "folga_t": 144.8
+        }
+      },
+      "LLE150": {
+        "28": {
+          "produzido_t": 1139.3,
+          "meta_t": 1139.3,
+          "cobertura_pct": 100.0,
+          "horas_tot": 19.73,
+          "n_setups": 2,
+          "dias_prod": 4,
+          "folga_t": 0.0
+        }
+      },
+      "LLE170": {
+        "28": {
+          "produzido_t": 1400.0,
+          "meta_t": 1479.1,
+          "cobertura_pct": 94.7,
+          "horas_tot": 24.09,
+          "n_setups": 2,
+          "dias_prod": 2,
+          "folga_t": 79.1
+        }
+      },
+      "EKL100": {
+        "27": {
+          "produzido_t": 2049.3,
+          "meta_t": 2049.3,
+          "cobertura_pct": 100.0,
+          "horas_tot": 38.74,
+          "n_setups": 3,
+          "dias_prod": 3,
+          "folga_t": 0.0
+        }
+      },
+      "FL1700": {
+        "26": {
+          "produzido_t": 5969.7,
+          "meta_t": 5969.7,
+          "cobertura_pct": 100.0,
+          "horas_tot": 101.88,
+          "n_setups": 9,
+          "dias_prod": 7,
+          "folga_t": 0.0
+        }
+      },
+      "FLEP1": {
+        "26": {
+          "produzido_t": 1231.8,
+          "meta_t": 1231.8,
+          "cobertura_pct": 100.0,
+          "horas_tot": 20.7,
+          "n_setups": 2,
+          "dias_prod": 3,
+          "folga_t": 0.0
+        }
+      },
+      "CHD318": {
+        "28": {
+          "produzido_t": 1400.0,
+          "meta_t": 1630.1,
+          "cobertura_pct": 85.9,
+          "horas_tot": 22.69,
+          "n_setups": 2,
+          "dias_prod": 2,
+          "folga_t": 230.1
+        }
+      },
+      "LLE200": {
+        "28": {
+          "produzido_t": 700.0,
+          "meta_t": 712.2,
+          "cobertura_pct": 98.3,
+          "horas_tot": 12.04,
+          "n_setups": 1,
+          "dias_prod": 2,
+          "folga_t": 12.2
+        }
+      },
+      "FCEP1": {
+        "25": {
+          "produzido_t": 19956.19,
+          "meta_t": 20526.4,
+          "cobertura_pct": 97.2,
+          "horas_tot": 136.01,
+          "n_setups": 26,
+          "dias_prod": 7,
+          "folga_t": 570.21
+        }
+      },
+      "FLE700": {
+        "26": {
+          "produzido_t": 700.0,
+          "meta_t": 835.4,
+          "cobertura_pct": 83.8,
+          "horas_tot": 12.24,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 135.4
+        }
+      },
+      "LWE175": {
+        "27": {
+          "produzido_t": 117.3,
+          "meta_t": 117.3,
+          "cobertura_pct": 100.0,
+          "horas_tot": 2.12,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "WUP250": {
+        "28": {
+          "produzido_t": 70.7,
+          "meta_t": 70.7,
+          "cobertura_pct": 100.0,
+          "horas_tot": 1.4,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "CKF227": {
+        "28": {
+          "produzido_t": 58.8,
+          "meta_t": 58.8,
+          "cobertura_pct": 100.0,
+          "horas_tot": 1.25,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "EKL150": {
+        "27": {
+          "produzido_t": 154.9,
+          "meta_t": 154.9,
+          "cobertura_pct": 100.0,
+          "horas_tot": 2.63,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "EKW150": {
+        "27": {
+          "produzido_t": 62.1,
+          "meta_t": 62.1,
+          "cobertura_pct": 100.0,
+          "horas_tot": 1.25,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "CKF205": {
+        "28": {
+          "produzido_t": 239.2,
+          "meta_t": 239.2,
+          "cobertura_pct": 100.0,
+          "horas_tot": 4.1,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "EKL170": {
+        "27": {
+          "produzido_t": 113.9,
+          "meta_t": 113.9,
+          "cobertura_pct": 100.0,
+          "horas_tot": 1.92,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "CKF360": {
+        "28": {
+          "produzido_t": 276.6,
+          "meta_t": 276.6,
+          "cobertura_pct": 100.0,
+          "horas_tot": 4.69,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "CKF312": {
+        "28": {
+          "produzido_t": 410.6,
+          "meta_t": 410.6,
+          "cobertura_pct": 100.0,
+          "horas_tot": 6.81,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "CKF233": {
+        "28": {
+          "produzido_t": 379.5,
+          "meta_t": 379.5,
+          "cobertura_pct": 100.0,
+          "horas_tot": 6.32,
+          "n_setups": 1,
+          "dias_prod": 2,
+          "folga_t": 0.0
+        }
+      },
+      "EKL110": {
+        "27": {
+          "produzido_t": 639.5,
+          "meta_t": 639.5,
+          "cobertura_pct": 100.0,
+          "horas_tot": 11.02,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "CKQ276": {
+        "28": {
+          "produzido_t": 195.6,
+          "meta_t": 195.6,
+          "cobertura_pct": 100.0,
+          "horas_tot": 3.41,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "LWE200": {
+        "27": {
+          "produzido_t": 28.9,
+          "meta_t": 28.9,
+          "cobertura_pct": 100.0,
+          "horas_tot": 0.75,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "CKF250": {
+        "28": {
+          "produzido_t": 508.6,
+          "meta_t": 508.6,
+          "cobertura_pct": 100.0,
+          "horas_tot": 8.36,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "CKQ300": {
+        "28": {
+          "produzido_t": 160.8,
+          "meta_t": 160.8,
+          "cobertura_pct": 100.0,
+          "horas_tot": 2.86,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "EKW135": {
+        "27": {
+          "produzido_t": 313.3,
+          "meta_t": 313.3,
+          "cobertura_pct": 100.0,
+          "horas_tot": 5.3,
+          "n_setups": 1,
+          "dias_prod": 2,
+          "folga_t": 0.0
+        }
+      },
+      "CKF285": {
+        "28": {
+          "produzido_t": 202.8,
+          "meta_t": 202.8,
+          "cobertura_pct": 100.0,
+          "horas_tot": 3.52,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "FTT700": {
+        "26": {
+          "produzido_t": 470.0,
+          "meta_t": 470.0,
+          "cobertura_pct": 100.0,
+          "horas_tot": 9.32,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "CKQ232": {
+        "28": {
+          "produzido_t": 6.6,
+          "meta_t": 6.6,
+          "cobertura_pct": 100.0,
+          "horas_tot": 0.42,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "EKL135": {
+        "27": {
+          "produzido_t": 689.4,
+          "meta_t": 689.4,
+          "cobertura_pct": 100.0,
+          "horas_tot": 11.04,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      },
+      "EKL200": {
+        "27": {
+          "produzido_t": 113.4,
+          "meta_t": 113.4,
+          "cobertura_pct": 100.0,
+          "horas_tot": 1.9,
+          "n_setups": 1,
+          "dias_prod": 1,
+          "folga_t": 0.0
+        }
+      }
+    }
+  },
+  "schedule_v2": {
+    "ORT": {
+      "27": [
+        {
+          "produto": "EKL120",
+          "lote_num": 1,
+          "dia_inicio": 1,
+          "dia_fim": 1,
+          "hora_inicio": 0.0,
+          "duracao_h": 11.201,
+          "horas_por_dia": {
+            "1": 11.201
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 700.01,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": null
+        },
+        {
+          "produto": "EKL120",
+          "lote_num": 2,
+          "dia_inicio": 3,
+          "dia_fim": 3,
+          "hora_inicio": 0.0,
+          "duracao_h": 11.201,
+          "horas_por_dia": {
+            "3": 11.201
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 700.01,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "EKL120"
+        },
+        {
+          "produto": "EKL100",
+          "lote_num": 1,
+          "dia_inicio": 4,
+          "dia_fim": 4,
+          "hora_inicio": 0.0,
+          "duracao_h": 13.223,
+          "horas_por_dia": {
+            "4": 13.223
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.99,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 8.0,
+          "produto_anterior": "EKL120"
+        },
+        {
+          "produto": "EKL100",
+          "lote_num": 2,
+          "dia_inicio": 4,
+          "dia_fim": 5,
+          "hora_inicio": 13.223,
+          "duracao_h": 13.223,
+          "horas_por_dia": {
+            "4": 7.075,
+            "5": 6.148
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.99,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "EKL100"
+        },
+        {
+          "produto": "LWE175",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 6.148,
+          "duracao_h": 2.118,
+          "horas_por_dia": {
+            "5": 2.118
+          },
+          "parcial": true,
+          "volume_t": 117.3,
+          "toneladas_brutas": 117.33,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "EKL100"
+        },
+        {
+          "produto": "EKL150",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 8.266,
+          "duracao_h": 2.633,
+          "horas_por_dia": {
+            "5": 2.633
+          },
+          "parcial": true,
+          "volume_t": 154.9,
+          "toneladas_brutas": 154.88,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "LWE175"
+        },
+        {
+          "produto": "EKW150",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 10.899,
+          "duracao_h": 1.255,
+          "horas_por_dia": {
+            "5": 1.255
+          },
+          "parcial": true,
+          "volume_t": 62.1,
+          "toneladas_brutas": 62.09,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "EKL150"
+        },
+        {
+          "produto": "EKL170",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 12.154,
+          "duracao_h": 1.919,
+          "horas_por_dia": {
+            "5": 1.919
+          },
+          "parcial": true,
+          "volume_t": 113.9,
+          "toneladas_brutas": 113.9,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "EKW150"
+        },
+        {
+          "produto": "EKL100",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 6,
+          "hora_inicio": 14.073,
+          "duracao_h": 12.292,
+          "horas_por_dia": {
+            "5": 6.225,
+            "6": 6.067
+          },
+          "parcial": true,
+          "volume_t": 649.3,
+          "toneladas_brutas": 649.29,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 41.0,
+          "produto_anterior": "EKL170"
+        },
+        {
+          "produto": "EKL110",
+          "lote_num": 1,
+          "dia_inicio": 6,
+          "dia_fim": 6,
+          "hora_inicio": 6.067,
+          "duracao_h": 11.018,
+          "horas_por_dia": {
+            "6": 11.018
+          },
+          "parcial": true,
+          "volume_t": 639.5,
+          "toneladas_brutas": 639.48,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "EKL100"
+        },
+        {
+          "produto": "LWE200",
+          "lote_num": 1,
+          "dia_inicio": 6,
+          "dia_fim": 6,
+          "hora_inicio": 17.085,
+          "duracao_h": 0.749,
+          "horas_por_dia": {
+            "6": 0.749
+          },
+          "parcial": true,
+          "volume_t": 28.9,
+          "toneladas_brutas": 28.89,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "EKL110"
+        },
+        {
+          "produto": "EKW135",
+          "lote_num": 1,
+          "dia_inicio": 6,
+          "dia_fim": 7,
+          "hora_inicio": 17.834,
+          "duracao_h": 5.304,
+          "horas_por_dia": {
+            "6": 2.464,
+            "7": 2.84
+          },
+          "parcial": true,
+          "volume_t": 313.3,
+          "toneladas_brutas": 313.32,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "LWE200"
+        },
+        {
+          "produto": "EKL135",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 2.84,
+          "duracao_h": 11.037,
+          "horas_por_dia": {
+            "7": 11.037
+          },
+          "parcial": true,
+          "volume_t": 689.4,
+          "toneladas_brutas": 689.39,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "EKW135"
+        },
+        {
+          "produto": "EKL200",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 13.877,
+          "duracao_h": 1.904,
+          "horas_por_dia": {
+            "7": 1.904
+          },
+          "parcial": true,
+          "volume_t": 113.4,
+          "toneladas_brutas": 113.42,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 35.0,
+          "produto_anterior": "EKL135"
+        }
+      ],
+      "28": [
+        {
+          "produto": "LLE170",
+          "lote_num": 1,
+          "dia_inicio": 1,
+          "dia_fim": 1,
+          "hora_inicio": 0.0,
+          "duracao_h": 12.044,
+          "horas_por_dia": {
+            "1": 12.044
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.99,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": null
+        },
+        {
+          "produto": "LLE170",
+          "lote_num": 2,
+          "dia_inicio": 2,
+          "dia_fim": 2,
+          "hora_inicio": 0.0,
+          "duracao_h": 12.044,
+          "horas_por_dia": {
+            "2": 12.044
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.99,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "LLE170"
+        },
+        {
+          "produto": "CHD318",
+          "lote_num": 1,
+          "dia_inicio": 2,
+          "dia_fim": 3,
+          "hora_inicio": 12.044,
+          "duracao_h": 11.347,
+          "horas_por_dia": {
+            "2": 8.405,
+            "3": 2.942
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 700.01,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "LLE170"
+        },
+        {
+          "produto": "CHD318",
+          "lote_num": 2,
+          "dia_inicio": 3,
+          "dia_fim": 3,
+          "hora_inicio": 2.942,
+          "duracao_h": 11.347,
+          "horas_por_dia": {
+            "3": 11.347
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 700.01,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "CHD318"
+        },
+        {
+          "produto": "LLE150",
+          "lote_num": 1,
+          "dia_inicio": 3,
+          "dia_fim": 4,
+          "hora_inicio": 14.289,
+          "duracao_h": 12.044,
+          "horas_por_dia": {
+            "3": 6.16,
+            "4": 5.885
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.99,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "CHD318"
+        },
+        {
+          "produto": "CKF276",
+          "lote_num": 1,
+          "dia_inicio": 4,
+          "dia_fim": 4,
+          "hora_inicio": 5.885,
+          "duracao_h": 11.381,
+          "horas_por_dia": {
+            "4": 11.381
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 700.01,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "LLE150"
+        },
+        {
+          "produto": "LLE200",
+          "lote_num": 1,
+          "dia_inicio": 4,
+          "dia_fim": 5,
+          "hora_inicio": 17.265,
+          "duracao_h": 12.044,
+          "horas_por_dia": {
+            "4": 3.183,
+            "5": 8.861
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.99,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "CKF276"
+        },
+        {
+          "produto": "WUP250",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 8.861,
+          "duracao_h": 1.404,
+          "horas_por_dia": {
+            "5": 1.404
+          },
+          "parcial": true,
+          "volume_t": 70.7,
+          "toneladas_brutas": 70.7,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "LLE200"
+        },
+        {
+          "produto": "CKF227",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 10.265,
+          "duracao_h": 1.246,
+          "horas_por_dia": {
+            "5": 1.246
+          },
+          "parcial": true,
+          "volume_t": 58.8,
+          "toneladas_brutas": 58.83,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "WUP250"
+        },
+        {
+          "produto": "CKF205",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 11.51,
+          "duracao_h": 4.097,
+          "horas_por_dia": {
+            "5": 4.097
+          },
+          "parcial": true,
+          "volume_t": 239.2,
+          "toneladas_brutas": 239.19,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 15.0,
+          "produto_anterior": "CKF227"
+        },
+        {
+          "produto": "CKF360",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 15.607,
+          "duracao_h": 4.688,
+          "horas_por_dia": {
+            "5": 4.688
+          },
+          "parcial": true,
+          "volume_t": 276.6,
+          "toneladas_brutas": 276.58,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 40.0,
+          "produto_anterior": "CKF205"
+        },
+        {
+          "produto": "LLE150",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 6,
+          "hora_inicio": 20.296,
+          "duracao_h": 7.683,
+          "horas_por_dia": {
+            "5": 0.153,
+            "6": 7.53
+          },
+          "parcial": true,
+          "volume_t": 439.3,
+          "toneladas_brutas": 439.29,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "CKF360"
+        },
+        {
+          "produto": "CKF312",
+          "lote_num": 1,
+          "dia_inicio": 6,
+          "dia_fim": 6,
+          "hora_inicio": 7.53,
+          "duracao_h": 6.806,
+          "horas_por_dia": {
+            "6": 6.806
+          },
+          "parcial": true,
+          "volume_t": 410.6,
+          "toneladas_brutas": 410.58,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "LLE150"
+        },
+        {
+          "produto": "CKF233",
+          "lote_num": 1,
+          "dia_inicio": 6,
+          "dia_fim": 7,
+          "hora_inicio": 14.337,
+          "duracao_h": 6.315,
+          "horas_por_dia": {
+            "6": 6.112,
+            "7": 0.203
+          },
+          "parcial": true,
+          "volume_t": 379.5,
+          "toneladas_brutas": 379.51,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 30.0,
+          "produto_anterior": "CKF312"
+        },
+        {
+          "produto": "CKQ276",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 0.203,
+          "duracao_h": 3.408,
+          "horas_por_dia": {
+            "7": 3.408
+          },
+          "parcial": true,
+          "volume_t": 195.6,
+          "toneladas_brutas": 195.61,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 25.0,
+          "produto_anterior": "CKF233"
+        },
+        {
+          "produto": "CKF250",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 3.611,
+          "duracao_h": 8.355,
+          "horas_por_dia": {
+            "7": 8.355
+          },
+          "parcial": true,
+          "volume_t": 508.6,
+          "toneladas_brutas": 508.57,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "CKQ276"
+        },
+        {
+          "produto": "CKQ300",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 11.966,
+          "duracao_h": 2.858,
+          "horas_por_dia": {
+            "7": 2.858
+          },
+          "parcial": true,
+          "volume_t": 160.8,
+          "toneladas_brutas": 160.81,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 35.0,
+          "produto_anterior": "CKF250"
+        },
+        {
+          "produto": "CKF285",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 14.824,
+          "duracao_h": 3.522,
+          "horas_por_dia": {
+            "7": 3.522
+          },
+          "parcial": true,
+          "volume_t": 202.8,
+          "toneladas_brutas": 202.82,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "CKQ300"
+        },
+        {
+          "produto": "CKQ232",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 18.346,
+          "duracao_h": 0.42,
+          "horas_por_dia": {
+            "7": 0.42
+          },
+          "parcial": true,
+          "volume_t": 6.6,
+          "toneladas_brutas": 6.57,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "CKF285"
+        }
+      ],
+      "25": [
+        {
+          "produto": "FCEP1",
+          "lote_num": 1,
+          "dia_inicio": 1,
+          "dia_fim": 1,
+          "hora_inicio": 0.0,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "1": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": null
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 2,
+          "dia_inicio": 2,
+          "dia_fim": 2,
+          "hora_inicio": 0.0,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "2": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 3,
+          "dia_inicio": 2,
+          "dia_fim": 2,
+          "hora_inicio": 5.231,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "2": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 4,
+          "dia_inicio": 2,
+          "dia_fim": 2,
+          "hora_inicio": 10.462,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "2": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 5,
+          "dia_inicio": 2,
+          "dia_fim": 2,
+          "hora_inicio": 15.694,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "2": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 6,
+          "dia_inicio": 2,
+          "dia_fim": 3,
+          "hora_inicio": 20.925,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "2": 0.38,
+            "3": 4.851
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 7,
+          "dia_inicio": 3,
+          "dia_fim": 3,
+          "hora_inicio": 4.851,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "3": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 8,
+          "dia_inicio": 3,
+          "dia_fim": 3,
+          "hora_inicio": 10.082,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "3": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 9,
+          "dia_inicio": 3,
+          "dia_fim": 3,
+          "hora_inicio": 15.313,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "3": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 10,
+          "dia_inicio": 3,
+          "dia_fim": 4,
+          "hora_inicio": 20.545,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "3": 0.761,
+            "4": 4.471
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 11,
+          "dia_inicio": 4,
+          "dia_fim": 4,
+          "hora_inicio": 4.471,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "4": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 12,
+          "dia_inicio": 4,
+          "dia_fim": 4,
+          "hora_inicio": 9.702,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "4": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 13,
+          "dia_inicio": 4,
+          "dia_fim": 4,
+          "hora_inicio": 14.933,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "4": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 14,
+          "dia_inicio": 4,
+          "dia_fim": 5,
+          "hora_inicio": 20.164,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "4": 1.141,
+            "5": 4.09
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 15,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 4.09,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "5": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 16,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 9.322,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "5": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 17,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 14.553,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "5": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 18,
+          "dia_inicio": 5,
+          "dia_fim": 6,
+          "hora_inicio": 19.784,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "5": 1.521,
+            "6": 3.71
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 19,
+          "dia_inicio": 6,
+          "dia_fim": 6,
+          "hora_inicio": 3.71,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "6": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 20,
+          "dia_inicio": 6,
+          "dia_fim": 6,
+          "hora_inicio": 8.941,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "6": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 21,
+          "dia_inicio": 6,
+          "dia_fim": 6,
+          "hora_inicio": 14.173,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "6": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 22,
+          "dia_inicio": 6,
+          "dia_fim": 7,
+          "hora_inicio": 19.404,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "6": 1.901,
+            "7": 3.33
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 23,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 3.33,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "7": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 24,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 8.561,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "7": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 25,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 13.792,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "7": 5.231
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        },
+        {
+          "produto": "FCEP1",
+          "lote_num": 26,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 19.024,
+          "duracao_h": 5.231,
+          "horas_por_dia": {
+            "7": 2.282
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 699.97,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FCEP1"
+        }
+      ],
+      "26": [
+        {
+          "produto": "FL1700",
+          "lote_num": 1,
+          "dia_inicio": 1,
+          "dia_fim": 1,
+          "hora_inicio": 0.0,
+          "duracao_h": 11.928,
+          "horas_por_dia": {
+            "1": 11.928
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 700.01,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": null
+        },
+        {
+          "produto": "FL1700",
+          "lote_num": 2,
+          "dia_inicio": 2,
+          "dia_fim": 2,
+          "hora_inicio": 0.0,
+          "duracao_h": 11.928,
+          "horas_por_dia": {
+            "2": 11.928
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 700.01,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FL1700"
+        },
+        {
+          "produto": "FL1700",
+          "lote_num": 3,
+          "dia_inicio": 2,
+          "dia_fim": 3,
+          "hora_inicio": 11.928,
+          "duracao_h": 11.928,
+          "horas_por_dia": {
+            "2": 9.858,
+            "3": 2.07
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 700.01,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FL1700"
+        },
+        {
+          "produto": "FL1700",
+          "lote_num": 4,
+          "dia_inicio": 3,
+          "dia_fim": 3,
+          "hora_inicio": 2.07,
+          "duracao_h": 11.928,
+          "horas_por_dia": {
+            "3": 11.928
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 700.01,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FL1700"
+        },
+        {
+          "produto": "FL1700",
+          "lote_num": 5,
+          "dia_inicio": 3,
+          "dia_fim": 4,
+          "hora_inicio": 13.997,
+          "duracao_h": 11.928,
+          "horas_por_dia": {
+            "3": 7.789,
+            "4": 4.139
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 700.01,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FL1700"
+        },
+        {
+          "produto": "FL1700",
+          "lote_num": 6,
+          "dia_inicio": 4,
+          "dia_fim": 4,
+          "hora_inicio": 4.139,
+          "duracao_h": 11.928,
+          "horas_por_dia": {
+            "4": 11.928
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 700.01,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FL1700"
+        },
+        {
+          "produto": "FL1700",
+          "lote_num": 7,
+          "dia_inicio": 4,
+          "dia_fim": 5,
+          "hora_inicio": 16.067,
+          "duracao_h": 11.928,
+          "horas_por_dia": {
+            "4": 5.719,
+            "5": 6.209
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 700.01,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FL1700"
+        },
+        {
+          "produto": "FL1700",
+          "lote_num": 8,
+          "dia_inicio": 5,
+          "dia_fim": 5,
+          "hora_inicio": 6.209,
+          "duracao_h": 11.928,
+          "horas_por_dia": {
+            "5": 11.928
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 700.01,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 0.0,
+          "produto_anterior": "FL1700"
+        },
+        {
+          "produto": "FLEP1",
+          "lote_num": 1,
+          "dia_inicio": 5,
+          "dia_fim": 6,
+          "hora_inicio": 18.137,
+          "duracao_h": 11.722,
+          "horas_por_dia": {
+            "5": 3.649,
+            "6": 8.072
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 700.02,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "FL1700"
+        },
+        {
+          "produto": "FLE700",
+          "lote_num": 1,
+          "dia_inicio": 6,
+          "dia_fim": 6,
+          "hora_inicio": 8.072,
+          "duracao_h": 12.245,
+          "horas_por_dia": {
+            "6": 12.245
+          },
+          "volume_t": 700.0,
+          "toneladas_brutas": 700.01,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "FLEP1"
+        },
+        {
+          "produto": "FL1700",
+          "lote_num": 1,
+          "dia_inicio": 6,
+          "dia_fim": 7,
+          "hora_inicio": 20.317,
+          "duracao_h": 6.456,
+          "horas_por_dia": {
+            "6": 1.469,
+            "7": 4.987
+          },
+          "parcial": true,
+          "volume_t": 369.7,
+          "toneladas_brutas": 369.7,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "FLE700"
+        },
+        {
+          "produto": "FLEP1",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 4.987,
+          "duracao_h": 8.983,
+          "horas_por_dia": {
+            "7": 8.983
+          },
+          "parcial": true,
+          "volume_t": 531.8,
+          "toneladas_brutas": 531.78,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "FL1700"
+        },
+        {
+          "produto": "FTT700",
+          "lote_num": 1,
+          "dia_inicio": 7,
+          "dia_fim": 7,
+          "hora_inicio": 13.97,
+          "duracao_h": 9.316,
+          "horas_por_dia": {
+            "7": 7.816
+          },
+          "parcial": true,
+          "volume_t": 470.0,
+          "toneladas_brutas": 470.01,
+          "semana": 1,
+          "ciclo": 1,
+          "setup_t": 20.0,
+          "produto_anterior": "FLEP1"
+        }
+      ]
+    }
+  },
+  "feasibility_matrix": {
+    "horizonte_dias_testado": 60,
+    "grid_parametros": [
+      {
+        "lote_t": 250,
+        "perda_setup_t": 20
+      },
+      {
+        "lote_t": 300,
+        "perda_setup_t": 20
+      },
+      {
+        "lote_t": 300,
+        "perda_setup_t": 30
+      },
+      {
+        "lote_t": 400,
+        "perda_setup_t": 20
+      },
+      {
+        "lote_t": 400,
+        "perda_setup_t": 30
+      },
+      {
+        "lote_t": 400,
+        "perda_setup_t": 40
+      },
+      {
+        "lote_t": 500,
+        "perda_setup_t": 30
+      },
+      {
+        "lote_t": 500,
+        "perda_setup_t": 40
+      },
+      {
+        "lote_t": 500,
+        "perda_setup_t": 50
+      },
+      {
+        "lote_t": 600,
+        "perda_setup_t": 40
+      },
+      {
+        "lote_t": 600,
+        "perda_setup_t": 50
+      },
+      {
+        "lote_t": 700,
+        "perda_setup_t": 50
+      }
+    ],
+    "resultados": [
+      {
+        "lote_t": 250,
+        "perda_setup_t": 20,
+        "factivel": true,
+        "cobertura_pct": 601.7,
+        "pct_subciclos_ok": 100.0,
+        "detalhe": {
+          "ORT": {
+            "factivel": true,
+            "status": "otimo",
+            "cobertura_pct": 601.7,
+            "pct_subciclos_ok": 100.0
+          }
+        }
+      },
+      {
+        "lote_t": 300,
+        "perda_setup_t": 20,
+        "factivel": true,
+        "cobertura_pct": 595.4,
+        "pct_subciclos_ok": 100.0,
+        "detalhe": {
+          "ORT": {
+            "factivel": true,
+            "status": "otimo",
+            "cobertura_pct": 595.4,
+            "pct_subciclos_ok": 100.0
+          }
+        }
+      },
+      {
+        "lote_t": 300,
+        "perda_setup_t": 30,
+        "factivel": true,
+        "cobertura_pct": 595.4,
+        "pct_subciclos_ok": 100.0,
+        "detalhe": {
+          "ORT": {
+            "factivel": true,
+            "status": "otimo",
+            "cobertura_pct": 595.4,
+            "pct_subciclos_ok": 100.0
+          }
+        }
+      },
+      {
+        "lote_t": 400,
+        "perda_setup_t": 20,
+        "factivel": true,
+        "cobertura_pct": 599.8,
+        "pct_subciclos_ok": 100.0,
+        "detalhe": {
+          "ORT": {
+            "factivel": true,
+            "status": "otimo",
+            "cobertura_pct": 599.8,
+            "pct_subciclos_ok": 100.0
+          }
+        }
+      },
+      {
+        "lote_t": 400,
+        "perda_setup_t": 30,
+        "factivel": true,
+        "cobertura_pct": 599.8,
+        "pct_subciclos_ok": 100.0,
+        "detalhe": {
+          "ORT": {
+            "factivel": true,
+            "status": "otimo",
+            "cobertura_pct": 599.8,
+            "pct_subciclos_ok": 100.0
+          }
+        }
+      },
+      {
+        "lote_t": 400,
+        "perda_setup_t": 40,
+        "factivel": true,
+        "cobertura_pct": 599.8,
+        "pct_subciclos_ok": 100.0,
+        "detalhe": {
+          "ORT": {
+            "factivel": true,
+            "status": "otimo",
+            "cobertura_pct": 599.8,
+            "pct_subciclos_ok": 100.0
+          }
+        }
+      },
+      {
+        "lote_t": 500,
+        "perda_setup_t": 30,
+        "factivel": true,
+        "cobertura_pct": 589.9,
+        "pct_subciclos_ok": 100.0,
+        "detalhe": {
+          "ORT": {
+            "factivel": true,
+            "status": "otimo",
+            "cobertura_pct": 589.9,
+            "pct_subciclos_ok": 100.0
+          }
+        }
+      },
+      {
+        "lote_t": 500,
+        "perda_setup_t": 40,
+        "factivel": true,
+        "cobertura_pct": 589.9,
+        "pct_subciclos_ok": 100.0,
+        "detalhe": {
+          "ORT": {
+            "factivel": true,
+            "status": "otimo",
+            "cobertura_pct": 589.9,
+            "pct_subciclos_ok": 100.0
+          }
+        }
+      },
+      {
+        "lote_t": 500,
+        "perda_setup_t": 50,
+        "factivel": true,
+        "cobertura_pct": 589.9,
+        "pct_subciclos_ok": 100.0,
+        "detalhe": {
+          "ORT": {
+            "factivel": true,
+            "status": "otimo",
+            "cobertura_pct": 589.9,
+            "pct_subciclos_ok": 100.0
+          }
+        }
+      },
+      {
+        "lote_t": 600,
+        "perda_setup_t": 40,
+        "factivel": true,
+        "cobertura_pct": 587.5,
+        "pct_subciclos_ok": 100.0,
+        "detalhe": {
+          "ORT": {
+            "factivel": true,
+            "status": "otimo",
+            "cobertura_pct": 587.5,
+            "pct_subciclos_ok": 100.0
+          }
+        }
+      },
+      {
+        "lote_t": 600,
+        "perda_setup_t": 50,
+        "factivel": true,
+        "cobertura_pct": 587.5,
+        "pct_subciclos_ok": 100.0,
+        "detalhe": {
+          "ORT": {
+            "factivel": true,
+            "status": "otimo",
+            "cobertura_pct": 587.5,
+            "pct_subciclos_ok": 100.0
+          }
+        }
+      },
+      {
+        "lote_t": 700,
+        "perda_setup_t": 50,
+        "factivel": true,
+        "cobertura_pct": 593.6,
+        "pct_subciclos_ok": 100.0,
+        "detalhe": {
+          "ORT": {
+            "factivel": true,
+            "status": "otimo",
+            "cobertura_pct": 593.6,
+            "pct_subciclos_ok": 100.0
+          }
+        }
+      }
+    ]
+  }
+}
