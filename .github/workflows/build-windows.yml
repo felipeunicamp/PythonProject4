@@ -25,15 +25,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install pyinstaller flask pyomo pandas openpyxl
 
-      - name: Baixar GLPK para Windows
+      - name: Instalar GLPK via Chocolatey
         shell: pwsh
         run: |
-          $url = "https://sourceforge.net/projects/winglpk/files/winglpk/GLPK-4.65/winglpk-4.65.zip/download"
-          Invoke-WebRequest -Uri $url -OutFile winglpk.zip
-          Expand-Archive -Path winglpk.zip -DestinationPath winglpk_extracted
+          choco install glpk -y
           New-Item -ItemType Directory -Force -Path solvers
-          Copy-Item winglpk_extracted\glpk-4.65\w64\glpsol.exe solvers\
-          Copy-Item winglpk_extracted\glpk-4.65\w64\glpk_4_65.dll solvers\
+          $glpsol = (Get-Command glpsol -ErrorAction SilentlyContinue).Source
+          if (-not $glpsol) { $glpsol = "C:\ProgramData\chocolatey\bin\glpsol.exe" }
+          Copy-Item $glpsol solvers\glpsol.exe
+          $glpkDir = Split-Path $glpsol
+          Get-ChildItem "$glpkDir\glpk*.dll" -ErrorAction SilentlyContinue | Copy-Item -Destination solvers\
+          if ((Get-ChildItem "solvers\*.dll").Count -eq 0) {
+            Get-ChildItem "$glpkDir\*.dll" | Copy-Item -Destination solvers\
+          }
+          Write-Host "Conteudo da pasta solvers:"
+          Get-ChildItem solvers\
 
       - name: Build com PyInstaller
         run: |
