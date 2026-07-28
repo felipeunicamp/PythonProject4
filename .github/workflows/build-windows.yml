@@ -22,8 +22,8 @@ jobs:
 
       - name: Instalar dependências Python
         run: |
-          python -m pip install --upgrade pip
-          pip install pyinstaller flask pyomo pandas openpyxl
+            python -m pip install --upgrade pip
+            pip install -r requirements.txt
 
       - name: Instalar GLPK via Chocolatey
         shell: pwsh
